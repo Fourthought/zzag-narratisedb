@@ -1,0 +1,39 @@
+# Dependencies
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables
+.env*
+!.env.example
+
+# Database
+*.db
+*.sqlite
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Python virtual environments
+.venv/
+venv/
+.pipenv/
+
+# Docs
+ai-docs/
+.ai-docs/
+
+# Pytest coverage
+*.coverage
