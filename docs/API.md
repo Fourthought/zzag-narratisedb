@@ -12,8 +12,6 @@
 | GET    | `/documents/{id}/sections/{section_id}` | Reconstructed section — ordered sentences with relevance and shield codes                  | Admin, Analyst |
 | GET    | `/documents/{id}/sentences`             | All sentences for a document with relevance and shield codes                               | Admin, Analyst |
 | GET    | `/documents/{id}/metadata`              | CHIRP incident metadata                                                                    | Admin, Analyst |
-| GET    | `/documents/{id}/recommendations`       | All recommendations with organisations                                                     | Admin, Analyst |
-| GET    | `/documents/{id}/safety-issues`         | All safety issues with their constituent sentences                                         | Admin, Analyst |
 | DELETE | `/documents/{id}`                       | Delete document and all related records                                                    | Admin          |
 
 ---
@@ -55,6 +53,7 @@
 
 | Method | Route                                         | Description                                                  | Role           |
 | ------ | --------------------------------------------- | ------------------------------------------------------------ | -------------- |
+| GET    | `/documents/{id}/safety-issues`               | All safety issues with their constituent sentences           | Admin, Analyst |
 | GET    | `/safety-issues/{id}`                         | Safety issue with all constituent sentences and shield codes | Admin, Analyst |
 | POST   | `/safety-issues/{id}/sentences`               | Add sentence to a safety issue                               | Admin          |
 | DELETE | `/safety-issues/{id}/sentences/{sentence_id}` | Remove sentence from a safety issue                          | Admin          |
@@ -63,11 +62,12 @@
 
 ## Recommendations
 
-| Method | Route                   | Description                                        | Role           |
-| ------ | ----------------------- | -------------------------------------------------- | -------------- |
-| GET    | `/recommendations/{id}` | Single recommendation with organisation            | Admin, Analyst |
-| PATCH  | `/recommendations/{id}` | Update recommendation fields (e.g. is_implemented) | Admin, Analyst |
-| DELETE | `/recommendations/{id}` | Delete a recommendation                            | Admin          |
+| Method | Route                             | Description                                        | Role           |
+| ------ | --------------------------------- | -------------------------------------------------- | -------------- |
+| GET    | `/documents/{id}/recommendations` | All recommendations with organisations             | Admin, Analyst |
+| GET    | `/recommendations/{id}`           | Single recommendation with organisation            | Admin, Analyst |
+| PATCH  | `/recommendations/{id}`           | Update recommendation fields (e.g. is_implemented) | Admin, Analyst |
+| DELETE | `/recommendations/{id}`           | Delete a recommendation                            | Admin          |
 
 ---
 
@@ -82,6 +82,19 @@
 
 ---
 
+## Embeddings
+
+| Method | Route                             | Description                                                     | Role           |
+| ------ | --------------------------------- | --------------------------------------------------------------- | -------------- |
+| POST   | `/sentences/{id}/embedding`       | Ingest embedding vector for a sentence (client-generated)       | Admin          |
+| POST   | `/safety-issues/{id}/embedding`   | Ingest embedding vector for a safety issue (client-generated)   | Admin          |
+| POST   | `/recommendations/{id}/embedding` | Ingest embedding vector for a recommendation (client-generated) | Admin          |
+| GET    | `/sentences/{id}/similar`         | Find sentences with similar embeddings                          | Admin, Analyst |
+| GET    | `/safety-issues/{id}/similar`     | Find safety issues with similar embeddings                      | Admin, Analyst |
+| GET    | `/recommendations/{id}/similar`   | Find recommendations with similar embeddings                    | Admin, Analyst |
+
+---
+
 ## Notes
 
 - No POST on recommendations, organisations, authors, sentences, sections, or safety issues — all created during document ingestion
@@ -89,3 +102,6 @@
 - Reconstructed endpoints (full document, section) assemble ordered sentences via `position`
 - Provenance chain: sentence → document; shield code → sentence → document; safety issue → sentences → document
 - `chirp_shield_code_categories` has no direct routes — always returned as part of shield code responses
+- Embeddings are client-generated and posted to the API — the service stores and queries them only, no generation in scope
+- Vector dimension fixed at 384 (standard lightweight local model output); changing embedding model requires a schema migration
+- Similar item routes return results ordered by cosine similarity with a configurable limit parameter
