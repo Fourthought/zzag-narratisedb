@@ -51,23 +51,25 @@
 
 ## Safety Issues
 
-| Method | Route                                         | Description                                                  | Role           |
-| ------ | --------------------------------------------- | ------------------------------------------------------------ | -------------- |
-| GET    | `/documents/{id}/safety-issues`               | All safety issues with their constituent sentences           | Admin, Analyst |
-| GET    | `/safety-issues/{id}`                         | Safety issue with all constituent sentences and shield codes | Admin, Analyst |
-| POST   | `/safety-issues/{id}/sentences`               | Add sentence to a safety issue                               | Admin          |
-| DELETE | `/safety-issues/{id}/sentences/{sentence_id}` | Remove sentence from a safety issue                          | Admin          |
+| Method | Route                                         | Description                                                          | Role           |
+| ------ | --------------------------------------------- | -------------------------------------------------------------------- | -------------- |
+| GET    | `/documents/{id}/safety-issues`               | All safety issues in a report with their constituent sentences       | Admin, Analyst |
+| GET    | `/safety-issues`                              | All safety issues with their constituent sentences grouped by report | Admin, Analyst |
+| GET    | `/safety-issues/{id}`                         | Safety issue with all constituent sentences and shield codes         | Admin, Analyst |
+| POST   | `/safety-issues/{id}/sentences`               | Add sentence to a safety issue                                       | Admin          |
+| DELETE | `/safety-issues/{id}/sentences/{sentence_id}` | Remove sentence from a safety issue                                  | Admin          |
 
 ---
 
 ## Recommendations
 
-| Method | Route                             | Description                                        | Role           |
-| ------ | --------------------------------- | -------------------------------------------------- | -------------- |
-| GET    | `/documents/{id}/recommendations` | All recommendations with organisations             | Admin, Analyst |
-| GET    | `/recommendations/{id}`           | Single recommendation with organisation            | Admin, Analyst |
-| PATCH  | `/recommendations/{id}`           | Update recommendation fields (e.g. is_implemented) | Admin, Analyst |
-| DELETE | `/recommendations/{id}`           | Delete a recommendation                            | Admin          |
+| Method | Route                             | Description                                              | Role           |
+| ------ | --------------------------------- | -------------------------------------------------------- | -------------- |
+| GET    | `/documents/{id}/recommendations` | All recommendations in a report with organisations       | Admin, Analyst |
+| GET    | `/recommendations`                | All recommendations with organisations grouped by report | Admin, Analyst |
+| GET    | `/recommendations/{id}`           | Single recommendation with organisation                  | Admin, Analyst |
+| PATCH  | `/recommendations/{id}`           | Update recommendation fields (e.g. is_implemented)       | Admin, Analyst |
+| DELETE | `/recommendations/{id}`           | Delete a recommendation                                  | Admin          |
 
 ---
 
