@@ -108,7 +108,10 @@ CREATE TABLE public.sections (
   name text NOT NULL,
   created_at timestamp with time zone DEFAULT now(),
   updated_at timestamp with time zone DEFAULT now(),
-  CONSTRAINT sections_pkey PRIMARY KEY (id)
+  document_id bigint,
+  position integer,
+  CONSTRAINT sections_pkey PRIMARY KEY (id),
+  CONSTRAINT sections_document_id_fkey FOREIGN KEY (document_id) REFERENCES public.documents(id)
 );
 CREATE TABLE public.sentences (
   id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
