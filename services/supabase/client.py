@@ -10,11 +10,11 @@ class SupabaseClient:
     def get_client(cls) -> Client:
         if cls._instance is None:
             url = os.environ.get("SUPABASE_URL")
-            key = os.environ.get("SUPABASE_KEY")
+            key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY") or os.environ.get("SUPABASE_KEY")
 
             if not url or not key:
                 raise ValueError(
-                    "SUPABASE_URL and SUPABASE_KEY environment variables must be set")
+                    "SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY (or SUPABASE_KEY) environment variables must be set")
 
             cls._instance = create_client(url, key)
 
