@@ -381,13 +381,16 @@ def split_into_sentences(text: str) -> list[dict]:
 
         text_type = "paragraph"
 
-        # Check for heading
+        # Check for heading (explicit patterns only)
         if len(stripped) < 80:
-            # All caps
-            if stripped.isupper() and not stripped.endswith("."):
+            # SECTION X pattern (e.g., "SECTION 1 - FACTUAL INFORMATION")
+            if re.match(r"^SECTION\s+\d+", stripped, re.IGNORECASE):
                 text_type = "heading"
-            # Subsection pattern
-            elif re.match(r"^\d+(\.\d+)*\s+", stripped):
+            # Subsection pattern (e.g., "1.1", "1.2.3", "2.3.1")
+            elif re.match(r"^\d+\.\d+(\.\d+)?\s+", stripped):
+                text_type = "heading"
+            # SYNOPSIS (explicit heading)
+            elif stripped == "SYNOPSIS":
                 text_type = "heading"
 
         # Check for list item (only if not already a heading)
@@ -483,6 +486,26 @@ def split_into_sentences(text: str) -> list[dict]:
                 "relevance_score": relevance,
             })
             position += 1
+
+    # Third pass: mark TOC based on duplicate headings
+    # Find first duplicate heading - everything before it is TOC
+    seen_headings = {}
+    first_duplicate_position = None
+
+    for sent in sentences:
+        if sent["text_type"] == "heading":
+            heading_text = sent["text"]
+            if heading_text in seen_headings:
+                # Found duplicate - this is where real content starts
+                first_duplicate_position = sent["position"]
+                break
+            seen_headings[heading_text] = sent["position"]
+
+    # Mark all sentences before the first duplicate as relevance 0 (TOC)
+    if first_duplicate_position is not None:
+        for sent in sentences:
+            if sent["position"] < first_duplicate_position:
+                sent["relevance_score"] = 0
 
     return sentences
 

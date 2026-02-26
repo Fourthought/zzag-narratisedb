@@ -98,3 +98,24 @@ async def get_document_full_json(id: int, min_relevance: int | None = None):
         **document,
         "sentences": sentences_result.data,
     }
+
+
+@router.get("/{id}/headings")
+async def get_document_headings(id: int):
+    """Get all headings for a document (document structure).
+
+    Filters out TOC entries (relevance_score = 0).
+    """
+    client = get_supabase()
+
+    result = (
+        client.table("sentences")
+        .select("id, text, position")
+        .eq("document_id", id)
+        .eq("text_type", "heading")
+        .or_("relevance_score.is.null,relevance_score.gt.0")
+        .order("position")
+        .execute()
+    )
+
+    return result.data
