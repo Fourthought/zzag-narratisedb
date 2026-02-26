@@ -75,19 +75,21 @@ The API does **not** perform semantic analysis or generate embeddings. It is a s
 A locally-operated pipeline maintained by the client, responsible for:
 
 - Reading sentences from the API
-- Applying advanced semantic NLP analysis to assign SHIELD codes and other classifications that require semantic understanding
-- Generating vector embeddings using a local model
+- Applying advanced semantic NLP analysis to sentences — assigning SHIELD codes and other classifications that require semantic understanding
+- Generating vector embeddings for sentences using a local model
 - Writing results (embeddings, shield codes, relevance scores) back to the API
+
+Safety issues and recommendations are extracted at ingestion time and are not processed by the NLP pipeline.
 
 **Neither layer is useful without the other.** The API provides structure; the NLP pipeline provides intelligence.
 
 ### Interaction flow
 
-1. A PDF is uploaded to `POST /documents` — the API ingests it, extracts structure, and stores documents, sections, sentences, safety issues, and recommendations
+1. A PDF is uploaded to `POST /documents` — the API computes a SHA256 hash of the document content and rejects it with a `409 Conflict` if it has been ingested before. Otherwise it ingests the PDF, extracts structure, and stores documents, sections, sentences, safety issues, and recommendations
 2. The client pipeline fetches sentences from the API
 3. The client pipeline runs semantic NLP analysis on the sentences — assigning SHIELD codes, generating embeddings, and applying any other classifications that require semantic understanding
-4. The client pipeline writes results back to the API (embeddings, shield codes, relevance scores)
-5. The API now serves fully enriched data — sentences with SHIELD codes and embeddings, safety issues and recommendations with embeddings — enabling similarity search and structured querying
+4. The client pipeline writes results back to the API (embeddings, shield codes, relevance scores for sentences)
+5. The API now serves fully enriched data — sentences with SHIELD codes and embeddings — enabling similarity search and structured querying. Safety issues and recommendations are stored as extracted at ingestion time and linked to their constituent sentences
 
 ---
 

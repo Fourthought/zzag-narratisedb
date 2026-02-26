@@ -33,17 +33,18 @@ See `ai-docs/ZigZag_ADR_20260223.md` for the full ADR. Key points:
 - Auth middleware
 - DELETE, PATCH routes
 
-## Known issues
-
-- `_get_or_create_org` in `services/ingestion.py` writes to `"organisations"` but the schema table is `"chirp_organisations"`
-- `chirp_report_metadata` is missing `page_count` and `pdf_subject` columns — pending migration before those fields can be written
-
 ## Conventions
 
 - Keep PDF parsing logic in `services/pdf_parser.py` (pure functions, no DB)
 - Keep DB orchestration in `services/ingestion.py`
 - `SupabaseService` in `services/supabase/service.py` is the DB abstraction layer — use it, don't call the Supabase client directly from routes
 - Don't make claims about extraction quality without testing against the sample PDFs in `samples/`
+
+## Data flow & responsibilities
+
+- **API extracts at ingestion:** documents, sections, sentences, safety issues, recommendations, report metadata
+- **Client NLP pipeline enriches:** sentences (embeddings, SHIELD codes, relevance scores)
+- Safety issues and recommendations are NOT processed by the NLP pipeline — they're stored as extracted and linked to constituent sentences via join tables
 
 ## API spec
 
