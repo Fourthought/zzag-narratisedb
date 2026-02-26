@@ -288,12 +288,16 @@ def split_into_sections(full_text: str) -> list[dict]:
 
 def split_into_sentences(text: str) -> list[dict]:
     """Split section text into sentences using nltk.sent_tokenize.
-    Returns list of {"text": "...", "text_type": "paragraph|list_item|heading", "position": 0}.
+    Returns list of {"text": "...", "text_type": "paragraph|list_item|heading", "position": 0, "relevance_score": int|None}.
 
     text_type heuristics:
     - heading: short line (< 80 chars) that is all caps or matches subsection pattern (e.g. "2.3.1 ...")
     - list_item: starts with bullet (-, *, ●) or numbered pattern (a., 1., i.)
     - paragraph: everything else
+
+    relevance_score heuristics:
+    - 0: TOC entries (short text ending with page number)
+    - None: not yet scored (default)
 
     Note: PDFs don't have paragraph structure - text is extracted as visual lines.
     This function reconstructs paragraphs by joining consecutive non-heading, non-list lines,
@@ -306,6 +310,26 @@ def split_into_sentences(text: str) -> list[dict]:
         nltk.data.find("tokenizers/punkt_tab")
     except LookupError:
         nltk.download("punkt_tab", quiet=True)
+
+    def is_toc_entry(text: str) -> bool:
+        """Check if text looks like a TOC entry (ends with page number)."""
+        # TOC entries are typically short and end with a page number
+        # Pattern: text ending with 1-3 digit number (page number)
+        # Exclude pure numbers and common non-TOC patterns
+        if len(text) > 150:
+            return False
+        # Ends with page number pattern (1-3 digits, possibly with a letter like 18a)
+        toc_pattern = r"\s\d{1,3}[a-z]?\s*$"
+        if not re.search(toc_pattern, text):
+            return False
+        # Must have some text before the page number
+        text_before_page = re.sub(toc_pattern, "", text).strip()
+        if len(text_before_page) < 3:
+            return False
+        # Exclude figure captions (they start with "Figure")
+        if text.lower().startswith("figure"):
+            return False
+        return True
 
     sentences = []
     lines = text.split("\n")
@@ -381,18 +405,22 @@ def split_into_sentences(text: str) -> list[dict]:
             for sent_text in sent_texts:
                 sent_text = sent_text.strip()
                 if sent_text:
+                    relevance = 0 if is_toc_entry(sent_text) else None
                     sentences.append({
                         "text": sent_text,
                         "text_type": "paragraph",
-                        "position": position
+                        "position": position,
+                        "relevance_score": relevance,
                     })
                     position += 1
         else:
             # heading and list_item stay as-is
+            relevance = 0 if is_toc_entry(block["text"]) else None
             sentences.append({
                 "text": block["text"],
                 "text_type": block["type"],
-                "position": position
+                "position": position,
+                "relevance_score": relevance,
             })
             position += 1
 
