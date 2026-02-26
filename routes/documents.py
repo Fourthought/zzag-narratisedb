@@ -39,9 +39,8 @@ async def get_document_full(id: int, min_relevance: int | None = None):
     # Build query with optional relevance filter
     query = (
         client.table("sentences")
-        .select("text, text_type, sections(name, position)")
+        .select("text, text_type")
         .eq("document_id", id)
-        .order("section_id")
         .order("position")
     )
 
@@ -85,9 +84,8 @@ async def get_document_full_json(id: int, min_relevance: int | None = None):
     # Build query with optional relevance filter
     query = (
         client.table("sentences")
-        .select("*, sections(name, position)")
+        .select("*")
         .eq("document_id", id)
-        .order("section_id")
         .order("position")
     )
 

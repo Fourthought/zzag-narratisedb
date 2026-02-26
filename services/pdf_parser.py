@@ -185,7 +185,27 @@ def split_into_sections(full_text: str) -> list[dict]:
     - SYNOPSIS
     - SECTION \\d+ [–-] .+
     - GLOSSARY OF ABBREVIATIONS AND ACRONYMS
+
+    Note: TOC entries (lines ending with page numbers) are skipped and not treated as section boundaries.
     """
+
+    def is_toc_entry(text: str) -> bool:
+        """Check if text looks like a TOC entry (short text ending with page number)."""
+        if len(text) > 150:
+            return False
+        # Ends with page number pattern (1-3 digits, possibly with a letter like 18a)
+        toc_pattern = r"\s\d{1,3}[a-z]?\s*$"
+        if not re.search(toc_pattern, text):
+            return False
+        # Must have some text before the page number
+        text_before_page = re.sub(toc_pattern, "", text).strip()
+        if len(text_before_page) < 3:
+            return False
+        # Exclude figure captions (they start with "Figure")
+        if text.lower().startswith("figure"):
+            return False
+        return True
+
     sections = []
 
     # Section patterns with their names
@@ -203,6 +223,12 @@ def split_into_sections(full_text: str) -> list[dict]:
     for line in lines:
         line = line.rstrip()
         stripped = line.strip()
+
+        # Skip TOC entries - don't treat them as section boundaries
+        if is_toc_entry(stripped):
+            # Add to current section text, but don't start a new section
+            current_text.append(line)
+            continue
 
         # Check for section boundaries
         section_match = re.match(section_pattern, stripped, re.IGNORECASE)
