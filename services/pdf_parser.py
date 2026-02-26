@@ -33,6 +33,33 @@ def extract_full_text(pdf_bytes: bytes) -> str:
     return "\n\n".join(text_parts)
 
 
+def extract_pdf_metadata(pdf_bytes: bytes) -> dict:
+    """Extract PDF file metadata (author, creation date, pages, etc.)."""
+    with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
+        metadata = {
+            "page_count": len(pdf.pages),
+            "pdf_title": None,
+            "pdf_author": None,
+            "pdf_subject": None,
+            "pdf_creator": None,
+            "pdf_producer": None,
+            "pdf_creation_date": None,
+            "pdf_mod_date": None,
+        }
+
+        if hasattr(pdf, 'metadata') and pdf.metadata:
+            raw_metadata = pdf.metadata
+            metadata["pdf_title"] = raw_metadata.get("Title")
+            metadata["pdf_author"] = raw_metadata.get("Author")
+            metadata["pdf_subject"] = raw_metadata.get("Subject")
+            metadata["pdf_creator"] = raw_metadata.get("Creator")
+            metadata["pdf_producer"] = raw_metadata.get("Producer")
+            metadata["pdf_creation_date"] = raw_metadata.get("CreationDate")
+            metadata["pdf_mod_date"] = raw_metadata.get("ModDate")
+
+        return metadata
+
+
 def extract_tables(pdf_bytes: bytes) -> list[list[list[str]]]:
     """Extract all tables from all pages using pdfplumber.extract_tables()."""
     all_tables = []

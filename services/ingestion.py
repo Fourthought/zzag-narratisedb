@@ -6,6 +6,7 @@ from fastapi import HTTPException
 from services.pdf_parser import (
     extract_full_text,
     extract_metadata_from_tables,
+    extract_pdf_metadata,
     extract_publication_date,
     extract_recommendations,
     extract_safety_issues,
@@ -25,6 +26,7 @@ class IngestionService:
 
         # Step 1: Parse PDF
         full_text = extract_full_text(pdf_bytes)
+        pdf_metadata = extract_pdf_metadata(pdf_bytes)
 
         # Step 2: Create document (with dedup check via hash)
         content_hash = hashlib.sha256(full_text.encode()).hexdigest()
@@ -34,7 +36,7 @@ class IngestionService:
             raise HTTPException(status_code=409, detail="Document already exists")
 
         author = self._get_or_create_author("Marine Accident Investigation Branch")
-        title = extract_title(full_text)
+        title = pdf_metadata.get("pdf_title") or extract_title(full_text)
         pub_date = extract_publication_date(full_text)
 
         document = self.db.create_record(
@@ -52,6 +54,8 @@ class IngestionService:
         # Step 3: Extract and store report metadata
         metadata = extract_metadata_from_tables(pdf_bytes)
         metadata["document_id"] = doc_id
+        metadata["page_count"] = pdf_metadata.get("page_count")
+        metadata["pdf_subject"] = pdf_metadata.get("pdf_subject")
         self.db.create_record("chirp_report_metadata", metadata)
 
         # Step 4: Split into sections and store
