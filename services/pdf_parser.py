@@ -292,8 +292,12 @@ def split_into_sentences(text: str) -> list[dict]:
 
     text_type heuristics:
     - heading: short line (< 80 chars) that is all caps or matches subsection pattern (e.g. "2.3.1 ...")
-    - list_item: starts with bullet (-, *, •) or numbered pattern (a., 1., i.)
+    - list_item: starts with bullet (-, *, ●) or numbered pattern (a., 1., i.)
     - paragraph: everything else
+
+    Note: PDFs don't have paragraph structure - text is extracted as visual lines.
+    This function reconstructs paragraphs by joining consecutive non-heading, non-list lines,
+    then splits the reconstructed paragraphs into sentences using NLTK.
     """
     import nltk
 
@@ -307,9 +311,18 @@ def split_into_sentences(text: str) -> list[dict]:
     lines = text.split("\n")
     position = 0
 
+    # First pass: classify each line and group into blocks
+    # A "block" is either a standalone heading/list_item, or a reconstructed paragraph
+    blocks = []
+    current_paragraph = []
+
     for line in lines:
         stripped = line.strip()
         if not stripped:
+            # Empty line ends current paragraph
+            if current_paragraph:
+                blocks.append({"type": "paragraph", "text": " ".join(current_paragraph)})
+                current_paragraph = []
             continue
 
         text_type = "paragraph"
@@ -325,8 +338,8 @@ def split_into_sentences(text: str) -> list[dict]:
 
         # Check for list item (only if not already a heading)
         if text_type == "paragraph":
-            # Bullet points
-            if re.match(r"^[\-\*•]\s+", stripped):
+            # Bullet points (including unicode bullet ●)
+            if re.match(r"^[\-\*●]\s+", stripped):
                 text_type = "list_item"
             # Numbered patterns
             elif re.match(r"^[a-zA-Z0-9][.\)]\s+", stripped):
@@ -334,21 +347,51 @@ def split_into_sentences(text: str) -> list[dict]:
             elif re.match(r"^\([a-zA-Z0-9]\)\s+", stripped):
                 text_type = "list_item"
 
-        # Use NLTK to split the line into sentences
-        if text_type != "heading" and text_type != "list_item":
-            sent_texts = nltk.sent_tokenize(stripped)
+        # Handle based on type
+        if text_type == "heading" or text_type == "list_item":
+            # Save any pending paragraph first
+            if current_paragraph:
+                blocks.append({"type": "paragraph", "text": " ".join(current_paragraph)})
+                current_paragraph = []
+            # Add heading/list_item as standalone block
+            blocks.append({"type": text_type, "text": stripped})
+        else:
+            # Accumulate paragraph text
+            # Check if this line continues a previous line (no period, or lowercase continuation)
+            if current_paragraph:
+                last_line = current_paragraph[-1]
+                # If previous line ends with a period and this line starts with uppercase,
+                # it might be a new sentence in the same paragraph
+                if last_line.endswith(('.', '!', '?', '"', "'")) and stripped[0].isupper():
+                    # Still part of paragraph, just a new sentence
+                    pass
+                current_paragraph.append(stripped)
+            else:
+                current_paragraph.append(stripped)
+
+    # Save final paragraph
+    if current_paragraph:
+        blocks.append({"type": "paragraph", "text": " ".join(current_paragraph)})
+
+    # Second pass: split paragraph blocks into sentences using NLTK
+    for block in blocks:
+        if block["type"] == "paragraph":
+            # Use NLTK to split the paragraph into actual sentences
+            sent_texts = nltk.sent_tokenize(block["text"])
             for sent_text in sent_texts:
-                if sent_text.strip():
+                sent_text = sent_text.strip()
+                if sent_text:
                     sentences.append({
-                        "text": sent_text.strip(),
-                        "text_type": text_type,
+                        "text": sent_text,
+                        "text_type": "paragraph",
                         "position": position
                     })
                     position += 1
         else:
+            # heading and list_item stay as-is
             sentences.append({
-                "text": stripped,
-                "text_type": text_type,
+                "text": block["text"],
+                "text_type": block["type"],
                 "position": position
             })
             position += 1
