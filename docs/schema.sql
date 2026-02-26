@@ -58,6 +58,8 @@ CREATE TABLE public.chirp_report_metadata (
   vessel_name text,
   created_at timestamp with time zone DEFAULT now(),
   updated_at timestamp with time zone DEFAULT now(),
+  page_count integer,
+  pdf_subject text,
   CONSTRAINT chirp_report_metadata_pkey PRIMARY KEY (id),
   CONSTRAINT chirp_report_metadata_document_id_fkey FOREIGN KEY (document_id) REFERENCES public.documents(id)
 );
