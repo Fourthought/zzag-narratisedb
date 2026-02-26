@@ -134,8 +134,8 @@ class IngestionService:
             return None
 
         name = name.strip()
-        existing = self.db.get_records("organisations", {"name": name}, limit=1)
+        existing = self.db.get_records("chirp_organisations", {"name": name}, limit=1)
         if existing:
             return existing[0]
 
-        return self.db.create_record("organisations", {"name": name})
+        return self.db.create_record("chirp_organisations", {"name": name})
