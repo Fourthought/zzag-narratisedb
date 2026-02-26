@@ -339,14 +339,18 @@ def split_into_sentences(text: str) -> list[dict]:
     # A "block" is either a standalone heading/list_item, or a reconstructed paragraph
     blocks = []
     current_paragraph = []
+    current_list_item = None  # Track multi-line list items
 
     for line in lines:
         stripped = line.strip()
         if not stripped:
-            # Empty line ends current paragraph
+            # Empty line ends current paragraph and any ongoing list item
             if current_paragraph:
                 blocks.append({"type": "paragraph", "text": " ".join(current_paragraph)})
                 current_paragraph = []
+            if current_list_item:
+                blocks.append({"type": "list_item", "text": current_list_item})
+                current_list_item = None
             continue
 
         text_type = "paragraph"
@@ -372,28 +376,58 @@ def split_into_sentences(text: str) -> list[dict]:
                 text_type = "list_item"
 
         # Handle based on type
-        if text_type == "heading" or text_type == "list_item":
+        if text_type == "heading":
+            # Save any pending accumulations first
+            if current_list_item:
+                blocks.append({"type": "list_item", "text": current_list_item})
+                current_list_item = None
+            if current_paragraph:
+                blocks.append({"type": "paragraph", "text": " ".join(current_paragraph)})
+                current_paragraph = []
+            # Add heading as standalone block
+            blocks.append({"type": "heading", "text": stripped})
+
+        elif text_type == "list_item":
             # Save any pending paragraph first
             if current_paragraph:
                 blocks.append({"type": "paragraph", "text": " ".join(current_paragraph)})
                 current_paragraph = []
-            # Add heading/list_item as standalone block
-            blocks.append({"type": text_type, "text": stripped})
-        else:
-            # Accumulate paragraph text
-            # Check if this line continues a previous line (no period, or lowercase continuation)
-            if current_paragraph:
-                last_line = current_paragraph[-1]
-                # If previous line ends with a period and this line starts with uppercase,
-                # it might be a new sentence in the same paragraph
-                if last_line.endswith(('.', '!', '?', '"', "'")) and stripped[0].isupper():
-                    # Still part of paragraph, just a new sentence
-                    pass
-                current_paragraph.append(stripped)
-            else:
-                current_paragraph.append(stripped)
+            # If there's an ongoing list item, save it first
+            if current_list_item:
+                blocks.append({"type": "list_item", "text": current_list_item})
+            # Start new list item
+            current_list_item = stripped
 
-    # Save final paragraph
+        else:
+            # Paragraph text - could be continuation of list item or start of paragraph
+            if current_list_item:
+                # Check if this is a continuation of the list item
+                # Continuation: previous list item doesn't end with punctuation AND this line starts lowercase
+                list_ends_without_punct = not current_list_item.rstrip().endswith(('.', '!', '?'))
+                line_starts_lowercase = stripped[0].islower()
+                if list_ends_without_punct and line_starts_lowercase:
+                    # Continuation of multi-line list item
+                    current_list_item += " " + stripped
+                else:
+                    # End the list item, start a new paragraph
+                    blocks.append({"type": "list_item", "text": current_list_item})
+                    current_list_item = None
+                    current_paragraph.append(stripped)
+            else:
+                # Accumulate paragraph text
+                if current_paragraph:
+                    last_line = current_paragraph[-1]
+                    # If previous line ends with a period and this line starts with uppercase,
+                    # it might be a new sentence in the same paragraph
+                    if last_line.endswith(('.', '!', '?', '"', "'")) and stripped[0].isupper():
+                        pass  # Still part of paragraph, just a new sentence
+                    current_paragraph.append(stripped)
+                else:
+                    current_paragraph.append(stripped)
+
+    # Save any remaining accumulations
+    if current_list_item:
+        blocks.append({"type": "list_item", "text": current_list_item})
     if current_paragraph:
         blocks.append({"type": "paragraph", "text": " ".join(current_paragraph)})
 
