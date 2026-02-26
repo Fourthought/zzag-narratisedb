@@ -77,16 +77,17 @@ class IngestionService:
         for section_rec in section_records:
             sentences = split_into_sentences(section_rec["_text"])
             for sent in sentences:
-                self.db.create_record(
-                    "sentences",
-                    {
-                        "text": sent["text"],
-                        "text_type": sent["text_type"],
-                        "position": sent["position"],
-                        "section_id": section_rec["id"],
-                        "document_id": doc_id,
-                    },
-                )
+                sentence_data = {
+                    "text": sent["text"],
+                    "text_type": sent["text_type"],
+                    "position": sent["position"],
+                    "section_id": section_rec["id"],
+                    "document_id": doc_id,
+                }
+                # Include relevance_score if present (0 for TOC, None for unscored)
+                if "relevance_score" in sent:
+                    sentence_data["relevance_score"] = sent["relevance_score"]
+                self.db.create_record("sentences", sentence_data)
 
         # Step 6: Extract and store safety issues
         conclusions = next(
