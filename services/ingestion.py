@@ -6,6 +6,8 @@ from services.pdf_parser import (
     parse_pdf,
     extract_publication_date,
     extract_title,
+    parse_accident_date,
+    parse_loss_of_life,
     split_into_sentences,
 )
 from services.supabase.service import SupabaseService
@@ -74,10 +76,10 @@ class IngestionService:
             "pdf_author": pdf_author,
             "vessel_name": report_metadata.vessel_name,
             "vessel_type": report_metadata.vessel_type,
-            "accident_date": report_metadata.accident_date,
+            "accident_date": parse_accident_date(report_metadata.accident_date),
             "accident_location": report_metadata.accident_location,
             "severity": report_metadata.severity,
-            "loss_of_life": report_metadata.loss_of_life,
+            "loss_of_life": parse_loss_of_life(report_metadata.loss_of_life),
             "port_of_origin": report_metadata.port_of_origin,
             "destination": report_metadata.destination,
             "accident_type": report_metadata.accident_type,

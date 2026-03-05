@@ -117,16 +117,17 @@ def _parse_metadata_from_tables(tables: list[list[list[str]]]) -> ReportMetadata
     metadata = ReportMetadata()
 
     # Look for key-value pairs in tables
+    # Uses re.search so patterns match anywhere in the key cell
     key_patterns = {
-        "vessel_name": r"(?i)vessel.*name|name.*vessel",
-        "vessel_type": r"(?i)vessel.*type|type.*vessel",
-        "accident_date": r"(?i)date.*accident|accident.*date",
-        "accident_location": r"(?i)location|where",
-        "severity": r"(?i)severity|serious",
-        "loss_of_life": r"(?i)loss.*life|fatalities|casualties",
-        "port_of_origin": r"(?i)port.*origin|departure.*port|from",
-        "destination": r"(?i)destination|to\b",
-        "accident_type": r"(?i)accident.*type|type.*accident|incident.*type",
+        "vessel_name": r"(?i)vessel.{0,5}name",
+        "vessel_type": r"(?i)^type$",
+        "accident_date": r"(?i)date.*time",
+        "accident_location": r"(?i)location.*incident|location.*accident",
+        "severity": r"(?i)type.*casualty|type.*marine|type.*incident",
+        "loss_of_life": r"(?i)injur|fatal|casualt",
+        "port_of_origin": r"(?i)port.*departure|port.*origin",
+        "destination": r"(?i)port.*arrival",
+        "accident_type": r"(?i)type.*voyage|voyage.*type",
     }
 
     for table in tables:
@@ -136,17 +137,47 @@ def _parse_metadata_from_tables(tables: list[list[list[str]]]) -> ReportMetadata
             key_cell = str(row[0]).strip() if row[0] else ""
             value_cell = str(row[1]).strip() if row[1] else ""
 
-            if not key_cell or not value_cell or value_cell.lower() in ["none", "n/a", "-"]:
+            if not key_cell or not value_cell or value_cell.lower() in ["none", "n/a", "-", "not applicable"]:
                 continue
 
             for metadata_key, pattern in key_patterns.items():
-                if re.match(pattern, key_cell):
+                if re.search(pattern, key_cell):
                     current_value = getattr(metadata, metadata_key)
                     if not current_value:
                         setattr(metadata, metadata_key, value_cell)
                     break
 
     return metadata
+
+
+def parse_accident_date(raw: str) -> Optional[str]:
+    """Parse accident date string to ISO YYYY-MM-DD, or None if unparseable.
+
+    Handles formats like "28 September 2023 at 0936", "28 Sep 2023", etc.
+    """
+    if not raw:
+        return None
+    # Match day month year, ignoring trailing time info
+    m = re.search(r"(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})", raw)
+    if m:
+        day, month_name, year = m.group(1), m.group(2), m.group(3)
+        month_num = MONTH_MAP.get(month_name.lower())
+        if month_num:
+            return f"{year}-{month_num:02d}-{int(day):02d}"
+    return None
+
+
+def parse_loss_of_life(raw: str) -> Optional[int]:
+    """Parse loss-of-life string to integer, or None if unparseable.
+
+    Handles formats like "1 fatality", "2 fatalities", "None", "3".
+    """
+    if not raw:
+        return None
+    m = re.search(r"\d+", raw)
+    if m:
+        return int(m.group())
+    return None
 
 
 def extract_title(full_text: str) -> str:
@@ -191,15 +222,19 @@ def extract_publication_date(full_text: str) -> Optional[str]:
         return iso_matches[0]
 
     # Pattern for month year (e.g., "September 2023", "OCTOBER 2025")
+    # Take the LAST valid match — publication date appears at the bottom of cover page,
+    # while narrative dates (e.g. "on 28 September 2023") appear earlier.
     month_year_pattern = r"\b([A-Za-z]+)\s+(\d{4})\b"
     matches = re.findall(month_year_pattern, full_text[:COVER_PAGE_CHAR_LIMIT])
 
+    result = None
     for month_name, year in matches:
         month_lower = month_name.lower()
         if month_lower in MONTH_MAP:
             month_num = MONTH_MAP[month_lower]
-            # Use first day of the month since we don't have the day
-            return f"{year}-{month_num:02d}-01"
+            result = f"{year}-{month_num:02d}-01"
+    if result:
+        return result
 
     return None
 
