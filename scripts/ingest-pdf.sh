@@ -18,8 +18,6 @@ if [ ! -f "$PDF_PATH" ]; then
   exit 1
 fi
 
-./scripts/truncate-db.sh
-
 echo "Uploading $PDF_PATH to $API_URL/documents..."
 curl -X POST "$API_URL/documents" \
   -F "file=@$PDF_PATH"
