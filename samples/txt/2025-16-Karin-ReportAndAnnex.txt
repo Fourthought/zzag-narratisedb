@@ -1,0 +1,1097 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Report on the investigation of
+the fatal contact between the dive workboat
+Karin
+and a recreational diver
+in Scapa Flow, Orkney Islands, Scotland on 28 September 2023
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+VERY SERIOUS MARINE CASUALTY	REPORT NO 16/2025	OCTOBER 2025
+
+The United Kingdom Merchant Shipping (Accident Reporting and Investigation) Regulations 2012 - Regulation 5:
+
+"The sole objective of the investigation of an accident under the Merchant Shipping (Accident Reporting and Investigation) Regulations 2012 shall be the prevention of future accidents through the ascertainment of its causes and circumstances. It shall not be the purpose of an investigation to determine liability nor, except so far as is necessary to achieve its objective, to apportion blame."
+NOTE
+This report is not written with litigation in mind and, pursuant to Regulation 14(14) of the Merchant Shipping (Accident Reporting and Investigation) Regulations 2012, shall be inadmissible in any judicial proceedings whose purpose, or one of whose purposes is to attribute or apportion liability or blame.
+
+
+
+
+
+
+
+(c) Crown copyright, 2025
+
+You may re-use this document/publication (not including departmental or agency logos) free of charge in any format or medium. You must re-use it accurately and not in a misleading context. The material must be acknowledged as Crown copyright and you must give the title of the source publication. Where we have identified any third party copyright material you will need to obtain permission from the copyright holders concerned.
+
+
+
+All MAIB publications can be found on our website: www.gov.uk/maib For all enquiries:
+Marine Accident Investigation Branch
+First Floor, Spring Place 105 Commercial Road Southampton
+
+SO15 1GH
+United Kingdom
+
+Email:	maib@dft.gov.uk Telephone: +44 (0)23 8039 5500
+
+
+Press enquiries during office hours: +44 (0)19 3244 0015
+Press enquiries out of hours: +44 (0)30 0777 7878
+
+CONTENTS
+GLOSSARY OF ABBREVIATIONS AND ACRONYMS
+
+SYNOPSIS	1
+SECTION 1  - FACTUAL INFORMATION	2
+1.1 Particulars of Karin and accident	2
+1.2 Background	3
+1.3 Narrative	3
+1.3.1 Arrival at site	4
+1.3.2 Post-accident	8
+1.3.3 Emergency response	8
+1.3.4 Recovery	8
+1.4 Environmental conditions	9
+1.5 Diver 1	9
+1.6 Karin	9
+1.6.1 General information	9
+1.6.2 Crew	11
+1.6.3 Wheelhouse visibility	11
+1.7 Jean Elaine	12
+1.7.1 General information	12
+1.7.2 Crew	12
+1.8 Dive operations	13
+1.8.1 Safety briefing and dive entry	13
+1.8.2 Recreational diving support	13
+1.8.3 Dive computers	14
+1.8.4 Delayed surface marker buoy	14
+1.9 Orkney Islands Council Harbour Authority	15
+1.9.1 Overview	15
+1.9.2 Diving permit system	17
+1.9.3 Onsite coordination	17
+1.9.4 Orkney vessel traffic services	18
+1.10 Regulations and guidance	18
+1.10.1 The Merchant Shipping and Fishing Vessels (Health and Safety at Work) Regulations 1997	18
+1.10.2 Vessel traffic services	18
+1.10.3 The Small Commercial Vessel and Pilot Boat Code	19
+1.10.4 Safety responsibilities on board dive boats	19
+1.10.5 British Diving Safety Group	19
+1.11 Previous/similar accidents	20
+1.11.1 Karin - contact with a recreational diver	20
+1.11.2 Seadogz - high-speed contact	20
+SECTION 2  - ANALYSIS	21
+2.1 Aim	21
+2.2 Overview	21
+2.3 The accident	21
+2.4 Diver vulnerability	21
+2.5 Visibility and lookout on board Karin	22
+2.5.1 Forward visibility	22
+2.5.2 Lookout arrangements	22
+2.6 Operational practices	23
+2.6.1 Communications	23
+2.6.2 Safety management	23
+2.7 Harbour authority oversight	24
+2.7.1 Coordination and control	24
+2.7.2 Diving permits	24
+2.7.3 Local safety committee	25
+2.8 Delayed surface marker buoy operation	25
+SECTION 3  - CONCLUSIONS	26
+3.1 Safety issues directly contributing to the accident that have been addressed or resulted in recommendations	26
+3.2 Other safety issues directly contributing to the accident	26
+3.3 Safety issues not directly contributing to the accident that have been addressed
+or resulted in recommendations	26
+SECTION 4  - ACTION TAKEN	27
+4.1 MAIB actions	27
+4.2 Actions taken by other organisations	27
+SECTION 5  - RECOMMENDATIONS	28
+
+
+
+FIGURES
+
+Figure 1:	Orkney Islands, Scotland, with (inset) the wreck site at Scapa Flow
+
+Figure 2:	SMS Markgraf with shot lines
+
+Figure 3:	Karin and Jean Elaine's navigational history with estimated track for diver 1 and diver 2
+
+Figure 4:	Diver 1 recorded dive depths and timings of ascent
+
+Figure 5:	Karin deck arrangement and composite view of the wheelhouse [images are not from the day of the accident]
+
+Figure 6:	Representation of Karin's visual blind sectors
+
+Figure 7:	A typical DSMB in use
+
+Figure 8:	Diver 1's marked DSMB with its parted line and hand reel of a similar type to that used by diver 1
+
+Figure 9:	Accident location in the Orkney Islands Council Harbour Authority sea area
+
+
+ANNEXES
+
+Annex A:	MAIB Safety Bulletin SB2/2024, issued June 2024
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Karin
+
+GLOSSARY OF ABBREVIATIONS AND ACRONYMS
+BCD	-	buoyancy control device
+BDSG	-	British Diving Safety Group
+CCTV	-	closed-circuit television
+cm	-	centimetre
+DSMB	-	delayed surface marker buoy
+HMCG	-	His Majesty's Coastguard
+IMO	-	International Maritime Organization
+kts	-	knots
+m	-	metre
+mm	-	millimetre
+Mecal	-	Marine Engineers Certifying Authority Limited MCA	-	Maritime and Coastguard Agency
+MGN	-	Marine Guidance Note
+MGN 280 (M)	-		Small Vessels in Commercial Use for Sport or Pleasure, Workboats and Pilot Boats - Alternative Construction Standards
+MGN 424 (M)	-	Safety Responsibilities on Board Dive Boats, Amendment 1
+MGN 492 (M+F)	-		Health and Safety and Work: protecting those not employed by the ship owner, Amendment 1
+MGN 636 (M)	-		Merchant Shipping and Fishing Vessels (Health and Safety at Work) Regulations 1997, Amendment 2
+MRCC	-	Maritime Rescue Coordination Centre PMSC	-	Port Marine Safety Code
+RNLI	-	Royal National Lifeboat Institution
+RYA	-	Royal Yachting Association
+SAA	-	Sub-Aqua Association
+SCV Code	-		Small Commercial Vessel and Pilot Boat Code, as annexed to MGN 280 (M)
+SHA	-	Statutory Harbour Authority
+SMS	-	Seiner Majestät Schiff
+UTC	-	universal time coordinated
+VHF	-	very high frequency
+VTS	-	vessel traffic services
+
+TIMES: all times used in this report are British Summer Time (UTC +1) unless otherwise stated.
+
+SYNOPSIS
+On the morning of 28 September 2023, Paul Smith, a submerged recreational diver carrying out a decompression stop, died when he was struck by the rotating propeller of the UK registered dive workboat Karin. The diver was diving from a second dive workboat, Jean Elaine, and had been exploring the wreck of the German battleship SMS Markgraf in Scapa Flow, Scotland.
+
+The diver and his buddy were carrying out a drift decompression ascent. The pair had released a delayed surface marker buoy while submerged to alert support craft of their presence, the line of which was attached to the casualty's buoyancy control device.
+Although the delayed surface marker buoy was visible to the second dive boat waiting on the other side of the wreck, it was not seen by Karin's crew, and the vessel motored over its position. One of the two divers subsequently failed to resurface.
+
+Immediate search and rescue efforts were unsuccessful in trying to locate the missing diver, and his body was located on the seabed during a specialist search 3 weeks later. The diver's body, which showed signs of severe head injuries, was subsequently recovered one week later on 16 October.
+
+The investigation found that Karin's skipper was not maintaining a sufficient lookout despite manoeuvring in an area with multiple submerged divers. The investigation also found that the risk to divers was increased by the simultaneous operation of two dive boats on the same wreck and that existing harbour authority controls were insufficient to provide a robust safety barrier.
+
+The Maritime and Coastguard Agency has undertaken to extend the requirements of a previous MAIB recommendation and include in the new Sport & Pleasure Vessel Code that all small commercial vessels must implement a safety management system.
+
+Orkney Islands Council Harbour Authority has drafted a new edition of its Harbour Authority General Directions, detailing diving and recreational activities. A recommendation has been made to Orkney Islands Council Harbour Authority to conduct a further risk-based review of recreational dive boat operations for dive vessel operators within its areas of responsibility.
+
+Johns Diving Charters, the owner of Karin, has sold the vessel to a local operator and retired from the recreational diving support industry. The Chief Inspector of Marine Accidents has written to the new owner of Karin to highlight for their awareness the safety issues contained in this report.
+
+SECTION 1 - FACTUAL INFORMATION
+1.1 PARTICULARS OF KARIN AND ACCIDENT
+
+VESSEL PARTICULARSVessel's nameKarinFlagUKCertifyingMarine Engineers Certifying Authority LimitedIMO number/fishing numbersNot applicableTypeDive workboatRegistered ownerJohns Diving ChartersManager(s)Johns Diving ChartersConstructionWoodYear of build1945 (approximate)Length overall24mGross tonnage68.65Minimum safe manning2Authorised cargoNot applicable
+VOYAGE PARTICULARSPort of departureStromness, Orkney Islands, ScotlandPort of arrivalStromness, Orkney Islands, ScotlandType of voyageRecreational diving expeditionCargo informationNot applicableManning2
+MARINE CASUALTY INFORMATIONDate and time28 September 2023 at 0936Type of marine casualty or incidentVery Serious Marine CasualtyLocation of incidentScapa Flow, Orkney Islands, ScotlandPlace on boardPropellerInjuries/fatalities1 fatalityDamage/environmental impactNoneVessel operationRecreational diving supportVoyage segmentMid-waterExternal & internal environmentDaylight; good visibility; smooth seas; light winds; air temperature 8°C;
+sea temperature 12°CPersons on board12
+1.2 BACKGROUND
+
+Karin and Jean Elaine1 were two of six similar motor vessels based at Stromness, Scotland that provided support for groups of recreational divers who chartered the vessels for diving trips on the scuttled World War 1 battle ships in Scapa Flow.
+
+The wreck of Seiner Majestät Schiff (SMS)2 Markgraf, at a depth of 45m, was one of seven battleships that remained in Scapa Flow. Over the years, these wrecks had become popular sites for recreational divers. On typical charters, divers carried out two dives per day from their respective vessels before returning to port each night.
+
+On 28 September 2023, Karin was on day six of a one-week charter for a group of 10 recreational leisure divers. Jean Elaine was under charter for the same period for a group of 12 recreational leisure divers, including Paul Smith (diver 1) and his dive buddy (diver 2).
+
+1.3 NARRATIVE
+
+On 28 September 2023, at 0835 and 0910 respectively, Jean Elaine and Karin left Stromness and were navigated by their skippers through Hoy Sound (Figure 1) and proceeded to the German battleship wreck sites in Scapa Flow, a passage of approximately 1 hour.
+
+(c) Made Smart Group BV 2025 (c) i4 Insight 2025 charts are non type-approved and for illustration purposes only
+
+
+Stromness
+
+
+
+
+
+
+
+
+
+
+
+
+Wreck siteKarin's trackFigure 1: Orkney Islands, Scotland, with (inset) the wreck site at Scapa Flow
+
+
+1  On 22 July 2024, Jean Elaine grounded while underway in Deer Sound, Orkney, Scotland. The vessel later broke up and was declared a constructive total loss. Jean Elaine's owner, Scapa Flow Charters, subsequently ceased operations.
+2  All ships of the Imperial German Navy were designated SMS (His Majesty's Ship).
+
+1.3.1 Arrival at site
+
+At 0942, Jean Elaine arrived at the wreck site of SMS Markgraf (Markgraf). The wreck was marked on the surface by two shot line3 marker buoys, one at the bow and one at the stern (Figure 2). Nine of the 12 divers on board had completed their final preparation checks before they entered the water in three separate groups; three of the divers remained on board.
+
+Source image from Mr R. Macdonald
+Figure 2: SMS Markgraf with shot lines
+
+The first three divers started their descent at 0955, using the bow shot line, followed shortly after by four divers using the aft shot line. At 0958, Jean Elaine transited from east to west of the wreck, passing over the seven submerged divers as it did so. At 1000, diver 1 and diver 2 entered the water and swam down to the wreck
+via the bow shot line (Figure 3); their dive was scheduled to last approximately 45 minutes.
+
+At 1004, Karin arrived at the wreck site of Markgraf. When the vessel was about 200m from the shot lines (Figure 3), Karin's skipper noticed Jean Elaine drifting approximately 50m to the east of the wreck location. Karin's skipper called
+Jean Elaine on the very high frequency (VHF) radio and requested permission to enter the site and deploy divers. Jean Elaine's skipper checked for signs of divers and/or bubbles at the shot lines and was satisfied that they were clear. Jean Elaine's skipper granted access to enter and briefed Karin's skipper that they had nine divers on the wreck.
+
+3  A type of down line consisting of a line and a buoy. The line was attached to the dive site wreck and was used as a surface and underwater datum point. It provided a marked entry and exit point and could be used for decompression stops.
+
+(c) Made Smart Group BV 2025 (c) i4 Insight 2025 charts are non type-approved and for illustration purposes only
+
+Positions of Jean Elaine and Karin at time of collision
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 3: Karin and Jean Elaine's navigational history with estimated track for diver 1 and diver 2
+
+At 1009, Karin's skipper manoeuvred the vessel into position at the stern shot line and, assisted by the deckhand, deployed four of its divers (Figure 3). Karin then passed over Jean Elaine's nine submerged divers as it crossed to the wreck's bow shot line, where a further four divers were deployed. Two passengers remained
+on board. Karin's deckhand then went to the galley to prepare lunch for the divers' return. There were now 17 divers in the water, nine from Jean Elaine and eight from Karin.
+
+With all divers deployed, both skippers periodically manoeuvred their vessels within 200m of the wreck location as they monitored the surrounding waters and waited for their respective dive groups to surface.
+
+At 1018, diver 1 and diver 2 had, assisted by the tide, traversed the hull of Markgraf eastwards and passed the stern shot line to inspect the wreck's rudders. The pair then began a drift ascent4 to a depth of 30m, where they remained for 4 minutes (Figure 4). At 1020, diver 1 deployed a delayed surface marker buoy (DSMB)5 to indicate his presence to any surface vessels. At the same time, Karin was drifting with the wind approximately 130m to the eastnorth-east of the divers' position. At 1025, diver 1 and diver 2 reached the first of their two planned decompression stops at a depth of 15m; this lasted approximately 3 minutes.
+
+At 1029, Jean Elaine's skipper collected a single diver to the south of the wreck before crossing the wreck site to collect a second group of divers that had surfaced approximately 100m to the north at 1034 (see Figure 3). As Jean Elaine transited through the area, the deckhand, who was acting as a lookout at the bow, noticed two separate DSMBs on the surface to the east of their position, approximately 20m apart and in Karin's vicinity. The deckhand lost sight of the two DSMBs as they switched their focus to the group of three divers ahead of them that they were about to recover. At the same time, to compensate for the effects of the wind and tide that had pushed it to the north-west, Karin's skipper engaged the vessel's propulsion system and turned the dive workboat to port (see Figure 3). Diver 1 and diver 2 were by now approximately 110m south of Karin and 3m below the surface, completing their final decompression stop (Figure 4). Diver 1 was suspended by his
+DSMB, which he had attached to his buoyancy control device (BCD)6 via a steel clip, while diver 2 circled around him.
+
+At 1036, diver 2 turned away from diver 1 and looked towards the surface. Diver 2 suddenly noticed an approaching vessel and, realising a collision was imminent, immediately dived to a depth of 9m as Karin passed over the dive pair's position at 3.2kts (see Figure 3). Diver 2 heard something 'twang' as they descended.
+Jean Elaine was 180m north-west of Karin when its crew saw Karin pass over a DSMB and, shortly after, noticed a pair of blue fins momentarily surface close to the DSMB before submerging again. Diver 2 then returned to the surface and swam towards diver 1's DSMB, expecting it to be attached to diver 1, but the line had parted, and there was no sign of diver 1. Diver 2 then took hold of the remaining line and waited to be collected by Jean Elaine.
+
+
+
+
+
+4  A controlled ascent to the surface where a diver is carried along by the tidal current while conducting decompression stops at appropriate depths.
+5  See section 1.8.4 for description of a DSMB.
+6  Divers could achieve neutral buoyancy by adjusting the amount of air in the BCD. This allowed them to hover at any depth, ascend or descend slowly, and stay in a controlled position.
+
+For illustrative purposes only: not to scale
+
+
+
+
+
+
+
+
+
+
+DSMB
+
+
+
+
+0
+
+5	1000: Entered water
+10
+
+15
+
+20
+
+25
+
+30
+
+35
+
+40	SMS Markgraf
+
+45
+
+50
+
+
+
+                 1036: Contact at 1m 1030: Final decompression stop at 3m
+
+
+
+
+1025: First decompression stop at 15m
+
+
+
+
+
+
+1020: DSMB deployed
+
+
+
+
+
+1036: Diver 1 dropped to seabed at 45m
+
+
+Figure 4: Diver 1 recorded dive depths and timings of ascent
+
+1.3.2 Post-accident
+
+At 1041, Jean Elaine`s skipper repositioned their vessel towards diver 2 for collection. Once recovered on board, diver 2 asked the skipper about the whereabouts of diver 1; none of the group could locate him. The group presumed that he was carrying out an additional decompression stop, which was not unusual. Jean Elaine's skipper broadcast a safety message via VHF channel 16 to other vessels in the area, stating that they had an unmarked diver decompressing
+and to exercise caution in their vicinity. They then continued to monitor the surrounding waters for the four remaining divers who needed to be recovered once they resurfaced.
+
+About 10 minutes later, as Jean Elaine's crew waited for the remaining divers to surface, the skipper requested that three nearby diving support vessels close on their position to assist with locating diver 1, the nearest being over 800m to the south. Jean Elaine's skipper requested the skipper of the nearby diving support vessel Clasina to contact His Majesty's Coastguard (HMCG) on their behalf and report the missing diver situation, which Clasina's skipper promptly did on VHF channel 16.
+
+On board Karin, neither the skipper nor deckhand noticed anything to indicate that there had been any contact with a submerged diver. The skipper proceeded to recover their divers on board before they assisted with the search for the missing diver.
+
+1.3.3 Emergency response
+
+At 1108, Aberdeen Maritime Rescue Coordination Centre (MRCC) received the distress message relay and subsequently mobilised search and rescue assets. This included two Royal National Lifeboat Institution (RNLI) all-weather lifeboats from Stromness and Longhope, two rescue helicopters, and four other diving support vessels as well as shore-based assets, who conducted a coordinated search of the area to locate the missing diver.
+
+At 1355, Aberdeen MRCC granted Jean Elaine permission to return to Stromness so its divers could receive assistance following the distress of the events. On arrival in Stromness, Jean Elaine's crew and passengers went ashore into the care of Police Scotland.
+
+At 1400, Karin's divers started their second dive of the day, 280m to the north of Markgraf on its sister ship, SMS Kronprinz Wilhelm. Karin's crew continued to monitor the surrounding waters for diver 1 throughout the dive, until the vessel departed the wreck site at 1539 and returned to port. Karin arrived in Stromness at 1654.
+
+At 2030, following an unsuccessful search of the area for the missing diver, HMCG stood down all of the remaining assets and the search was terminated.
+
+1.3.4 Recovery
+
+On October 9, Police Scotland tasked a local specialist diving company to locate the missing diver. The team started their search that day at diver 1's last known location. Using a side scan sonar system, the dive company detected a probable body on
+
+the seabed 109m east of Markgraf, indicative of the missing diver. Police Scotland were informed and, on 16 October 2023, 19 days after the accident, a body was recovered from the seabed by a specialist dive team. The body was subsequently identified as diver 1.
+
+1.4 ENVIRONMENTAL CONDITIONS
+
+At the time of the accident, the wind was south-easterly at 5kts with calm seas, good visibility and clear skies. The tidal stream was setting north-east at about 1kt and
+in the last phase of flood. The sea temperature was 12°C. High water at Stromness
+was at 0830 and approximately 1 hour later at the wreck site of Markgraf.
+
+Horizontal visibility in the water column was a maximum of 10m and approximately 6m at the wreck level.
+
+1.5 DIVER 1
+
+Paul Smith was a 70-year-old UK national who had retired from work in 2020. A qualified recreational diver, he had completed more than 1,000 dives over a 30-year period. Diver 1 had qualified as an Open Water Instructor in 2010, and completed the Sub-Aqua Association (SAA) Club Nitrox Instructor course in
+2023. He had dived on the wrecks at Scapa Flow, including Markgraf, many times previously from both Karin and, since 2006, Jean Elaine.
+
+Diver 1 was 180cm tall, of medium build and was described as actively fit. He normally wore hearing aids, although not when diving. An examination of diver 1's diving equipment after his body was recovered identified no defects, his air tank display gauge registered 30 bar of air pressure, and there was a sheathed knife attached to his left leg.
+
+The postmortem examination identified that diver 1 had a large head injury, measuring 21cm in length, which ran from just above his right eye and coursed backwards, curving above his right ear. Diver 1's skull was fractured over the entire injury. The pathologist concluded that, this man died of blunt force head injury sustained as a diver involved in a marine vehicular collision.
+
+1.6 KARIN
+
+1.6.1 General information
+
+Karin was a 24m wooden-hulled vessel with a 2.7m draught, built in Germany circa 1945 for use as a fishing vessel. In 1995, Karin was purchased by Johns Diving Charters and registered in the UK. The owner subsequently converted Karin to operate as a workboat to support recreational diving activities and sightseeing trips.
+
+Karin was certified by the Marine Engineers Certifying Authority Limited (Mecal) under the Maritime and Coastguard Agency (MCA) Small Commercial Vessel and Pilot Boat (SCV) Code, annexed to Marine Guidance Note (MGN) 280 (M)7. Karin was certified to carry up to 12 passengers.
+
+
+
+
+7  Small Vessels in Commercial Use for Sport or Pleasure, Workboats and Pilot Boats - Alternative Construction Standards.
+
+Karin was propelled by a single, keel-cooled diesel engine connected to a reduction gearbox that drove a four-blade, unguarded, fixed pitch propeller. The engine speed and propulsion direction were controlled by a dual lever cable throttle control unit.
+The steering was controlled by a single rudder, which was operated by either hand steering via the ship's wheel or the autopilot unit, which was mounted to the right of the wheelhouse central console (Figure 5).
+
+Image courtesy of East Cheshire Sub-Aqua Club
+
+Figure 5: Karin deck arrangement and composite view of the wheelhouse [images are not from the day of the accident]
+
+1.6.2 Crew
+
+Karin's skipper had over 40 years' experience as a commercial workboat skipper and operator and held a Royal Yachting Association (RYA) Yachtmaster Offshore qualification, which was commercially endorsed for power-driven craft. The Johns Diving Charters website stated that the skipper was an experienced, commercially certified diver and had trained as a diving instructor.
+
+Karin's deckhand had worked at sea for over 40 years on various fishing boats. Their duties on board Karin were to help with berthing activities, cook, and assist the divers during their deployment from and recovery to the vessel. Additionally, the deckhand assisted the skipper during diving operations by monitoring the waters around the vessel for diver movements. The deckhand had undertaken basic courses in sea survival, first aid and firefighting; they did not hold any formal navigational watchkeeping qualifications.
+
+1.6.3 Wheelhouse visibility
+
+Karin had been adapted to make it more suitable as a workboat; this included
+fitting a raised shelter deck forward, which extended 10m aft from the bow and encompassed the galley/mess deck and accommodation area, and a second shelter deck area around the stern.
+
+Karin's wheelhouse was situated aft of midships, its forward bulkhead a distance of 16m from the stem. Karin's working deck, where divers would group before and after a dive, was situated between the forward shelter deck and the wheelhouse (Figure 5). This arrangement was typical of a fishing vessel of its age and
+was intended to provide skippers with oversight of the working deck during
+fishing operations.
+
+The view from Karin's helm position was partially obscured by the 165mm stanchion supports between the five forward-facing windows, the shelter deck areas, the centreline-mounted forward mast and the vessel's gangway, which was stowed in a raised position. The height of the bow impeded forward visibility of the sea surface from the wheelhouse helm station by approximately 100m ahead of the vessel. This visual blind sector covered an area of 20° on each side of the centreline and a total area of 40° (Figure 6). Karin's skipper would post the deckhand to act as a lookout on top of the forward shelter deck area and relay observations verbally back to
+the helm when detecting divers in the water, especially when they were within the vessel's visual blind sector.
+
+
+For illustrative purposes only: not to scale
+
+Figure 6: Representation of Karin's visual blind sectors
+
+
+1.7 JEAN ELAINE
+
+1.7.1 General information
+
+Jean Elaine was built in 1956 as a fishing vessel and was owned and managed by Scapa Flow Charters. The vessel had been converted to operate as a commercial workboat that supported recreational diving, sightseeing trips and survey work.
+Jean Elaine was certified by Mecal under the MCA's SCV Code, annexed to MGN
+280 (M). Jean Elaine was certified to carry up to 12 passengers.
+
+1.7.2 Crew
+
+Jean Elaine's skipper held a commercially endorsed Certificate of Service as a Yachtmaster Offshore for Power Driven Craft, issued by the MCA in 1994. The skipper had over 35 years' diving experience and was formerly a certified commercial diver.
+
+The deckhand had worked on board Jean Elaine with the skipper for the past 5 years and held a commercially endorsed RYA/MCA Yachtmaster Coastal Certificate of Competence for power-driven craft. The deckhand's duties included diver safety, filling and preparing the divers' air tanks, and acting as a lookout at the bow to assist the skipper while divers were in the water.
+
+1.8 DIVE OPERATIONS
+
+1.8.1 Safety briefing and dive entry
+
+Jean Elaine's skipper played an audio safety briefing to passengers through the vessel's public address system. The content of the briefing included:
+
+? safe movement around the vessel
+
+? muster points
+
+? liferaft location
+
+? no-go areas.
+
+The divers were also verbally briefed to use the shot lines for ascent/descent as this provided the safest method and, should they choose to ascend away from the shot lines, to use a DSMB if comfortable to do so. Once on the surface, the divers were to give an agreed hand signal to indicate they were ready for collection. No other dive-related safety topics were briefed. The skipper's practice was to leave dive preparation to the divers, who would check their own and each other's dive equipment. Assisted by the deckhand, and when ready to do so, the divers would enter the water via the starboard side at their chosen shot line while the skipper monitored the vessel's position.
+
+1.8.2 Recreational diving support
+
+The skippers of Karin and Jean Elaine would discuss options for the next day's dive programme with their respective passengers, factoring in local conditions and the preferences of the dive groups. Once these individual plans had been established, the two skippers would communicate their intentions to each other to avoid simultaneous arrival at the same location. If the two groups planned to dive on the same wreck, the skippers would stagger their sail times to avoid congestion at the wreck site.
+
+The recreational divers were classed as passengers while on board the workboats. The crossover from passenger to diver occurred when they entered the water. Once the divers were submerged, the vessels' crews had no means to communicate
+with them.
+
+When their divers were submerged, the vessels would remain close by for the first few minutes in case a diver returned to the surface due to kit failure. Once the skippers were satisfied that there were no issues, they would move clear of the wreck site and be on standby for their divers to resurface, monitoring the area for other vessels in transit as a safeguard
+
+Once the divers had completed their dives, they would return to the surface either via the shot lines as briefed by the crews or, if they had missed the shot lines, by way of a drift ascent and deploy a DSMB to indicate their presence underwater.
+
+The skippers would wait for their respective divers to surface and display a predetermined signal to indicate they were ready for collection. This would be acknowledged by the crew, and the workboats would then move in to collect their divers in turn. Both vessels were equipped with a hydraulic diver recovery lift on their starboard side (see Figure 5). Additionally, Karin had a rigid ladder that acted as a
+
+backup system and was deployed for the duration of the divers' time in the water. The ladder extended 2m below the surface on the vessel's starboard side. When reboarding in groups, divers would use the ladder for support as they waited their turn at the lift. Karin's deckhand would signal the skipper when the divers were in position and the skipper would operate the lift from the wheelhouse to recover the divers on board.
+
+Some operators on Orkney had installed external facing closed-circuit television (CCTV) systems on board their vessels. This helped the crews to monitor the areas surrounding their vessels that were not visible from the helm, as they recognised the risks of operating near submerged divers who were close to the surface. Neither Karin nor Jean Elaine had a CCTV system.
+
+1.8.3 Dive computers
+
+Diver 1 and diver 2 each used dive computer units that displayed and recorded real-time parameters such as the time elapsed, water depth and temperature. They also facilitated divers to plan their ascent, including when and for how long to conduct decompression stops.
+
+The download of diver 1's dive computer showed a sharp spike in depth from 3m to 1m within 8 seconds at the time Karin passed above him. A rapid descent of 41m to the seabed was recorded 52 seconds later (see Figure 4).
+
+1.8.4 Delayed surface marker buoy
+
+A DSMB is an inflatable tube or buoy about 1.4m in length with a 20cm circumference and typically orange in colour. DSMBs are deployed by ascending divers towards the end of a dive and inflated using the diver's air supply (Figure 7). DSMBs are typically connected to a hand reel to enable the user to control the length of line being payed out or reeled in and keep it taut in line with the depth of water (Figure 8). DSMBs assist support craft to locate and monitor divers' locations, and in doing so reduce the risk of contact and injury.
+
+Image sourced from BSAC (article 'Safety and the dSMB' was originally published in SCUBA magazine, Issue 149, October 2024)
+Figure 7: A typical DSMB in use
+
+Image courtesy of diver 2, David Scott	Image of Aqua rachet dive reel, sourced from Scuba
+Figure 8: Diver 1's marked DSMB with its parted line and hand reel of a similar type to that used by diver 1
+
+
+1.9 ORKNEY ISLANDS COUNCIL HARBOUR AUTHORITY
+
+1.9.1 Overview
+
+The Orkney Islands Council Harbour Authority (the harbour authority) was the Statutory Harbour Authority (SHA) responsible for the safe and efficient operation of 29 piers and harbours throughout the Orkney Islands, including Scapa Flow (Figure 9). The harbour authority operated under the principles set out in the Port Marine Safety Code (PMSC)8. The harbourmaster managed the safe navigational operation of the harbour area by using Orkney vessel traffic services (VTS) to monitor marine traffic.
+
+The Orkney Harbour Areas Byelaws 1977 stated that:
+
+Every vessel shall be navigated with such care and caution and at such speed and in such manner as not to endanger the lives of or cause injury to persons or damage to property...
+
+
+
+8  The national minimum safety standard to which every aspect of UK ports and marine facilities should be managed.
+
+On diving within a harbour area, the byelaws stated that:
+
+No person who is wearing or equipped with clothing or apparatus designed or adapted for swimming underwater or diving shall swim underwater, dive or fish in a harbour area except with the written permission o the harbour master. [sic]
+
+The harbour authority had also established a local safety committee that included support vessel operators. The committee aimed to enhance diving safety, improve coordination and communication, mitigate risks, and encourage a positive safety culture. In 2020, the safety committee was disbanded due to a decline in the number of operators in the area.
+
+Image courtesy of Orkney Islands Council Harbour Authority
+Figure 9: Accident location in the Orkney Islands Council Harbour Authority sea area
+
+1.9.2 Diving permit system
+
+The harbour authority operated a diving permit system for vessel operators so it could monitor their movements and to ensure safe water space management.
+Before operations started, the harbour authority required vessel operators to submit a completed recreational/leisure diving permit request form for activities being conducted in Orkney harbour areas during the next 1-month block. The permit request was to be submitted to the harbourmaster one month in advance of the planned diving operations, where it would be reviewed by an authorised harbour officer. Permission would be granted or refused in writing to the operator.
+
+The diving permit to dive outlined the harbour authority's general conditions for the applicant to follow during diving operations. These included:
+
+? To ensure operators were aware of the general conditions and precautions for diving in the harbour area.
+
+? Responsibility for safety was delegated to the divers, dive supervisors and the dive vessel skipper/owner.
+
+? The permit applicant was accountable for the conduct and behaviour of all divers on their vessel/diving under the permit.
+
+? All leisure divers were to confirm to the vessel skipper that they were suitably experienced, qualified and medically fit for each dive.
+
+? Onsite coordination would be via VHF and allocated time slots would be introduced for dive activity during busy periods.
+
+? No diving was to take place without written permission being granted.
+
+As part of its recreational/leisure diving permit system the harbour authority introduced the facility to restrict dive activity on the wrecks at Scapa Flow by allocating time slots for different types of vessels. These were intended to manage water space and avoid excessive numbers of vessels/divers in any area. When
+in force the allocated time slots were controlled through Orkney VTS. The permit stated that when time slots were not allocated, the dive vessels were to coordinate with each other on the basis that the first vessel on site had the right to prevent other vessels from diving in its vicinity. Allocated time slots were not in force on the day of the accident.
+
+Karin`s operator had submitted diving permit requests to the harbour authority for every month of operation from 2014 to August 2023, all of which had been approved. The operator had not submitted a permit request form received by the harbour authority to cover its operations for September 2023.
+
+1.9.3 Onsite coordination
+
+As set out in the harbour authority diving permit, the first vessel to arrive had control of the dive site and could prevent access to other vessels. The skippers of the vessels would communicate with each other via VHF radio to determine one another's intentions and receive confirmation from the skipper of the first vessel on
+site that it was safe to proceed. The vessel skippers were required to comply with all SHA instructions and directions, and to keep the harbour authority fully informed of their individual vessel movements via Orkney VTS.
+
+It was common practice in this area for divers from two or more vessels to dive simultaneously on the same wreck. If the environmental conditions were favourable, up to three vessels would simultaneously deploy divers on a wreck site.
+
+1.9.4 Orkney vessel traffic services
+
+The purpose of Orkney VTS was to contribute to safe and efficient operations for marine traffic and protection of the environment for all vessels over 12m in length operating within the harbour authority's area. All applicable vessels were required to report their movements via VHF radio to Orkney VTS, which operated a continuous 24-hour watch from Orkney Marine Services headquarters.
+
+1.10 REGULATIONS AND GUIDANCE
+
+1.10.1 The Merchant Shipping and Fishing Vessels (Health and Safety at Work) Regulations 1997
+
+Guidance for The Merchant Shipping and Fishing Vessels (Health and Safety at Work) Regulations 1997 was provided in MGN 636 (M). Employers were required under the regulations to take appropriate measures to ensure the health and safety of workers and other persons, so far as reasonably practicable. MGN 492 (M+F)
+Amendment 1, Health and Safety and Work: protecting those not employed by the shipowner, provided information about the safety and duty of care for other
+people on a vessel and stated that the term 'other person' may include passengers travelling on board.
+
+On responsibility for a vessel's operation, MGN 492 (M+F) Amendment 1 stated that:
+
+Regulation 4 says that where an individual employer does not have control of the operation of the ship, the duty of care resides with the person who has "control of that matter". The company has overall control of the operation of the ship, and therefore has a duty to assess the risks to others on board ship in so far as they are affected by the operation of the ship.
+
+1.10.2 Vessel traffic services
+
+The IMO Resolution A.1158(32), Guidelines for Vessel Traffic Services, stated that:
+
+The purpose of VTS is to contribute to the safety of life at sea, improve the safety and efficiency of navigation and support the protection of the environment within a VTS area by mitigating the development of unsafe situations through:
+
+1. providing timely and relevant information on factors that may influence ship
+movements and assist onboard decision-making;
+
+2. monitoring and managing ship traffic to ensure the safety and efficiency of
+ship movements; and
+
+3. responding to developing unsafe situations.
+
+1.10.3 The Small Commercial Vessel and Pilot Boat Code
+
+In 2004, the MCA issued the Small Commercial Vessel and Pilot Boat (SCV) Code as an annex to MGN 280 (M), Small Vessels in Commercial Use for Sport or
+Pleasure, Workboats and Pilot Boats - Alternative Construction Standards. Vessels
+complying with the SCV Code were issued with an SCV Certificate.
+
+The guidance provided in MGN 280 (M) required risk assessments to be conducted that identify the hazards and personnel at risk and directed skippers to take appropriate measures to remove the risks in so far as possible. There was no requirement for risk assessments to be written down and none were documented on either Karin or Jean Elaine.
+
+Section 3.4 on Sports Diving, Sea Angling and Other Water Based Recreational Activities stated that:
+
+The objectives for sport have been set out by Government. The principle of self-determination for sports bodies has been encouraged to the extent that when it has been necessary to impose some form of control on such bodies
+- such as safety or environmental matters - the policy has usually been to encourage the bodies to adopt voluntary codes or procedures which would have the same effect as regulation.
+
+The Sport & Pleasure Vessel Code will replace the SCV Code and is due to be enabled by The Merchant Shipping (Vessels in Commercial Use for Sport or Pleasure) Regulations in 2025. The Sport & Pleasure Vessel Code will apply
+to newly built vessels, and to existing vessels within a yet to be defined period
+following inception.
+
+1.10.4 Safety responsibilities on board dive boats
+
+The guidance provided in MGN 424 (M) Amendment 1, Safety Responsibilities on Board Dive Boats, focused on the safe conduct of diving operations, especially on vessels where the owner, operator or crew were not the same as the diving contractors and did not control the diving operation. The notice summarised the main points as:
+
+? the duties of the owner/operator, master/crew, diving contractor and diving supervisor and their relationship to each other and individual responsibilities;
+
+? particular emphasis on ensuring that there is a coherent diving plan and risk assessments are carried out.
+
+? ensuring that the divers are competent and properly qualified.
+
+1.10.5 British Diving Safety Group
+
+Established in 2002, the British Diving Safety Group (BDSG) provided guidance for recreational divers that included good practice for DSMB use. The BDSG's intended purpose was to unite organisations and agencies involved in recreational scuba diving and related support activities to improve safety.
+
+Until 2006, some UK recreational diving organisations had accepted the practice of divers attaching a DSMB to their person. The risks associated with doing so included entanglement, uncontrolled ascent and the inability to detach in an emergency. In recognition of these risks, the BDSG produced universally adopted guidance for the use of DSMBs, which stated:
+
+When deploying a DSMB from depth, the diver should not attach the reel to their person as they may be carried up by the device if the reel jams. Great care should be taken to avoid entanglement in the line9.
+
+1.11 PREVIOUS/SIMILAR  ACCIDENTS
+
+1.11.1 Karin - contact with a recreational diver
+
+On 23 June 2023, Karin came into contact with one of its recreational divers during the single-handed operation of the vessel. The diver had deployed from Karin's starboard side to commence a dive on a wreck at Scapa Flow. The diver was in
+a state of negative buoyancy and their drysuit was fully deflated in readiness for the descent. For reasons unknown, the diver failed to submerge as planned and was drawn towards the vessel's stern as it moved through the water. Unsighted by Karin's skipper, the diver was struck on the leg by the vessel's propeller before it passed clear.
+
+The diver was able to shout to the skipper, who then manoeuvred the vessel and recovered the diver on board via the diver recovery lift. The diver was taken ashore and transferred to the local hospital, where they were assessed and treated for minor injuries, including the wound to their leg. The diver remained in hospital for overnight observation and was discharged the following day.
+
+1.11.2 Seadogz - high-speed contact
+
+On 22 August 2020, the commercially operated rigid inflatable boat Seadogz hit a navigation buoy at high speed in Southampton Water. The collision resulted in the death of a 15-year-old passenger (MAIB report 10/202310). The investigation found that small high-speed passenger craft had no specific requirement to operate a safety management system. Recommendations made to the MCA included, to:
+
+... expedite the introduction of The Sport & Pleasure Vessel Code and its enabling legislation at the earliest possible opportunity to ensure that additional requirements are introduced for small commercial high-speed passenger
+craft for:
+
+? 	the operators of such craft to implement a safety management system that includes, but is not limited to:
+
+? operational procedures for the craft's full range of intended operations, including navigational and emergency response procedures.
+
+? accident reporting and investigation procedures.
+
+
+9  https://bdsg.org.uk/wp-content/uploads/2020/07/BDSG-DSMBs.pdf
+10 https://www.gov.uk/maib-reports/heavy-contact-between-the-high-speed-passenger-craft-seadogz-and-a- navigation-buoy-with-loss-of-1-life
+
+SECTION 2 - ANALYSIS
+2.1 AIM
+
+The purpose of the analysis is to determine the contributory causes and circumstances of the accident as a basis for making recommendations to prevent similar accidents occurring in the future.
+
+2.2 OVERVIEW
+
+Paul Smith died after he was struck by the rotating propeller of the dive workboat Karin, which was providing support for another group of recreational divers. Paul Smith and Karin's crew were almost certainly unaware of each other's presence.
+
+The analysis will examine the circumstances leading to the accident; the lookout functions on board Karin; onsite coordination between the two dive workboats; the operational oversight of the dive vessel companies; and the role of the SHA.
+
+2.3 THE ACCIDENT
+
+The nature of diver 1's head injuries, the absence of any signs of distress and the fact he had adequate breathing air remaining all led to the conclusion that he was fatally injured after being struck by a rotating propeller. Two vessels were operating in the immediate area at the time of diver 1's disappearance, and the nearest vessel to these was over 800m away. Jean Elaine was almost 200m away at the time of the accident so Karin was therefore the only vessel that could have struck diver 1.
+
+Diver 2 was fortunate to see Karin approaching and took immediate evasive action to avoid contact. There was no time for them to alert diver 1 and they lost sight of him as they dived to a depth of 9m. Diver 1 might have had his back to Karin and diver 2 as he focused on his decompression stop. The less than 10m horizontal visibility in the water column and diver 1's impaired hearing might also have affected his ability to detect Karin. It is unknown whether diver 1 was aware of the approaching vessel as the moment of contact between diver 1 and Karin was unwitnessed.
+
+Diver 1 was fatally injured when he was struck by Karin's rotating propeller as the vessel passed overhead. It is possible that diver 1's DSMB line snagged on part of the vessel's hull or its diver recovery ladder and drew diver 1 into the path of the propeller blades.
+
+2.4 DIVER VULNERABILITY
+
+The use of shot lines provided the safest method of ascent for divers as it enabled them to surface in a known position. Vessel operators knew to keep clear of the shot line marker buoys except when retrieving or dropping off divers. Divers on Jean Elaine were verbally briefed that the shot lines were the safest way to ascend.
+
+It was not uncommon for divers to lose sight of the shot lines, to drift past them or, despite the safety benefits, to leave the main wreck site to explore the surrounding area. This meant that, in practice, divers regularly ascended away from the shot lines using a DSMB to mark their position and facilitate decompression stops. Divers ascending away from the shot lines could effectively surface anywhere across the 175m wreck site and surrounding area, increasing their vulnerability to contact and entanglement with surface vessels.
+
+Diver 1 and diver 2 had drifted more than 100m past Markgraf's stern shot line and were conducting a decompression stop as part of their drift ascent when the accident happened. Consequently, they were distant from the shot line marker and reliant on their DSMB being seen. Divers are especially vulnerable to contact with
+vessels when conducting shallow depth decompression stops and surfacing due to low subsurface visibility, current, and the variability of the dive workboats' lookouts. Their safety largely relies on surface craft sighting their DSMB and maintaining a safe distance.
+
+2.5 VISIBILITY AND LOOKOUT ON BOARD KARIN
+
+2.5.1 Forward visibility
+
+Diver 1 deployed his DSMB about 16 minutes before the contact with Karin and it was visible on the surface to Jean Elaine's crew from approximately 200m away. However, Karin's skipper did not see the DSMB from their position in
+the wheelhouse.
+
+Karin was built as a fishing vessel before being modified to operate as a workboat. The original design was typical for a fishing vessel of its age as it provided a broad view of the open working deck from the wheelhouse; however, the modifications introduced restrictions that impacted Karin's new purpose. These changes, coupled with the wheelhouse's relative height and proximity to the raised shelter deck on the foredeck, reduced forward visibility from the helm station by approximately 100m ahead of the vessel at sea level (Figure 6).
+
+Other vessels conducting similar operations to Karin had identified the risks of divers surfacing within their blind sectors. These have installed CCTV systems and have crew located in effective lookout locations to mitigate the risk of contact with divers.
+
+Diver 1 and diver 2 were about 110m away when Karin began to turn to port. This meant that their DSMB was almost certainly within Karin's blind sector by the time the turn was completed, which impeded the skipper's ability to see it from the wheelhouse as the vessel closed on its position. Without a lookout on the bow the skipper navigated unknowingly towards the submerged divers, putting them at risk of contact with the vessel.
+
+2.5.2 Lookout arrangements
+
+The lookout arrangements of nearby vessels were critical to diver safety, given that, between them, Jean Elaine and Karin had 17 divers in the water spread across the 175m wreck site.
+
+On board Jean Elaine the deckhand was stationed at the bow, looking out for signs of surfacing divers and DSMBs, while the skipper was in the wheelhouse. An effective lookout was therefore maintained.
+
+On board Karin the restriction to forward visibility from the wheelhouse necessitated a lookout at the bow, and it was stated that it was normal practice to do so while navigating through dive sites. However, the deckhand was not in position on the bow and was undertaking other duties in the galley. Considering the non-fatal previous accident involving Karin, when a diver was similarly struck by its propeller during single-handed operation of the vessel, it is apparent that the stated procedure of
+
+a lookout posted on the bow was not always used. This was most likely because Karin's skipper had previously operated the vessel single-handedly and was comfortable doing so. Consequently, divers on or near the surface were at risk of not being seen.
+
+It is evident that the lookout arrangements on board Karin were ineffective, placing
+divers at risk of collision with the vessel while they were submerged close to the surface.
+
+2.6 OPERATIONAL PRACTICES
+
+2.6.1 Communications
+
+Detailed and effective communication between the skippers of Karin, Jean Elaine, and Orkney VTS was essential to maintain the safety of divers in the water.
+Both skippers were former divers and therefore likely aware of the risks faced by submerged divers.
+
+Karin and Jean Elaine's skippers had a brief radio exchange on arrival at the wreck site, during which Karin's skipper requested permission for Karin to enter the site and deploy divers. Following a quick visual check of the area, Jean Elaine's skipper granted permission for Karin to access the site. This was the only communication between the two skippers until after diver 1 was reported missing.
+The vessels' movements were not relayed to Orkney VTS. The absence of detailed communication between the skippers beforehand meant that the number of divers in the water and the time they were expected to surface was not completely known by either skipper.
+
+It was likely that Jean Elaine's divers would surface before Karin's divers because they had started their dive first. However, Karin's crew were unaware of this, which increased the risk of accidental contact with the divers. Jean Elaine's crew had noticed two separate DSMBs close to Karin but did not communicate this information to Karin's skipper. Consequently, the opportunity to warn Karin's crew about the close proximity of surfacing divers was missed.
+
+With more than one dive workboat intending to operate on a single dive site, detailed and frequent communication between the skippers, and relaying their vessels' movements to VTS, was essential to ensure deconfliction and prevent accidents.
+The opportunities to highlight diver 1's potential whereabouts and prevent contact with Karin were missed.
+
+2.6.2 Safety management
+
+The safety of divers on board support vessels such as Karin and Jean Elaine was required to be managed in line with MGN 280 (M), MGN 636 (M) and MGN 492 (M+F), which stated that appropriate measures were to be taken to ensure the health and safety of passengers travelling on board a vessel. However, the divers fell outside these requirements once they entered the water and no governing instruments or guidance were in place to manage the risks, noting MGN 424 (M) was directed at commercial dive operations.
+
+Written risk assessments were not explicitly required under MGN 280 (M), and the sports diving content suggested that control of safety or environmental matters was encouraged by the adoption of voluntary codes or procedures. Although audio safety briefings were provided to divers on board Jean Elaine, neither vessel had documented procedures or risk assessments for their crews to follow.
+
+This tragic accident occurred in the last stages of a dive operation and involved the interaction of near-surface divers and support vessels manoeuvring in close proximity. The adoption of safety procedures supported by well-prepared risk assessments and emergency plans would enhance the safety of divers while travelling on board the vessel and when in the water.
+
+It is evident that there is no current requirement to effectively manage the safety of recreational divers operating from support vessels. It would be beneficial for the recommendation made in the Seadogz report for high-speed small commercial
+vessels to implement a safety management system that includes, but is not limited to operational procedures for the craft's full range of intended operations as part of the new Sport & Pleasure Vessel Code to be extended to all small commercial vessels, including those supporting dive operations.
+
+2.7 HARBOUR AUTHORITY OVERSIGHT
+
+2.7.1 Coordination and control
+
+The size and popularity of the Markgraf wreck site meant that several diving support vessels were often operating there simultaneously. This presented oversight challenges for the vessels' skippers as they attempted to monitor multiple diver operations.
+
+Karin and Jean Elaine had planned to be on site separately. However, Karin arrived at the wreck site 20 minutes ahead of the previously agreed schedule. As the wreck site coordinator, Jean Elaine's skipper had control of access and an opportunity
+to prevent Karin from entering the dive site until they had recovered their divers. However, the skipper allowed Karin to access the dive site, increasing the number of divers and so the risk of unwanted interaction with surface vessels. The SHA had the ability via its VTS to monitor and restrict daily dive boat operations within its waters, but this was not implemented.
+
+It is evident that control of the dive area was ineffective, placing divers at risk due to
+multiple vessels operating over a single wreck site.
+
+2.7.2 Diving permits
+
+The harbour authority used a recreational/leisure diving permit request system to manage the risks associated with diving activities in its harbour area. The permit holder, as the vessel's operator, was deemed by the harbour authority to understand their legal obligation towards the safety of their passengers.
+
+Despite this requirement, and in contrast to the previous 9 years, Karin's operator did not apply for a permit covering the vessel's planned diving activities for September 2023. Consequently, no permissions were in place for Karin to operate as a dive workboat at the time of the accident. The failure to submit a diving permit request
+
+was unusual and Karin's permit history indicated that this was an administrative oversight. Karin was cleared to proceed by Orkney VTS despite not having a valid permit in place, which contravened the harbour authority's requirements.
+
+It is evident that the diving permit system was not being enforced effectively at the
+harbour authority level on the day of the accident.
+
+2.7.3 Local safety committee
+
+The local safety committee established to oversee diving operations had been disbanded in 2020. Although the harbour authority had means to address general stakeholder issues, the more specific safety challenges relating to diving were probably better dealt with at the operator level.
+
+The disbandment of the local safety committee removed the means of cohesive group communication for local dive workboat operators and meant there was no forum in which to highlight and mitigate associated risks and share good practice.
+
+2.8 DELAYED SURFACE MARKER BUOY OPERATION
+
+The use of DSMBs is an important safeguard for divers conducting drift ascents and decompression stops to indicate their presence to surface vessels. Until 2006 it was not uncommon for divers to attach a DSMB to their BCD. However, UK guidance had since advised that divers should hold a DSMB in their hand rather than attach it to their person to prevent the risk of entanglement in an emergency situation.
+
+On the day of the accident diver 1 had clipped his DSMB to his BCD. This meant that his ability to take avoiding action would have been restricted had he been aware of Karin's proximity. Diver 2, without any DSMB attached or held, was able to descend clear of Karin. To take similar evasive action, diver 1 would have needed sufficient time to detach the DSMB and dive clear or move out of Karin's way. As
+analysed in section 2.3, it is also possible that diver 1's DSMB line snagged on Karin
+as the vessel passed over the submerged divers.
+
+Diver 1 had been a recreational diver for many years and had started the sport and completed his early training before the guidance was changed to advise divers to hold DSMB lines in their hand rather than attach them to their person. He may have become accustomed to operating with his DSMB attached to him and this might explain why he did so on the day of the accident.
+
+Diver 1 would have been unable to release the DSMB easily from his diving equipment, restricting his ability to take avoiding action at the time of the accident.
+
+SECTION 3 - CONCLUSIONS
+3.1 SAFETY ISSUES DIRECTLY CONTRIBUTING TO THE ACCIDENT THAT HAVE BEEN ADDRESSED OR RESULTED IN RECOMMENDATIONS
+
+1. Diver 1 was fatally injured when he was struck by Karin's rotating propeller. It is also possible that diver 1's DSMB line snagged on a part of the vessel or its diver recovery ladder and drew diver 1 into the path of the propeller blades. [2.3]
+
+2. The safety of diver 1 and diver 2 was dependent on their DSMB being seen by surface craft to avoid collision. [2.4]
+
+3. Diver 1's DSMB probably went unseen by Karin's crew because it was within the vessel's forward visibility blind sector from the wheelhouse and no lookout was posted at the bow. This meant that Karin continued unknowingly towards the divers, placing them at risk. [2.5.1]
+
+4. The lookout arrangements on board Karin were ineffective, placing divers at risk of
+contact with the vessel while they were submerged close to the surface. [2.5.2]
+
+5. There was no structured safety management system in operation on either
+Jean Elaine or Karin. Consequently, divers were at risk while on board and when diving. [2.6.2]
+
+3.2 OTHER SAFETY ISSUES DIRECTLY CONTRIBUTING TO THE ACCIDENT
+
+1. The communications between Karin and Jean Elaine did not deconflict the dive activities and, by not advising VTS of their vessels' movements, the skippers did not mitigate the risks to divers. This meant that opportunities were missed to highlight diver 1's potential whereabouts and prevent his contact with Karin. [2.6.1]
+
+2. Diver 1's DSMB was attached to his diving equipment, contrary to guidelines. This restricted his ability to take evasive action at the time of the accident. [2.8]
+
+3.3 SAFETY ISSUES NOT DIRECTLY CONTRIBUTING TO THE ACCIDENT THAT HAVE BEEN ADDRESSED OR RESULTED IN RECOMMENDATIONS
+
+1. Jean Elaine's skipper did not exercise their right to prevent Karin's access to the dive site. The harbour authority had the ability to further restrict dive boat operations through effective oversight of vessel movements, yet did not do so. This meant there was no effective control of the dive site, placing divers at risk due to multiple vessels operating at a single wreck site. [2.7.1]
+
+2. Karin was allowed to proceed to sea without a valid diving permit in place, which contravened the harbour authority's requirements. It is evident that the diving permit system was not being enforced effectively by the harbour authority on the day of the accident. [2.7.2]
+
+3. The disbandment of the local safety committee had removed the forum for local dive workboat operators to discuss best practice. This meant there was no opportunity
+to highlight and mitigate associated risks to improve the collective safety of divers. [2.7.3]
+
+SECTION 4 - ACTION TAKEN
+4.1 MAIB ACTIONS
+
+? The MAIB has issued a safety bulletin (Annex A) urging diving support boat operators to keep an effective lookout at all times when their vessels are underway and stressing the importance of maintaining detailed and frequent communications with nearby vessel operators. The safety bulletin also reinforced the guidance that divers should hold DSMBs in their hand rather than attach them to their person. The safety bulletin made a recommendation to the British Diving Safety Group to disseminate the bulletin to organisations and agencies within its membership and draw attention to the safety issues raised, particularly maintaining an effective lookout with divers in the water and DSMB use.
+
+? The Chief Inspector of Marine Accidents has written to Karin's new owner
+(see section 4.2) to highlight the safety issues contained in this report, specifically
+those concerning the vessel's operational safety on the day of the accident.
+
+4.2 ACTIONS TAKEN BY OTHER ORGANISATIONS
+
+The Maritime and Coastguard Agency has undertaken to extend the Sport & Pleasure Vessel Code requirements of MAIB recommendation 2023/12211 to include that all small commercial vessel must implement a safety management system.
+
+The Orkney Islands Council Harbour Authority has conducted a risk-based review of recreational diving operations for dive vessel operators within its areas of responsibility and drafted a new edition of the Orkney Islands Council Harbour Authority General Directions 2024, part VII - Diving and Recreational Activities.
+This review included a requirement for all dive vessel operators to provide proof of a working safety management system.
+
+Johns Diving Charters has sold Karin to a local operator and retired from the recreational diving support industry.
+
+The British Diving Safety Group has disseminated MAIB Safety Bulletin SB2/2024 to organisations and agencies within its membership.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11 https://www.gov.uk/maib-reports/heavy-contact-between-the-high-speed-passenger-craft-seadogz-and-a- navigation-buoy-with-loss-of-1-life
+
+SECTION 5 - RECOMMENDATIONS
+The Orkney Islands Council Harbour Authority is recommended to:
+
+2025/147	Conduct a further risk-based review of recreational diving operations for dive vessel operators within its areas of responsibility, to include:
+
+? The effectiveness of permit arrangements for recreational dive vessels and
+enforcement of permit conditions.
+
+? The control and monitoring of diving support operations by Orkney vessel traffic services, including the number of vessels permitted to operate simultaneously.
+
+? Engagement with local stakeholders and consideration of the re-establishment of the local safety committee.
+
+? The development of a local code of practice for recreational diving operations that considers the principles outlined in Marine Guidance Note 424 (M) - Safety Responsibilities on board Dive Boats.
+
+
+	Safety recommendations shall in no case create a presumption of blame or liability.	
+
+Annex A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MAIB Safety Bulletin SB2/2024, issued June 2024
+
+
+
+
+
+Fatal injury to a recreational diver
+after contact with the recreational diving support boat
+Karin
+in Scapa Flow, Orkney Islands, Scotland on 28 September 2023
+
+Representative image of a diver near a dive boat
+
+MAIB SAFETY BULLETIN 2/2024
+This document, containing safety lessons, has been produced for marine safety purposes only, on the basis of information available to date.
+The Merchant Shipping (Accident Reporting and Investigation) Regulations 2012 provide for the Chief Inspector of Marine Accidents to make recommendations at any time during the course of an investigation if, in his opinion, it is necessary or desirable to do so.
+The Marine Accident Investigation Branch is carrying out an investigation into the fatal injury to a recreational diver after contact with the recreational diving support boat Karin.
+The MAIB will publish a full report on completion of the investigation.
+
+Captain Andrew Moll OBE
+Chief Inspector of Marine Accidents
+
+
+
+
+
+
+
+
+
+NOTE
+This bulletin is not written with litigation in mind and, pursuant to Regulation 14(14) of the Merchant Shipping (Accident Reporting and Investigation) Regulations 2012, shall not be admissible in any judicial proceedings whose purpose, or one of whose purposes, is to apportion liability or blame.
+
+
+
+
+
+
+
+
+
+
+
+
+This bulletin is also available on our website: www.gov.uk/maib Press Enquiries: 01932 440015 Out of hours: 020 7944 4292
+Public Enquiries: 0300 330 3000
+
+BACKGROUND
+On the morning of 28 September 2023, a recreational diver carrying out decompression stops died, almost certainly as a result of being struck by the rotating propeller of the UK registered diving support boat Karin. The diver was diving from a second dive boat that was also supporting divers exploring the wreck of the German battleship SMS Markgraf (Figure 1), which was lying at a depth of 45m in Scapa Flow, Orkney Islands, Scotland.
+
+Reproduced from Admiralty Chart 0035-0 by permission of HMSO and the UK Hydrographic Office
+Figure 1: SMS Markgraf
+
+The diver and their dive buddy had ascended to their final scheduled decompression stop 3m below the surface. The divers were conducting a drift decompression away from the available shot line1 but their presence was indicated by their delayed surface marker buoy (DSMB)2, the line of which was clipped to the casualty's dive vest (Figure 2). The DSMB was visible to the second dive boat waiting on the other side of the wreck site, but it was not sighted by Karin's crew before Karin motored over it.
+The crew of the second dive boat saw the DSMB disappear under Karin. Subsequently, one of the two divers failed to resurface. The coastguard was notified and an extensive 2-day air and sea search of the area was conducted, but without success.
+The missing diver's body was found 3 weeks later following a seabed search conducted by a local survey vessel using side-scan sonar. A specialist team recovered the diver's body from the seabed.
+
+1 A type of downline or descending line comprising a line and a buoy and used as a surface and underwater datum point to mark the position of entry and exit while diving and during decompression stops. The line is weighted or attached to the seabed or dive site wreck and held at the surface by the buoy.
+2 The launch of a DSMB by a submerged diver just before ascent marks their position to surface craft. A DSMB could also be used by divers while completing a safety stop, particularly in a current or where other visual references were absent.
+
+Image courtesy of diver 2, David Scott	Image of Aqua rachet dive reel, sourced from Scuba
+Figure 2: Diver 1's marked DSMB with its parted line and hand reel of a similar type to that used by diver 1
+
+Karin was a 24m converted fishing boat with a draught of 2.8m, certified by Mecal Ltd under the Maritime and Coastguard Agency's (MCA) Small Commercial Vessel and Pilot Boat Code of Practice (SCV2), annexed to Marine Guidance Note (MGN) 280 (M). The two crew of Karin comprised a skipper, who was suitably qualified and had extensive experience both as a diver
+and dive boat skipper engaged in this type of operation, and a crew member whose principal role was that of cook.
+
+INITIAL FINDINGS
+The accident occurred during daylight in favourable environmental conditions with good visibility, calm seas, no rain, and a tidal stream of less than 1 knot (kt). Karin was manoeuvring at a speed of 4kts slightly to the east of the shot line marking the stern of the wreck. The tidal streams in the area were not strong, although it was not uncommon for divers to carry out drift decompression stops before surfacing. The DSMB marking the casualty and their buddy had been on the surface for 11 minutes before the accident, but had not been seen by Karin's skipper who was operating the boat from the wheelhouse during this time.
+
+
+
+
+
+2
+
+SAFETY LESSONS
+? The requirement to maintain an effective lookout at all times when a vessel is underway is clearly articulated in the COLREGs3 and it is vital when operating in close proximity to people in the water, such as with dive boats. A dedicated lookout posted in a suitable
+location is essential to make sure the helm/skipper is given sufficient warning of a surfacing diver to take effective avoiding action.
+? Manoeuvring a boat in areas where divers are known to be below the surface introduces unnecessary risk to a diver surfacing close by. Unless drifting or anchored, the support boat should keep a safe standoff distance from submerged divers and only move over the dive site when recovering divers from the water.
+? Where multiple boats intend to operate in the same area, detailed and frequent communication between the operators is essential to ensure deconfliction and prevent accidents. Boat operators should coordinate and plan their movements before arrival at dive sites to minimise the event of multiple boats operating in the same area at once.
+? Divers using a DSMB should hold the line in their hand, as recommended by the British Sub-Aqua Club, rather than attach it to their person. In the event that the DSMB becomes snagged by a passing craft, the diver can then release the line to avoid entanglement and potentially being drawn to the surface or into contact with the craft.
+? The nature of static shot lines in well-known positions supports their use during decompression stops. Although the strength of the current might prevent their use, divers decompressing or surfacing away from shot lines have increased vulnerability to hazards such as boat traffic, entanglement in marine debris or becoming caught in underwater structures.
+
+RECOMMENDATIONS
+The British Diving Safety Group is recommended to:
+S2024/114	Disseminate this safety bulletin to all organisations and agencies within its membership drawing attention to the safety issues raised, in particular:
+? that owners, operators and skippers of diving support boats should ensure compliance with COLREGs Rule 5 concerning provision of a lookout, especially when operating in proximity to divers in the water.
+? to raise awareness among its members of the hazards to divers of attaching a DSMB to their person while submerged, and that the recognised good practice is for the reel to be held in their hand.
+
+
+
+	Safety recommendations shall in no case create a presumption of blame or liability	
+
+Issued June 2024
+
+3 The Convention on the International Regulations for Preventing Collisions at Sea, 1972 as amended.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
