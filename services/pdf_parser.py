@@ -1,7 +1,7 @@
 import io
 import re
+from dataclasses import dataclass
 from typing import Optional
-from datetime import datetime
 
 import pdfplumber
 
@@ -21,75 +21,100 @@ MONTH_MAP = {
     "december": 12, "dec": 12,
 }
 
+# Constants
+COVER_PAGE_CHAR_LIMIT = 500
 
-def extract_full_text(pdf_bytes: bytes) -> str:
+
+@dataclass
+class PdfMetadata:
+    """PDF file metadata."""
+    page_count: int
+    pdf_title: Optional[str] = None
+    pdf_author: Optional[str] = None
+    pdf_subject: Optional[str] = None
+    pdf_creator: Optional[str] = None
+    pdf_producer: Optional[str] = None
+    pdf_creation_date: Optional[str] = None
+    pdf_mod_date: Optional[str] = None
+
+
+@dataclass
+class ReportMetadata:
+    """Metadata extracted from Section 1.1 tables."""
+    vessel_name: Optional[str] = None
+    vessel_type: Optional[str] = None
+    accident_date: Optional[str] = None
+    accident_location: Optional[str] = None
+    severity: Optional[str] = None
+    loss_of_life: Optional[str] = None
+    port_of_origin: Optional[str] = None
+    destination: Optional[str] = None
+    accident_type: Optional[str] = None
+
+
+@dataclass
+class ParsedPDF:
+    """Combined output from parsing a PDF."""
+    full_text: str
+    metadata: PdfMetadata
+    report_metadata: ReportMetadata
+
+
+def _extract_full_text(pdf: pdfplumber.PDF) -> str:
     """Extract all text from all pages, concatenated."""
     text_parts = []
-    with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
-        for page in pdf.pages:
-            page_text = page.extract_text()
-            if page_text:
-                text_parts.append(page_text)
+    for page in pdf.pages:
+        page_text = page.extract_text()
+        if page_text:
+            text_parts.append(page_text)
     return "\n\n".join(text_parts)
 
 
-def extract_pdf_metadata(pdf_bytes: bytes) -> dict:
-    """Extract PDF file metadata (author, creation date, pages, etc.)."""
-    with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
-        metadata = {
-            "page_count": len(pdf.pages),
-            "pdf_title": None,
-            "pdf_author": None,
-            "pdf_subject": None,
-            "pdf_creator": None,
-            "pdf_producer": None,
-            "pdf_creation_date": None,
-            "pdf_mod_date": None,
-        }
+def _extract_metadata(pdf: pdfplumber.PDF) -> PdfMetadata:
+    """Extract PDF file metadata."""
+    metadata = PdfMetadata(page_count=len(pdf.pages))
 
-        if hasattr(pdf, 'metadata') and pdf.metadata:
-            raw_metadata = pdf.metadata
-            metadata["pdf_title"] = raw_metadata.get("Title")
-            metadata["pdf_author"] = raw_metadata.get("Author")
-            metadata["pdf_subject"] = raw_metadata.get("Subject")
-            metadata["pdf_creator"] = raw_metadata.get("Creator")
-            metadata["pdf_producer"] = raw_metadata.get("Producer")
-            metadata["pdf_creation_date"] = raw_metadata.get("CreationDate")
-            metadata["pdf_mod_date"] = raw_metadata.get("ModDate")
+    if hasattr(pdf, 'metadata') and pdf.metadata:
+        raw_metadata = pdf.metadata
+        metadata.pdf_title = raw_metadata.get("Title")
+        metadata.pdf_author = raw_metadata.get("Author")
+        metadata.pdf_subject = raw_metadata.get("Subject")
+        metadata.pdf_creator = raw_metadata.get("Creator")
+        metadata.pdf_producer = raw_metadata.get("Producer")
+        metadata.pdf_creation_date = raw_metadata.get("CreationDate")
+        metadata.pdf_mod_date = raw_metadata.get("ModDate")
 
-        return metadata
+    return metadata
 
 
-def extract_tables(pdf_bytes: bytes) -> list[list[list[str]]]:
+def _extract_tables(pdf: pdfplumber.PDF) -> list[list[list[str]]]:
     """Extract all tables from all pages using pdfplumber.extract_tables()."""
     all_tables = []
-    with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
-        for page in pdf.pages:
-            tables = page.extract_tables()
-            if tables:
-                all_tables.extend(tables)
+    for page in pdf.pages:
+        tables = page.extract_tables()
+        if tables:
+            all_tables.extend(tables)
     return all_tables
 
 
-def extract_metadata_from_tables(pdf_bytes: bytes) -> dict:
-    """Parse Section 1.1 tables into a dict mapping to chirp_report_metadata fields.
+def parse_pdf(pdf_bytes: bytes) -> ParsedPDF:
+    """Parse PDF and extract all data in a single pass."""
+    with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
+        full_text = _extract_full_text(pdf)
+        metadata = _extract_metadata(pdf)
+        tables = _extract_tables(pdf)
 
-    Keys: vessel_name, vessel_type, accident_date, accident_location,
-    severity, loss_of_life, port_of_origin, destination, accident_type.
-    """
-    metadata = {
-        "vessel_name": None,
-        "vessel_type": None,
-        "accident_date": None,
-        "accident_location": None,
-        "severity": None,
-        "loss_of_life": None,
-        "port_of_origin": None,
-        "destination": None,
-        "accident_type": None,
-    }
+    report_metadata = _parse_metadata_from_tables(tables)
+    return ParsedPDF(
+        full_text=full_text,
+        metadata=metadata,
+        report_metadata=report_metadata,
+    )
 
-    tables = extract_tables(pdf_bytes)
+
+def _parse_metadata_from_tables(tables: list[list[list[str]]]) -> ReportMetadata:
+    """Parse Section 1.1 tables into ReportMetadata."""
+    metadata = ReportMetadata()
 
     # Look for key-value pairs in tables
     key_patterns = {
@@ -111,12 +136,14 @@ def extract_metadata_from_tables(pdf_bytes: bytes) -> dict:
             key_cell = str(row[0]).strip() if row[0] else ""
             value_cell = str(row[1]).strip() if row[1] else ""
 
-            if not key_cell or not value_cell or value_cell.lower() in ["", "none", "n/a", "-"]:
+            if not key_cell or not value_cell or value_cell.lower() in ["none", "n/a", "-"]:
                 continue
 
             for metadata_key, pattern in key_patterns.items():
-                if re.match(pattern, key_cell) and not metadata[metadata_key]:
-                    metadata[metadata_key] = value_cell
+                if re.match(pattern, key_cell):
+                    current_value = getattr(metadata, metadata_key)
+                    if not current_value:
+                        setattr(metadata, metadata_key, value_cell)
                     break
 
     return metadata
@@ -159,13 +186,13 @@ def extract_publication_date(full_text: str) -> Optional[str]:
     """
     # Try ISO date format first
     iso_pattern = r"\b(\d{4}-\d{2}-\d{2})\b"
-    iso_matches = re.findall(iso_pattern, full_text[:500])
+    iso_matches = re.findall(iso_pattern, full_text[:COVER_PAGE_CHAR_LIMIT])
     if iso_matches:
         return iso_matches[0]
 
     # Pattern for month year (e.g., "September 2023", "OCTOBER 2025")
     month_year_pattern = r"\b([A-Za-z]+)\s+(\d{4})\b"
-    matches = re.findall(month_year_pattern, full_text[:500])
+    matches = re.findall(month_year_pattern, full_text[:COVER_PAGE_CHAR_LIMIT])
 
     for month_name, year in matches:
         month_lower = month_name.lower()
@@ -177,197 +204,16 @@ def extract_publication_date(full_text: str) -> Optional[str]:
     return None
 
 
-def split_into_sections(full_text: str) -> list[dict]:
-    """Split text at section boundaries. Returns list of
-    {"name": "SYNOPSIS", "text": "...", "position": 0}.
+def _classify_lines(text: str) -> list[dict]:
+    """Classify each line and group into blocks.
 
-    Section patterns (regex, case-insensitive):
-    - SYNOPSIS
-    - SECTION \\d+ [–-] .+
-    - GLOSSARY OF ABBREVIATIONS AND ACRONYMS
-
-    Note: TOC entries (lines ending with page numbers) are skipped and not treated as section boundaries.
+    Returns a list of {"type": "paragraph|list_item|heading", "text": "..."}.
     """
-
-    def is_toc_entry(text: str) -> bool:
-        """Check if text looks like a TOC entry (short text ending with page number)."""
-        if len(text) > 150:
-            return False
-        # Ends with page number pattern (1-3 digits, possibly with a letter like 18a)
-        toc_pattern = r"\s\d{1,3}[a-z]?\s*$"
-        if not re.search(toc_pattern, text):
-            return False
-        # Must have some text before the page number
-        text_before_page = re.sub(toc_pattern, "", text).strip()
-        if len(text_before_page) < 3:
-            return False
-        # Exclude figure captions (they start with "Figure")
-        if text.lower().startswith("figure"):
-            return False
-        return True
-
-    sections = []
-
-    # Section patterns with their names
-    synopsis_pattern = r"^SYNOPSIS\s*$"
-    section_pattern = r"^SECTION\s+(\d+)\s*[–-]\s+(.+?)\s*$"
-    glossary_pattern = r"^GLOSSARY OF ABBREVIATIONS AND ACRONYMS\s*$"
-    conclusions_pattern = r"^CONCLUSIONS\s*$"
-    recommendations_pattern = r"^RECOMMENDATIONS\s*$"
-
-    lines = full_text.split("\n")
-    current_section = None
-    current_text = []
-    position = 0
-
-    for line in lines:
-        line = line.rstrip()
-        stripped = line.strip()
-
-        # Skip TOC entries - don't treat them as section boundaries
-        if is_toc_entry(stripped):
-            # Add to current section text, but don't start a new section
-            current_text.append(line)
-            continue
-
-        # Check for section boundaries
-        section_match = re.match(section_pattern, stripped, re.IGNORECASE)
-        if section_match:
-            # Save previous section
-            if current_section:
-                sections.append({
-                    "name": current_section,
-                    "text": "\n".join(current_text).strip(),
-                    "position": position
-                })
-                position += 1
-
-            current_section = section_match.group(2).strip()
-            current_text = []
-            continue
-
-        if re.match(synopsis_pattern, stripped, re.IGNORECASE):
-            if current_section:
-                sections.append({
-                    "name": current_section,
-                    "text": "\n".join(current_text).strip(),
-                    "position": position
-                })
-                position += 1
-
-            current_section = "SYNOPSIS"
-            current_text = []
-            continue
-
-        if re.match(glossary_pattern, stripped, re.IGNORECASE):
-            if current_section:
-                sections.append({
-                    "name": current_section,
-                    "text": "\n".join(current_text).strip(),
-                    "position": position
-                })
-                position += 1
-
-            current_section = "GLOSSARY"
-            current_text = []
-            continue
-
-        if re.match(conclusions_pattern, stripped, re.IGNORECASE):
-            if current_section:
-                sections.append({
-                    "name": current_section,
-                    "text": "\n".join(current_text).strip(),
-                    "position": position
-                })
-                position += 1
-
-            current_section = "CONCLUSIONS"
-            current_text = []
-            continue
-
-        if re.match(recommendations_pattern, stripped, re.IGNORECASE):
-            if current_section:
-                sections.append({
-                    "name": current_section,
-                    "text": "\n".join(current_text).strip(),
-                    "position": position
-                })
-                position += 1
-
-            current_section = "RECOMMENDATIONS"
-            current_text = []
-            continue
-
-        # Add line to current section
-        current_text.append(line)
-
-    # Save last section
-    if current_section:
-        sections.append({
-            "name": current_section,
-            "text": "\n".join(current_text).strip(),
-            "position": position
-        })
-
-    return sections
-
-
-def split_into_sentences(text: str) -> list[dict]:
-    """Split section text into sentences using nltk.sent_tokenize.
-    Returns list of {"text": "...", "text_type": "paragraph|list_item|heading", "position": 0, "relevance_score": int|None}.
-
-    text_type heuristics:
-    - heading: short line (< 80 chars) that is all caps or matches subsection pattern (e.g. "2.3.1 ...")
-    - list_item: starts with bullet (-, *, ●) or numbered pattern (a., 1., i.)
-    - paragraph: everything else
-
-    relevance_score heuristics:
-    - 0: TOC entries (short text ending with page number)
-    - None: not yet scored (default)
-
-    Note: PDFs don't have paragraph structure - text is extracted as visual lines.
-    This function reconstructs paragraphs by joining consecutive non-heading, non-list lines,
-    then splits the reconstructed paragraphs into sentences using NLTK.
-    """
-    import nltk
-
-    # Download NLTK data if needed
-    try:
-        nltk.data.find("tokenizers/punkt_tab")
-    except LookupError:
-        nltk.download("punkt_tab", quiet=True)
-
-    def is_toc_entry(text: str) -> bool:
-        """Check if text looks like a TOC entry (ends with page number)."""
-        # TOC entries are typically short and end with a page number
-        # Pattern: text ending with 1-3 digit number (page number)
-        # Exclude pure numbers and common non-TOC patterns
-        if len(text) > 150:
-            return False
-        # Ends with page number pattern (1-3 digits, possibly with a letter like 18a)
-        toc_pattern = r"\s\d{1,3}[a-z]?\s*$"
-        if not re.search(toc_pattern, text):
-            return False
-        # Must have some text before the page number
-        text_before_page = re.sub(toc_pattern, "", text).strip()
-        if len(text_before_page) < 3:
-            return False
-        # Exclude figure captions (they start with "Figure")
-        if text.lower().startswith("figure"):
-            return False
-        return True
-
-    sentences = []
-    lines = text.split("\n")
-    position = 0
-
-    # First pass: classify each line and group into blocks
-    # A "block" is either a standalone heading/list_item, or a reconstructed paragraph
     blocks = []
     current_paragraph = []
-    current_list_item = None  # Track multi-line list items
+    current_list_item = None
 
-    for line in lines:
+    for line in text.split("\n"):
         stripped = line.strip()
         if not stripped:
             # Empty line ends current paragraph and any ongoing list item
@@ -460,7 +306,25 @@ def split_into_sentences(text: str) -> list[dict]:
     if current_paragraph:
         blocks.append({"type": "paragraph", "text": " ".join(current_paragraph)})
 
-    # Second pass: split paragraph blocks into sentences using NLTK
+    return blocks
+
+
+def _tokenize_blocks(blocks: list[dict]) -> list[dict]:
+    """Split paragraph blocks into sentences using NLTK.
+
+    Returns a list of sentence dicts with text, text_type, position.
+    """
+    import nltk
+
+    # Download NLTK data if needed
+    try:
+        nltk.data.find("tokenizers/punkt_tab")
+    except LookupError:
+        nltk.download("punkt_tab", quiet=True)
+
+    sentences = []
+    position = 0
+
     for block in blocks:
         if block["type"] == "paragraph":
             # Use NLTK to split the paragraph into actual sentences
@@ -468,148 +332,33 @@ def split_into_sentences(text: str) -> list[dict]:
             for sent_text in sent_texts:
                 sent_text = sent_text.strip()
                 if sent_text:
-                    relevance = 0 if is_toc_entry(sent_text) else None
                     sentences.append({
                         "text": sent_text,
                         "text_type": "paragraph",
                         "position": position,
-                        "relevance_score": relevance,
                     })
                     position += 1
         else:
             # heading and list_item stay as-is
-            relevance = 0 if is_toc_entry(block["text"]) else None
             sentences.append({
                 "text": block["text"],
                 "text_type": block["type"],
                 "position": position,
-                "relevance_score": relevance,
             })
             position += 1
-
-    # Third pass: mark front matter/TOC as relevance 0.
-    # Strategy 1: look for the MAIB glossary end marker — everything up to and including
-    # this sentence is front matter (TOC, legal boilerplate, glossary).
-    MAIB_FRONT_MATTER_END = "times: all times used in this report are british summer time"
-
-    front_matter_end = None
-    for sent in sentences:
-        if MAIB_FRONT_MATTER_END in sent["text"].lower():
-            front_matter_end = sent["position"]
-            break
-
-    if front_matter_end is not None:
-        for sent in sentences:
-            if sent["position"] <= front_matter_end:
-                sent["relevance_score"] = 0
-    else:
-        # Fallback: normalised duplicate heading detection.
-        # Strip consecutive trailing number groups and normalise case before comparing,
-        # so "1.5 Diver 1 9" (TOC) and "1.5 DIVER 1" (body) both normalise to "1.5 diver".
-        def normalise_heading(text):
-            return re.sub(r'(\s+\d+)+\s*$', '', text.strip()).strip().lower()
-
-        seen = {}
-        content_start_position = None
-        for sent in sentences:
-            if sent["text_type"] == "heading":
-                key = normalise_heading(sent["text"])
-                if key in seen:
-                    content_start_position = sent["position"]
-                    break
-                seen[key] = sent["position"]
-
-        if content_start_position is not None:
-            for sent in sentences:
-                if sent["position"] < content_start_position:
-                    sent["relevance_score"] = 0
 
     return sentences
 
 
-def extract_safety_issues(conclusions_text: str) -> list[str]:
-    """Parse numbered safety issues from Section 3 text."""
-    issues = []
-    lines = conclusions_text.split("\n")
+def split_into_sentences(text: str) -> list[dict]:
+    """Split text into sentences using nltk.sent_tokenize.
+    Returns list of {"text": "...", "text_type": "paragraph|list_item|heading", "position": 0}.
 
-    # Look for numbered safety issues
-    # Pattern: "1.1", "1.2", etc. or "Safety issue 1:", etc.
-    current_issue = None
-    issue_pattern = r"^(\d+\.\d+)\s+(.+)$"
-
-    for line in lines:
-        stripped = line.strip()
-        if not stripped:
-            continue
-
-        match = re.match(issue_pattern, stripped)
-        if match:
-            if current_issue:
-                issues.append(current_issue.strip())
-            current_issue = match.group(2)
-        elif current_issue:
-            # Continuation of current issue
-            current_issue += " " + stripped
-
-    if current_issue:
-        issues.append(current_issue.strip())
-
-    # Alternative: look for "safety issue" keyword
-    if not issues:
-        safety_issue_pattern = r"(?i)safety\s+issue\s*\d+[:\.\-]\s*(.+?)(?=\n|$|\s*safety\s+issue)"
-        matches = re.findall(safety_issue_pattern, conclusions_text)
-        issues = [m.strip() for m in matches if m.strip()]
-
-    return issues
-
-
-def extract_recommendations(recommendations_text: str) -> list[dict]:
-    """Parse recommendations from Section 5 text.
-    Returns list of {"reference_code": "2025/147", "text": "...", "organisation": "Org Name"}.
+    text_type heuristics:
+    - heading: short line (< 80 chars) that matches section/subsection pattern
+    - list_item: starts with bullet (-, *, ●) or numbered pattern (a., 1., i.)
+    - paragraph: everything else
     """
-    recommendations = []
-
-    # Pattern for MAIB recommendations: YYYY/NNN
-    ref_code_pattern = r"(\d{4}/\d+)"
-
-    lines = recommendations_text.split("\n")
-    current_rec = None
-
-    for line in lines:
-        stripped = line.strip()
-        if not stripped:
-            continue
-
-        # Look for reference code
-        ref_match = re.search(ref_code_pattern, stripped)
-        if ref_match:
-            # Save previous recommendation
-            if current_rec and current_rec.get("text"):
-                recommendations.append(current_rec)
-
-            current_rec = {
-                "reference_code": ref_match.group(1),
-                "text": stripped,
-                "organisation": None
-            }
-        elif current_rec:
-            # Continuation of current recommendation
-            current_rec["text"] += " " + stripped
-
-            # Try to extract organisation (common patterns)
-            org_patterns = [
-                r"(?i)to\s+([A-Z][A-Za-z\s&]+?)(?:\s+(?:to|recommend|ensure|consider|review)|$)",
-                r"(?i)(?:recommend|addressed)\s+to\s+([A-Z][A-Za-z\s&]+?)(?:\s+(?:to|recommend|ensure)|$)",
-            ]
-            for pattern in org_patterns:
-                org_match = re.search(pattern, stripped)
-                if org_match and not current_rec["organisation"]:
-                    org_name = org_match.group(1).strip()
-                    if len(org_name) > 2 and len(org_name) < 100:
-                        current_rec["organisation"] = org_name
-                        break
-
-    if current_rec and current_rec.get("text"):
-        recommendations.append(current_rec)
-
-    return recommendations
+    blocks = _classify_lines(text)
+    sentences = _tokenize_blocks(blocks)
+    return sentences
