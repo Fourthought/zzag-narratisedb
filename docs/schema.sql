@@ -99,6 +99,7 @@ CREATE TABLE public.chirp_report_metadata (
   updated_at timestamp with time zone DEFAULT now(),
   page_count integer,
   pdf_subject text,
+  pdf_author text,
   CONSTRAINT chirp_report_metadata_pkey PRIMARY KEY (id),
   CONSTRAINT chirp_report_metadata_document_id_fkey FOREIGN KEY (document_id) REFERENCES public.documents(id) ON DELETE CASCADE
 );

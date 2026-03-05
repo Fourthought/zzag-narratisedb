@@ -34,7 +34,9 @@ class IngestionService:
         if existing:
             raise HTTPException(status_code=409, detail="Document already exists")
 
-        author = self._get_or_create_author("Marine Accident Investigation Branch")
+        pdf_author = pdf_metadata.get("pdf_author")
+        author_name = self._resolve_author_name(pdf_author)
+        author = self._get_or_create_author(author_name)
         title = pdf_metadata.get("pdf_title") or extract_title(full_text)
         pub_date = extract_publication_date(full_text)
 
@@ -56,6 +58,7 @@ class IngestionService:
         metadata["document_id"] = doc_id
         metadata["page_count"] = pdf_metadata.get("page_count")
         metadata["pdf_subject"] = pdf_metadata.get("pdf_subject")
+        metadata["pdf_author"] = pdf_author
         self.db.create_record("chirp_report_metadata", metadata)
         print("  Metadata stored")
 
@@ -138,6 +141,13 @@ class IngestionService:
                 section_sentences.append(sent["text"])
 
         return "\n".join(section_sentences)
+
+    def _resolve_author_name(self, pdf_author: Optional[str]) -> str:
+        if not pdf_author:
+            return "Unknown"
+        if "gov.uk/maib" in pdf_author.lower():
+            return "MAIB"
+        return pdf_author
 
     def _get_or_create_author(self, name: str) -> dict:
         """Get existing author by name or create a new one."""
