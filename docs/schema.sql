@@ -91,16 +91,18 @@ CREATE POLICY "Chirp Organisations: Public read access" ON public.chirp_organisa
 
 CREATE TABLE public.chirp_recommendations (
   id uuid DEFAULT gen_random_uuid() NOT NULL,
+  document_id uuid,
+  chunk_id uuid,
+  organisation_id uuid,
   recommendation text NOT NULL,
   is_implemented boolean DEFAULT false,
-  created_at timestamp with time zone DEFAULT now(),
-  updated_at timestamp with time zone DEFAULT now(),
-  organisation_id uuid,
-  chunk_id uuid,
   is_verified boolean DEFAULT false,
   verified_at timestamp with time zone,
+  created_at timestamp with time zone DEFAULT now(),
+  updated_at timestamp with time zone DEFAULT now(),
   CONSTRAINT chirp_recommendations_pkey PRIMARY KEY (id),
   CONSTRAINT chirp_recommendations_chunk_id_fkey FOREIGN KEY (chunk_id) REFERENCES public.chunks(id) ON DELETE SET NULL,
+  CONSTRAINT chirp_recommendations_document_id_fkey FOREIGN KEY (document_id) REFERENCES public.documents(id) ON DELETE CASCADE,
   CONSTRAINT chirp_recommendations_organisation_id_fkey FOREIGN KEY (organisation_id) REFERENCES public.chirp_organisations(id) ON DELETE SET NULL
 );
 
@@ -113,21 +115,21 @@ CREATE POLICY "Chirp Recommendations: Public read access" ON public.chirp_recomm
 
 CREATE TABLE public.chirp_report_metadata (
   id uuid DEFAULT gen_random_uuid() NOT NULL,
+  document_id uuid,
+  vessel_name text,
+  vessel_type text,
+  accident_type text,
   accident_date date,
   accident_location text,
   severity text,
   loss_of_life integer,
   port_of_origin text,
   destination text,
-  accident_type text,
-  vessel_type text,
-  vessel_name text,
-  created_at timestamp with time zone DEFAULT now(),
-  updated_at timestamp with time zone DEFAULT now(),
   page_count integer,
   pdf_subject text,
   pdf_author text,
-  document_id uuid,
+  created_at timestamp with time zone DEFAULT now(),
+  updated_at timestamp with time zone DEFAULT now(),
   CONSTRAINT chirp_report_metadata_pkey PRIMARY KEY (id),
   CONSTRAINT chirp_report_metadata_document_id_fkey FOREIGN KEY (document_id) REFERENCES public.documents(id) ON DELETE CASCADE
 );
@@ -159,14 +161,16 @@ CREATE POLICY "Chirp Safety Issue Legislation: Public read access" ON public.chi
 
 CREATE TABLE public.chirp_safety_issues (
   id uuid DEFAULT gen_random_uuid() NOT NULL,
-  name text,
+  document_id uuid,
   chunk_id uuid,
+  name text,
   is_verified boolean DEFAULT false,
   verified_at timestamp with time zone,
   created_at timestamp with time zone DEFAULT now(),
   updated_at timestamp with time zone DEFAULT now(),
   CONSTRAINT chirp_safety_issues_pkey PRIMARY KEY (id),
-  CONSTRAINT chirp_safety_issues_chunk_id_fkey FOREIGN KEY (chunk_id) REFERENCES public.chunks(id) ON DELETE SET NULL
+  CONSTRAINT chirp_safety_issues_chunk_id_fkey FOREIGN KEY (chunk_id) REFERENCES public.chunks(id) ON DELETE SET NULL,
+  CONSTRAINT chirp_safety_issues_document_id_fkey FOREIGN KEY (document_id) REFERENCES public.documents(id) ON DELETE CASCADE
 );
 
 ALTER TABLE public.chirp_safety_issues ENABLE ROW LEVEL SECURITY;
@@ -193,10 +197,10 @@ CREATE POLICY "Chirp Shield Code Categories: Public read access" ON public.chirp
 
 CREATE TABLE public.chirp_shield_codes (
   id uuid DEFAULT gen_random_uuid() NOT NULL,
+  category_id uuid,
   code text NOT NULL,
   title text NOT NULL,
   definition text,
-  category_id uuid,
   created_at timestamp with time zone DEFAULT now(),
   updated_at timestamp with time zone DEFAULT now(),
   CONSTRAINT chirp_shield_codes_pkey PRIMARY KEY (id),
@@ -244,14 +248,14 @@ CREATE POLICY "Chunks: Public read access" ON public.chunks FOR SELECT USING (tr
 
 CREATE TABLE public.documents (
   id uuid DEFAULT gen_random_uuid() NOT NULL,
+  author_id uuid,
   title text NOT NULL,
   url text,
-  publication_date date,
   filename text,
   hash text NOT NULL,
+  publication_date date,
   created_at timestamp with time zone DEFAULT now(),
   updated_at timestamp with time zone DEFAULT now(),
-  author_id uuid,
   CONSTRAINT documents_pkey PRIMARY KEY (id),
   CONSTRAINT documents_author_id_fkey FOREIGN KEY (author_id) REFERENCES public.authors(id) ON DELETE SET NULL
 );
@@ -283,13 +287,13 @@ CREATE POLICY "Legislation: Public read access" ON public.legislation FOR SELECT
 
 CREATE TABLE public.sentences (
   id uuid DEFAULT gen_random_uuid() NOT NULL,
+  document_id uuid,
   text text NOT NULL,
   text_type text NOT NULL,
   "position" integer,
   relevance_score integer,
   created_at timestamp with time zone DEFAULT now(),
   updated_at timestamp with time zone DEFAULT now(),
-  document_id uuid,
   CONSTRAINT sentences_pkey PRIMARY KEY (id),
   CONSTRAINT sentences_document_id_fkey FOREIGN KEY (document_id) REFERENCES public.documents(id) ON DELETE CASCADE
 );
