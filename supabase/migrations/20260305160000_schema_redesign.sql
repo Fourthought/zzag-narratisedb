@@ -149,11 +149,13 @@ ALTER TABLE public.chirp_report_metadata ADD COLUMN document_id uuid;
 ALTER TABLE public.chirp_recommendations DROP COLUMN organisation_id;
 ALTER TABLE public.chirp_recommendations ADD COLUMN organisation_id uuid;
 
--- chirp_safety_issues: drop document_id (replaced by chunk_id added in step 10)
+-- chirp_safety_issues.document_id (kept alongside chunk_id — denormalised for query ergonomics)
 ALTER TABLE public.chirp_safety_issues DROP COLUMN document_id;
+ALTER TABLE public.chirp_safety_issues ADD COLUMN document_id uuid;
 
--- chirp_recommendations: drop document_id (replaced by chunk_id added in step 10)
+-- chirp_recommendations.document_id (kept alongside chunk_id — denormalised for query ergonomics)
 ALTER TABLE public.chirp_recommendations DROP COLUMN document_id;
+ALTER TABLE public.chirp_recommendations ADD COLUMN document_id uuid;
 
 
 -- ============================================================
@@ -179,6 +181,14 @@ ALTER TABLE public.chirp_report_metadata
 ALTER TABLE public.chirp_recommendations
   ADD CONSTRAINT chirp_recommendations_organisation_id_fkey
   FOREIGN KEY (organisation_id) REFERENCES public.chirp_organisations(id) ON DELETE SET NULL;
+
+ALTER TABLE public.chirp_safety_issues
+  ADD CONSTRAINT chirp_safety_issues_document_id_fkey
+  FOREIGN KEY (document_id) REFERENCES public.documents(id) ON DELETE CASCADE;
+
+ALTER TABLE public.chirp_recommendations
+  ADD CONSTRAINT chirp_recommendations_document_id_fkey
+  FOREIGN KEY (document_id) REFERENCES public.documents(id) ON DELETE CASCADE;
 
 
 -- ============================================================
