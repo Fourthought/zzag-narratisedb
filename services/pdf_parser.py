@@ -487,25 +487,42 @@ def split_into_sentences(text: str) -> list[dict]:
             })
             position += 1
 
-    # Third pass: mark TOC based on duplicate headings
-    # Find first duplicate heading - everything before it is TOC
-    seen_headings = {}
-    first_duplicate_position = None
+    # Third pass: mark front matter/TOC as relevance 0.
+    # Strategy 1: look for the MAIB glossary end marker — everything up to and including
+    # this sentence is front matter (TOC, legal boilerplate, glossary).
+    MAIB_FRONT_MATTER_END = "times: all times used in this report are british summer time"
 
+    front_matter_end = None
     for sent in sentences:
-        if sent["text_type"] == "heading":
-            heading_text = sent["text"]
-            if heading_text in seen_headings:
-                # Found duplicate - this is where real content starts
-                first_duplicate_position = sent["position"]
-                break
-            seen_headings[heading_text] = sent["position"]
+        if MAIB_FRONT_MATTER_END in sent["text"].lower():
+            front_matter_end = sent["position"]
+            break
 
-    # Mark all sentences before the first duplicate as relevance 0 (TOC)
-    if first_duplicate_position is not None:
+    if front_matter_end is not None:
         for sent in sentences:
-            if sent["position"] < first_duplicate_position:
+            if sent["position"] <= front_matter_end:
                 sent["relevance_score"] = 0
+    else:
+        # Fallback: normalised duplicate heading detection.
+        # Strip consecutive trailing number groups and normalise case before comparing,
+        # so "1.5 Diver 1 9" (TOC) and "1.5 DIVER 1" (body) both normalise to "1.5 diver".
+        def normalise_heading(text):
+            return re.sub(r'(\s+\d+)+\s*$', '', text.strip()).strip().lower()
+
+        seen = {}
+        content_start_position = None
+        for sent in sentences:
+            if sent["text_type"] == "heading":
+                key = normalise_heading(sent["text"])
+                if key in seen:
+                    content_start_position = sent["position"]
+                    break
+                seen[key] = sent["position"]
+
+        if content_start_position is not None:
+            for sent in sentences:
+                if sent["position"] < content_start_position:
+                    sent["relevance_score"] = 0
 
     return sentences
 
