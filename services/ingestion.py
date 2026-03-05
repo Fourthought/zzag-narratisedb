@@ -28,6 +28,10 @@ class IngestionService:
         pdf_metadata = extract_pdf_metadata(pdf_bytes)
         print(f"  Extracted {len(full_text)} characters, {pdf_metadata.get('page_count')} pages")
 
+        pdf_title = pdf_metadata.get("pdf_title") or ""
+        if not filename.lower().startswith("maibinvreport") and not pdf_title.lower().startswith("maibinvreport"):
+            raise HTTPException(status_code=422, detail="Only MAIBInvReport documents are supported")
+
         print("Step 2: Creating document record...")
         content_hash = hashlib.sha256(full_text.encode()).hexdigest()
         existing = self.db.get_records("documents", {"hash": content_hash}, limit=1)
