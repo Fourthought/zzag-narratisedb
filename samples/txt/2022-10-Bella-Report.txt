@@ -1,0 +1,239 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SUMMARY
+
+Flooding and sinking of the survey workboat Bella
+in the approaches to Lynmouth, England
+on 6 July 2021
+
+At about 1506 on 6 July 2021, the UK workboat Bella flooded and sank while carrying out hydrographic survey operations in the approaches to Lynmouth, England. Bella's crew abandoned into the liferaft and were rescued uninjured by a local boat owner; there was no pollution.
+
+Primarily designed for recreational use, Bella was a small open boat that had been significantly modified for commercial surveying by the addition of a heavy gantry, winch and multibeam echo sounder. These modifications had reduced Bella's forward freeboard, increasing its vulnerability to flooding. In moderate seas, Bella shipped water over the bow that made its way into the wheelhouse and then into the void space between the deck and the hull. With no buoyant volume or in-built buoyancy, Bella succumbed to the water ingress and sank. This investigation has identified weaknesses in the commercial certification applicable to Bella, which inappropriately resulted in it being certified as a workboat suitable for operations at sea, and in the owner's safety management system.
+
+Since the accident, the Yacht Designers and Surveyors Association has updated its paperwork to reflect the requirements of the latest regulations. Recommendations have been made to the Maritime and Coastguard Agency to provide guidance
+to Certifying Authorities on the risks of relying on Recreational Craft Directive information, and to Bella's owner, Geosight Limited, to implement a safety management system that complies with the principles of the International Safety Management Code.
+Image courtesy of Geosight Ltd
+Bella
+1
+
+FACTUAL INFORMATION
+Narrative
+During the morning of 6 July 2021, Bella's two crew, the skipper and a crew member, and their shore- based supervisor discussed the environmental conditions and assessed that, with the gentle breeze1 from the north-west and waves up to about 1m, it was suitable to go to sea. The plan was for Bella, with two crew embarked, to conduct inshore hydrographic survey operations in the approaches to Lynmouth.
+
+At about 1430, Bella left Lynmouth Harbour (Figure 1); both crew were wearing auto-inflate personal flotation devices (PFD). When clear of the channel, the skipper altered course to the south-east to run down sea (Figure 2) and the crew member went forward and lowered the multibeam echo sounder (MBES) gantry from its stowed position into the sea. The crew member returned to the wheelhouse, shut the forward door, then switched on the survey equipment. The skipper then altered Bella's heading to the north-west (Figure 2) into sea at a speed of about 5 knots to commence survey operations.
+
+As Bella settled on its north-westerly heading, a short, choppy sea was experienced and waves started breaking over the bow, beginning to fill the forward cockpit area. The skipper turned on the electric bilge pump and reversed Bella's course to the south-east in an attempt to prevent further water ingress by running down sea. Floodwater was, by then, flowing over the sill of the forward door into the wheelhouse and from there entered the void space beneath the wheelhouse deck.
+
+With Bella sitting low in the water, bow down, the skipper realised that there was a danger of sinking so he stopped the engine and told the crew member to make a "Mayday!" call using the hand-held very high frequency (VHF) radio. No response was heard to the VHF "Mayday!" call, so the crew member used a mobile phone to report the emergency to the supervisor ashore and then, at 1506, called 999 to notify the coastguard. Shortly after the emergency calls were made, and with Bella swamped and partly submerged, the skipper launched and manually inflated the liferaft. With their PFDs inflated and Bella sinking, the skipper and crew member entered the sea and scrambled into the inflated liferaft. The crew member then used a flare to attract attention as Bella sank.
+
+Ashore, the supervisor asked some local boat owners at the quay to assist and, at about 1520, two local boat owners got underway in their rigid inflatable boats (RIB). A few minutes later, the skipper of one RIB recovered both Bella's crew from the liferaft, cold but unharmed. The skipper of the second RIB recovered the empty liferaft back to shore. Both Bella's crew were taken to hospital for checks; they did not require any treatment and were discharged later that day. On 19 July 2021, Bella was located and salvaged by divers.
+
+Figure 1: Closed-circuit television screenshot of Bella leaving Lynmouth, showing sea conditions at 1430 on 6 July 2022
+
+
+1 Conditions assessed as Beaufort force 3: wind speed 7 to 10 knots, wave height 0.5m to 1m.
+2
+
+Reproduced from Admiralty Chart 1160-1 by permission of HMSO and the UK Hydrographic Office
+Figure 2: Bella's estimated track and accident location
+
+Bella and crew
+Bella was a 5.6m glass reinforced plastic boat manufactured in Finland by Bella-Veneet Oy in 2001. Primarily intended for recreational use, Bella was a Bella 571C model that comprised of forward and aft cockpit areas, a central wheelhouse and outboard motor propulsion.
+
+In 2016, a Finnish survey company modified Bella by fitting a 100kg MBES system, comprised of a steel winch, gantry and MBES transducer, near the bow for hydrographic surveys (Figure 3). The survey company did not have Bella certified as a commercial vessel and only operated it in sheltered waters.
+
+In April 2019, Bella was purchased by Geosight Limited2 (Geosight). Based in Romsey, England, Geosight provided land and marine survey services. Bella was the company's first hydrographic survey vessel and, so it could be used commercially, Geosight arranged for Bella to be certified as a workboat.
+
+During 2020 and the early part of 2021, Geosight used Bella to conduct surveys in the Solent, Lowestoft and the Norfolk Broads. In May 2021, Geosight was contracted by North Devon Council to conduct land and hydrographic surveys of Lynmouth and Ilfracombe harbours, which was the first time that Bella had operated at sea rather than in sheltered, categorised waters.
+
+Bella's skipper had worked for Geosight since 2020 and had operated Bella during the Lowestoft and Norfolk Broads surveys. He held a seafarer's medical certificate and had completed a Royal Yachting Association (RYA) accredited sea survival course. Bella's crew member had worked for Geosight for 1 month and, before deploying to North Devon, had been briefed by the skipper on the use of the vessel's
+
+2 Also referred to in this report as the owner.
+3
+
+
+For illustrative purposes only: not to scale
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+           Battery Electric bilge pump
+
+
+Sole locker
+
+
+Opening Cockpit drain
+Figure 3: Bella's layout
+
+lifesaving appliances. The crew member did not hold a valid seafarers' medical certificate3 and had not completed any other marine training. The shore supervisor held an RYA Level 2 Powerboat Handling (RYA PBL2) qualification, without a commercial endorsement.
+Certification as a recreational craft
+During production, the International Marine Certification Institute had assessed that the Bella 571C model met the requirements of the EU's Recreational Craft Directive (RCD)4 Category C, capable of operating as a recreational craft in inshore coastal waters in winds up to force 6 and waves up to 2m high, carrying loads up to a maximum of 748kg.
+
+When Geosight purchased Bella, a Finnish copy of the RCD certificate for a Bella 571C, issued by the manufacturers on 16 October 2018, was supplied with the boat. The translated RCD certificate stated that the Bella 571C model was a partially-decked vessel that met the appropriate international standards for manufacture and construction. The RCD certificate's hull identification number had not been completed.
+
+As the manufacturer did not consider the Bella 571C as being susceptible to swamping, the model was
+not fitted with any additional means of flotation5.
+
+The RCD required the manufacturer to retain the technical documentation for at least 10 years after the last product had been manufactured6. The last Bella 571C was manufactured in 2002, and no copies of this documentation could be found during the investigation.
+Certification as a workboat
+Once Bella was in the UK, Geosight arranged for a surveyor from Saunders Morgan Harris Limited (SMH) to inspect and certify Bella for commercial use as a workboat. The certification process for small workboats of less than 24m in length was regulated by the Maritime and Coastguard Agency (MCA), who authorised Certifying Authorities (CA) to examine and certify small commercial vessels on their behalf. SMH surveyors were authorised to conduct these surveys by the Yacht Designers and Surveyors Association (YDSA) Limited, an MCA endorsed CA.
+
+On 11 November 2019, an SMH surveyor inspected Bella at Lymington to verify that it complied with The MCA Workboat Code Edition 2 - Amendment 1, The Safety of Small Workboats and Pilot Boats - A Code of Practice (The Workboat Code)7. The inspection identified several issues that needed to be addressed before Bella could be certified, including the requirement for additional cockpit drainage, the provision of lifesaving appliances, and the need for a safety management system. During November and December 2019, Geosight made the necessary improvements, including the writing of an operations manual and, on 6 January 2020, the surveyor reinspected Bella.
+
+Guided by the YDSA's survey forms, which referred to Marine Guidance Note (MGN) 280 (M), the surveyor used Bella's RCD information as evidence that it conformed with the construction requirements of The Workboat Code, and recorded that the vessel had a continuous watertight weather deck. The Workboat Code provided no direction on the use of RCD information, other than for the inspection of RIBs and open boats8. The surveyor also used a heel test to assess Bella's stability, which revealed that the boat had a minimum freeboard of 580mm9. In acknowledgement that Bella had a small wheelhouse
+
+
+3 Every seafarer on a seagoing vessel should be certificated as medically fit (for a Code boat going no more than 60 miles from shore, the ML5 certificate is sufficient).
+4 EU Directive 94/25/EC, dated 16 June 1994.
+5 Directive 94/25/EC, Annex I, article 3.3.
+6 Directive 94/25/EC, Annex V.
+7 On 31 December 2018, the Workboat Code superseded the guidance and technical standards published in MGN 280 (M) for the purposes of certifying new workboats and pilot boats.
+8 The Workboat Code, section 4.5.2.
+9 The Workboat Code, section 4.2.1.3.
+
+and was fitted with an MBES, the surveyor reduced the vessel's certified carrying capacity by 66%, such that Bella could carry up to three people with a maximum combined equipment and personnel weight of 246kg.
+
+Once the reinspection was complete, the surveyor sent Bella's survey forms and accompanying photographs to the YDSA duty surveyor for scrutiny and approval. The YDSA duty surveyor approved the documentation, following which the YDSA issued Geosight with a small commercial vessel certificate for Bella based on MGN 280 (M). The certificate authorised Bella to be operated in Area Category 6, in daylight and favourable weather conditions10, up to 3 miles from the nominated departure points (NDP) of Keyhaven, Chichester Harbour and Lowestoft.
+One of the changes introduced by The Workboat Code was that NDPs no longer formed part of the permitted areas of operation for small workboats. The Workboat Code's wording for Area Category 6 instead permitted vessels to operate:
+within 3 miles of land and not more than 3 miles radius from either the point of departure to sea or the seaward boundary of protected waters (see definition of "protected waters"), in favourable weather and daylight11.
+
+Safety management
+The Workboat Code recommended that vessel operators implement a safety management system (SMS) that complied with the principles of the International Safety Management Code (ISM Code). It also contained guidance and explained the requirement for risk assessments and method statements to take all potential hazards into account. Safe operations were based on suitably qualified crew operating vessels in accordance with an SMS. Geosight's operations manual for Bella described the operation
+of the vessel, its equipment and lifesaving appliances. The manual did not contain any operational risk assessments or guidance on favourable weather limitations for safe operation.
+
+The Workboat Code required the skipper of a small workboat, operating up to 3nm from its point of departure, to hold (as a minimum) a commercially-endorsed RYA/MCA Day Skipper Practical Certificate. To achieve commercial endorsement of an RYA/MCA Day Skipper qualification the seafarer was required in addition to hold a certificate of medical fitness, a GMDSS short range certificate, a sea survival certificate, and an RYA Professional Practices and Responsibilities (PPR) course completion certificate12. Geosight's operations manual listed the employees holding RYA PBL2 certificates as qualified to operate Bella, including the shore supervisor on the day of the accident.
+
+When Geosight planned the Lynmouth survey work, it was assessed that the risks associated with operating in this area would be comparable to Bella's previous sheltered waters surveys. A decision was taken that a team of three Geosight staff would deploy to North Devon, led by an experienced supervisor who would be based ashore.
+Post-accident inspection
+The MAIB commissioned an experienced workboat surveyor to conduct a post-accident inspection of Bella to assess its compliance with The Workboat Code. Key findings from this post-accident survey report included:
+* Openings in the deck of Bella's wheelhouse did not have watertight covers and so allowed water into the void space between the deck and hull moulding. This meant that the vessel did not have a continuous watertight weather deck which extends from stem to stern13 and, for certification, Bella should not have been considered a decked vessel (Figure 4).
+
+10 The Workboat Code, section 2, page 12 defines favourable weather as: conditions existing throughout a voyage or excursion in which the effects either individually or in combination of swell, height of waves, strength of wind and visibility cause no hazard to the safety of the vessel, including handling ability.
+11 The Workboat Code, section 3.2.1.
+12 MGN 280 (M) had previously only required operators of these vessels to hold a commercially-endorsed RYA PBL2.
+13 The Workboat Code, page 11.
+
+* Bella did not have the necessary means of flotation required by an open boat to withstand swamping.
+* Bella's forward and aft cockpit sole lockers were not watertight. The forward locker had no means of drainage and it was estimated that it would hold approximately 120kg of seawater when flooded
+(Figure 5). Flooding of the aft locker, which contained Bella's electrical batteries, would lead to failure of the vessel's electric bilge pump, engine start, lighting and radio.
+* The RCD certificate supplied by the owner could not be linked to Bella because the form's hull identification number had been left blank and the certificate was dated 17 years after Bella had been manufactured.
+* The RCD information accompanying Bella provided insufficient detail to confirm that the vessel met the construction and structural strength requirements of The Workboat Code.
+The post-accident survey report concluded that Bella was an open boat that did not have the means of flotation necessary to remain afloat when swamped. Consequently, it did not conform to the requirements of The Workboat Code and should not have been certified for commercial use. The surveyor also assessed that it was unlikely that Bella would have passed the more rigorous heel test for an open
+boat, which required it to have at least 400mm freeboard with its MBES gantry lowered and three crew (247.5kg) positioned in its bow14. A comparison of Bella with an unmodified Bella 571C showed that the 100kg MBES gantry had reduced its forward freeboard by approximately 80mm.
+Previous similar accidents
+In 2005, the MAIB investigated the hull failure of the RIB Big Yellow while it was conducting high-speed passenger trips in St Ives Bay, Cornwall (MAIB Report 11/2006)15. The vessel came to an abrupt stop, the forward section of the hull split open and a bench seat was torn from its mountings, throwing two children into the water. The investigation found that the inspecting surveyor had relied on the vessel's RCD certificate of compliance as evidence that the vessel's construction met the MCA's Code of Practice in force at the time. As a result of this investigation, the MAIB recommended that the MCA provide instruction to CAs on the need to closely examine structural drawings and calculations when examining RIBs that did not have access to underdeck areas.
+
+ANALYSIS
+Overview
+Bella was a small open boat, primarily intended for recreational use, that had been significantly modified and inappropriately commercially certified as suitable for inshore coastal survey operations. In relatively moderate sea conditions, Bella became swamped with seawater and began sinking rapidly. The two crew abandoned into a liferaft and were soon rescued. This section of the report will discuss the reasons why Bella sank, including shortcomings in the certification and operation processes.
+The accident
+In 2016, Bella had been fitted with an MBES system to enable it to conduct hydrographic surveys. This modification added weight to the bow and reduced its forward freeboard. As Bella headed at slow speed into sea, waves were able to break over the bow and flood its forward cockpit. Seawater then filled the forward sole locker, adding additional weight forward, further reducing its freeboard and increasing
+the flooding. Once the floodwater had reached the height of the forward door sill, it started to flood the wheelhouse and drain down into the void space through the openings in the wheelhouse deck (Figure 6).
+
+With a bow down angle, it is almost certain that Bella's electric bilge pump, located in the aft cockpit locker, would have been ineffective. Later, as the floodwater flowed aft, the pump might have operated for a short time before the batteries became submerged and electrical power lost. With progressive flooding, no means of pumping the floodwater out, or means of flotation to keep it afloat, Bella sank.
+
+14 The Workboat Code, section 11.5.2.2.
+15  https://www.gov.uk/maib-reports/hull-failure-of-rigid-inflatable-boat-big-yellow-off-st-ives-bay-cornwall-england.
+
+
+Figure 4: Bella's wheelhouse, showing openings into the void between the deck and hull mouldings
+
+
+Figure 5: Forward sole locker full of water, and cockpit drains
+
+For illustrative purposes only: not to scale
+
+Gantry lowered
+
+
+Waves break over bow and flood forward cockpit and sole locker. Seawater flows over door sill and enters wheelhouse, flooding void space between deck and hull moulding
+
+
+Vessel swamps and begins to sink
+
+Figure 6: Sequence of Bella sinking
+
+Certification of the vessel
+When the SMH surveyor certified Bella for commercial operations, he used the vessel's RCD information as evidence that it was a decked vessel, which complied with the construction and stability standards of The Workboat Code. In contrast, the MAIB's post-accident inspection concluded that Bella did not have a continuous watertight weatherdeck and so should have been surveyed and inspected as an open boat.
+
+The purpose of the RCD information was not to certify Bella for commercial operation as a workboat. Despite this, and guided by the YDSA survey form, Bella's RCD information gave the surveyor a false sense of confidence to conclude that the vessel met the requirements of The Workboat Code. However, without access to the technical documentation that underpinned Bella's RCD certification, the inspecting surveyor did not have the detail required to make these judgements. Moreover, the survey did not identify the presence of the non-watertight openings into the void space or the absence of additional buoyancy, underpinning the assessment that the survey did not identify Bella's shortcomings for certification as a workboat.
+
+The YDSA survey forms and certificate used by the surveyor during Bella's inspection had not been updated from MGN 280 (M) to reflect the introduction of The Workboat Code. This oversight led to the inclusion of NDPs on Bella's certificate, which were no longer part of the certification process16 and, as the operations manual was drafted after the initial survey, to its SMS incorrectly stating that the minimum qualification to operate the vessel was an RYA PBL2, rather than commercially-endorsed RYA/MCA Day Skipper Practical Certificate required by The Workboat Code.
+
+Had Bella been correctly assessed as an open boat with inadequate reserves of buoyancy or means of flotation, further work would have been required before it could have been certified for commercial use as a workboat.
+Operation of the vessel
+Bella was Geosight's first commercial survey vessel and the company had operated it for 18 months without incident. However, the early hydrographic surveys had been conducted in sheltered waters, which almost certainly created a false sense of security for the crew who had become accustomed to operating in very low sea states. Before departing Lynmouth, the conditions had been assessed as favourable for Bella to put to sea. However, with a reduced forward freeboard, which was about half the estimated wave height, the risk of Bella shipping water over the bow in even moderate sea conditions was significant. Geosight's planning for the Lynmouth survey work underestimated the risk of operating Bella in the open sea.
+
+Bella's operations manual did not conform with The Workboat Code's guidance to provide an SMS that met the principles of the ISM Code, which aimed to deliver consistent standards of safety management by establishing accountability thorough assessment and management of risks and robust procedures for operations and emergencies. Specifically for Bella, an SMS should have included a range of risk assessments for the vessel's operation. In particular, given the vulnerabilities of the vessel's design, these should have included well-defined limits in terms of sea state and weather to ensure that the crew could operate the vessel safely.
+
+A key part of an effective SMS is to ensure that crews of commercial vessels are suitably qualified and experienced. The Workboat Code required the skipper to hold a commercially-endorsed RYA/MCA Day Skipper Practical Certificate; however, the skipper held lesser qualifications and the shore-based supervisor, who Geosight's documentation identified as being qualified to skipper the vessel, did not
+have commercial endorsement. Moreover, only Bella's skipper held a valid seafarers' medical certificate. Nevertheless, when Bella began to founder and sink, the crew sensibly manoeuvred the vessel down sea, raised the alarm and then abandoned into the liferaft. The skipper's safety brief to the crew member before they departed and the wearing of PFDs ensured that the abandonment was safely executed.
+Alerted by the supervisor ashore, prompt action was also taken by local boat owners and resulted in the crew being swiftly rescued.
+
+16 The Workboat Code, Appendix 15.
+
+CONCLUSIONS
+* Bella sank because it became swamped with seawater and had insufficient reserves of buoyancy or means of flotation to remain afloat. The vessel was vulnerable to swamping even in moderate sea conditions because the addition of the multibeam echo sounder gantry had significantly reduced its forward freeboard.
+* Despite being issued with the necessary certification, Bella was not compliant with The Workboat Code; shortcomings in construction and means of flotation were missed during the certifying survey due to the surveyor's overreliance on RCD documentation.
+* The Geosight team at Lynmouth almost certainly underestimated the risk of Bella flooding and swamping as they had no recent experience of operating in the open sea and had become accustomed to operating in sheltered waters with low sea states.
+* Geosight's operations manual was not an effective safety management system; shortcomings included underestimation of hazards associated with vessel modifications, operating conditions and crew qualifications.
+* Bella's two crew managed the emergency creditably and were fortunate to be rescued by local vessels soon after their boat sank. The wearing of PFDs and their familiarity with lifesaving equipment led to a safe and orderly abandonment.
+
+ACTION TAKEN
+Actions taken by other organisations
+The Yacht Designers and Surveyors Association Limited has:
+* Updated its survey forms and certificates to reflect the introduction of The Workboat Code Edition 2;
+* Audited its survey records for similar vessels; and,
+* Introduced an examination process for its surveyors.
+
+RECOMMENDATIONS
+The Maritime and Coastguard Agency is recommended to:
+
+2022/131	Provide guidance to Certifying Authorities regarding the application of the Recreational Craft Directive when certifying vessels for commercial operation.
+
+Geosight Limited is recommended to:
+
+2022/132	Implement a safety management system for its vessels that follows the principles of the ISM Code.
+
+
+	Safety recommendations shall in no case create a presumption of blame or liability	
+
+VESSEL PARTICULARSVessel's nameBellaFlagUKCertifying AuthorityYacht Designers and Surveyors Association LimitedHull identification numberFI BEL 00516 1 001TypeSurvey workboatRegistered ownerGeosight LimitedManager(s)Geosight LimitedConstructionGlass reinforced plasticYear of build2001Length overall5.61mRegistered lengthNot applicableGross tonnageNot applicableMinimum safe manning1Authorised cargoNot applicable
+VOYAGE PARTICULARSPort of departureLynmouthPort of arrivalLynmouthType of voyageCoastalCargo informationNoneManning2
+MARINE CASUALTY INFORMATIONDate and time6 July 2021 at about 1506Type of marine casualty or incidentVery Serious Marine CasualtyLocation of incidentLynmouth, North Devon, EnglandPlace on boardUpper deckInjuries/fatalitiesNoneDamage/environmental impactConstructive total lossVessel operationCommercial voyageVoyage segmentMid-waterExternal & internal environmentDaylight; wind north-westerly force 3; wave height 0.5m-1.0mPersons on board2
+
+
+
+

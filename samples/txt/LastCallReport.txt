@@ -1,0 +1,1120 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+Report on the investigation into the foundering of the motor cruiser
+
+Last Call
+at Whitby
+
+   23 November 2007 with the loss of three lives
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Marine Accident Investigation Branch
+ Carlton House Carlton Place Southampton United Kingdom
+SO15 2DZ
+Report No 11/2008
+June 2008
+
+
+
+
+
+
+
+
+
+Extract from
+
+The United Kingdom Merchant Shipping (Accident Reporting and Investigation) Regulations 2005 - Regulation 5:
+
+
+"The sole objective of the investigation of an accident under the Merchant Shipping (Accident Reporting and Investigation) Regulations 2005 shall be the prevention of future accidents through the ascertainment of its causes and circumstances. It shall not be the purpose of an investigation to determine liability nor, except so far as is necessary to achieve its objective, to apportion blame."
+
+NOTE
+
+This report is not written with litigation in mind and, pursuant to Regulation 13(9) of the Merchant Shipping (Accident Reporting and Investigation) Regulations 2005, shall be inadmissible in any judicial proceedings whose purpose, or one of whose purposes is to attribute or apportion liability or blame.
+
+
+
+
+
+
+
+
+
+
+
+
+Further printed copies can be obtained via our postal address, or alternatively by: Email: maib@dft.gsi.gov.uk
+Tel:	023 8039 5500
+Fax:	023 8023 2459
+All reports can also be found on our website: www.maib.gov.uk
+
+CONTENTS
+GLOSSARY OF ABBREVIATIONS AND ACRONYMS
+
+
+Page
+
+
+SYNOPSIS	1
+SECTION 1 - FACTUAL INFORMATION	3
+1.1 Particulars of Last Call and accident	3
+1.2 Background	4
+1.3 Narrative	7
+1.4 Environmental conditions	12
+1.4.1 Forecast weather	12
+1.4.2 Actual weather	12
+1.4.3 State of tide	12
+1.5 Post-accident inspection of wreckage	13
+1.6 Last Call	13
+1.6.1 Design and build	13
+1.6.2 Navigational equipment	15
+1.6.3 Purchase of the boat	15
+1.7 The crew	15
+1.7.1 Previous boating experience	15
+1.7.2 Qualifications and training	17
+1.7.3 Knowledge	17
+1.7.4 Craft familiarisation	17
+1.8 Postmortem results	18
+1.9 The Port of Whitby	18
+1.9.1 Harbour Bylaws	18
+1.9.2 Overview	18
+1.9.3 Safety of navigation in Whitby harbour	20
+1.10 Buoyancy aids	21
+1.10.1 Provision of life vests	21
+1.10.2 Technical specification	22
+1.10.3 Other buoyancy aids	22
+1.10.4 Inspection	22
+1.11 Passage planning	23
+1.11.1 MCA advice	23
+1.12 Communications equipment	24
+1.12.1 VHF conformity	24
+1.12.2 VHF frequency allocation	24
+1.12.3 Operator's licence	24
+1.13 Recreational Craft Directive 2003/44/EC	24
+1.13.1 Requirements	24
+1.14 Design category	25
+1.14.1 RCD category	25
+1.14.2 Man Overboard prevention	27
+
+SECTION 2 ANALYSIS	28
+
+2.1Aim282.2Fatigue282.3Port of Whitby282.3.1	Northerly gales282.3.2	UKHO publications282.3.3	Local information282.3.4	Sources of advice292.3.5	Risk assessment292.4The weather292.5Post construction assessment292.6Recreational Craft Directive302.6.1	Categorisation process302.6.2	Requirement for re-assessment302.6.3	Categorisation summary312.6.4	Crew security312.7Lifesaving equipment322.7.1	Lifejackets322.7.2	Performance of Type II PFD Near Shore Buoyant Vest332.7.3	Regulation for lifejackets and buoyancy aids342.8Communications342.8.1VHF342.8.2Mobile telephone342.9Decisionmaking and risk perception342.9.1Intention to sail342.9.2Decision to sail352.9.3The accident352.9.4Passage planning362.9.5Summary372.10 Similar accidents	38
+2.10.1 2007 statistics	38
+SECTION 3 CONCLUSIONS	39
+3.1 Safety issues directly contributing to the accident which have resulted
+in recommendations	39
+3.2 Other safety issues identified during the investigation also leading to recommendations	40
+3.3 Safety issues identified during the investigation which have not resulted
+in recommendations but have been addressed	40
+SECTION 4 ACTION TAKEN	41
+4.1 The Port of Whitby	41
+4.2 MAIB	41
+4.3 The British Marine Federation (BMF)	41
+SECTION 5 RECOMMENDATIONS	42
+
+GLOSSARY OF ABBREVIATIONS AND ACRONYMS
+BERR		-	Department for Business, Enterprise and Regulatory Reform BMF	-		British Marine Federation
+CE	-	Conformité Européene (European Conformity)
+
+cm	-	Centimetre
+
+DfT	-	Department for Transport
+
+DSC	-	Digital Selective Calling
+
+DVD	-	Digital Video Disc
+
+EEA	-	European Economic Area
+
+EU	-	European Union
+
+GPS	-	Global Positioning System
+
+GRP	-	Glass Reinforced Plastic
+
+HMRC	-	Her Majesty's Revenue and Customs hp		-	horsepower
+IMCI	-	International Marine Certification Institute
+
+kg	-	kilogram
+
+m	-	metre
+
+MCA	-	Maritime and Coastguard Agency MRCC	-	Maritime Rescue Co-ordination Centre N	-	Newton
+Ofcom	-	Office of Communications
+
+OJ	-	Official Journal
+
+PCA	-	Post Construction Assessment
+
+PFD	-	Personal Flotation Device
+
+RCD	-	Recreational Craft Directive
+
+RNLI	-	Royal National Lifeboat Institution
+
+RSG	-	Recreational Craft Sectoral Group
+
+RYA	-	Royal Yachting Association
+
+SAR	-	Search and Rescue
+
+SOLAS	-	International Convention for the Safety of Life at Sea UK	-	United Kingdom
+UL	-	Underwriters Laboratories
+
+USA	-	United States of America
+
+USCG	-	United States Coast Guard
+
+UTC	-	Universal Co-ordinated Time
+
+VAT	-	Value Added Tax
+
+VHF	-	Very High Frequency
+
+Wave terminology:
+
+High side	-	That part of the wave that is about to break Low side	-	The lowest section of a discernible wave
+Plunging wave	-	Steep, breaking wave. Can be powerful and dangerous Shoulder	-	That part of the wave that will break soon
+Spilling wave	-	Aerated white water created after a plunging wave breaks, or as a wave experiences a gradual decrease in depth.
+
+All times used in this report are UTC unless otherwise stated
+
+SYNOPSIS
+
+
+
+On 23 November 2007, the 7.34m motor cruiser Last Call attempted to leave the port of Whitby. The boat was overwhelmed by the force of the large seas that had developed at the harbour's entrance, and all three of the crew lost their lives.
+
+Last Call, a Bayliner 245SB motor cruiser, was purchased second- hand through an independent American brokerage, identified on the internet. It was delivered to Whitby on 12 November 2007, and was sailed for the first time on 17 November in benign weather conditions. The new owner did not arrange for the vessel to undergo the required Post Construction Assessment before being put into service, and it was therefore not compliant with the Recreational Craft Directive.
+
+
+The decision was made to take the boat to sea for a final outing before recovering it at the local slipway to be stored on a trailer for the winter. Overnight on 22/23 November, a strong northerly wind had created 4m to 5m waves at the entrance to Whitby harbour, a well known local phenomenon. As Last Call was departing, personnel at the local RNLI station called the craft on VHF channel 16 to warn the crew of the danger. There was no reply, and Last Call continued toward the harbour entrance.
+
+At the harbour entrance, the craft climbed two large waves in close succession. The second wave caused two of the crew, including the skipper, to fall overboard. The craft drifted
+along the seaward side of the east breakwater extension with the third crew member still on board. While this crew member was reporting the incident to the coastguard, using a mobile telephone, a large wave capsized Last Call and she was washed overboard.
+
+The local lifeboat had already launched in anticipation of such an event, and was able to recover the first two crew members. The third was recovered by search and rescue helicopter. Regrettably, all three crew died due to immersion in salt water.
+
+The decision to sail Last Call in the prevailing conditions was ill conceived. Without a basic level of seamanship and navigational knowledge, no one on board the boat was able to judge the limitations of Last Call, or recognise the dangers they faced.
+
+The investigation found that:
+The skipper's and crew's lack of training and qualification in the use and operation of small craft contributed significantly to the accident.
+The port information pack produced by Whitby harbour needed to be more comprehensive and include information about the local effects caused by northerly winds.
+There are no official instructions or advice for the importers of craft into the UK in respect of their responsibilities under the Recreational Craft Directive.
+Recommendations have been made to The British Ports Association, designed to improve the local information provided to leisure craft operators; to BERR to seek from the EU, clarification of the requirements of the Recreational Craft Directive with respect to improved safety standards; to Bayliner and IMCI, to reassess the RCD compliance of the 245SB model and;
+to the British Marine Federation (BMF), MCA, RNLI and RYA designed to promote appropriate training for operators of leisure vessels.
+
+
+1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Last Call
+
+SECTION 1 - FACTUAL INFORMATION
+
+1.1 PARTICULARS OF LAST CALL AND ACCIDENT
+
+
+Vessel detailsRegistered owner:Andrew Stewart CarrickType:Bayliner 245SB CieraBuilt:2005 - United States of AmericaConstruction:GRPLength overall:7.34mWeight:2397KgEngine power and type:220HP - 5.0L Mercruiser Alpha 1 petrol sterndriveService speed:35KtsOther relevant info:Single propeller variant. Serial number: USDA49SKG405
+Accident detailsTime and date:1215 on 23 November 2007Location of incident:Entrance to Whitby harbourPersons on board:3Fatalities:3Damage:Foundered
+1.2 BACKGROUND
+Last Call, a Bayliner 245SB cabin cruiser, had been purchased second-hand through an independent American broker via the internet. The owner, Andrew Carrick, had researched the internet for over a year looking for a suitable boat to purchase. Email correspondence showed that first contact was made between the brokerage and prospective purchaser on 2 August 2007.
+
+Financial transactions and delivery arrangements were completed by email on 24 September 2007. The full purchase agreement included the boat, a new American road trailer, shrink wrapping for shipment and administration costs. The final purchase price was $34,845 or £17231.23. Additional costs included shipping, import duty, VAT and delivery to Whitby.
+
+Last Call was imported through the Port of Liverpool. Once import duty and VAT had been paid, the vessel was released by Her Majesty's Revenue and Customs (HMRC) and delivered by road transport to Coates Marine boatyard in Whitby on 12 November 2007. On arrival at Coates Marine, Last Call was lifted off the transport and stowed on its own trailer in the boatyard (Figure 1).
+
+Figure 1
+Last Call after delivery to Coates Marine
+
+On 15/16 November Andrew Carrick, together with his partner, Jill Russell and younger brother, John Carrick, visited Last Call while it was ashore on the trailer. After seeking advice, and by purchasing some equipment from the boatyard manager, they were able to start Last Call's engine and satisfy themselves that it ran correctly.
+
+At 0930 on 17 November, after obtaining a launching permit from the Whitby marina supervisor, Last Call was launched from the trailer using the slipway operated by Scarborough Borough Council (Figure 2). While Jill Russell and John Carrick made arrangements at the marina office for the allocation of a suitable day mooring, Last Call was being manoeuvred by Andrew Carrick in the vicinity of the marina, with a friend providing crew assistance.
+Figure 2
+Launching slipway
+
+Once the crew were on board, the skipper manoeuvred the boat around the upper harbour and then made the decision to proceed outside the harbour to sea. Two of the crew were wearing the buoyancy aids delivered with the boat, conditions were fair, and a 0.5m swell created some movement of the boat in the seaway. Last Call was reported as handling well, and about 2 hours later returned to Whitby marina for lunch.
+
+At about 1500, Last Call sailed for a second time and proceeded back to sea where sea conditions were described as calmer than during the morning trip (Figures 3 and 4). At 1930, Last Call returned to the slipway. The intention had been to recover the boat to the trailer, but after approximately 1 hour attempting to manoeuvre the boat onto the trailer, without success, it was decided to leave Last Call alongside at Whitby marina.
+
+Figure 3
+Last Call on passage, 17 November
+
+Figure 4
+
+Last Call on passage, 17 November
+
+Andrew Carrick and Jill Russell returned to the marina on 20 November and spent some time on board. Andrew Carrick also visited the Whitby harbourmaster's office to pay mooring dues for the period 17 to 23 November. He made an application for a permanent mooring, and left a deposit. The deputy port manager explained the mooring charges to him, and checked whether he held a copy of the Port of Whitby
+information pack, which he did. The deputy port manager also advised Andrew Carrick that the weather forecast for the foreseeable period was very poor.
+
+The owner and his partner made a further visit to the boat on 22 November.
+
+1.3 NARRATIVE
+At about 1145 on Friday 23 November 2007, Andrew Carrick, his partner and his brother, arrived at Whitby marina after a 30-minute car drive from their homes near Redcar, Middlesbrough. During a telephone call with his mother at about 1150, John Carrick made a light-hearted comment that the sea was rough, and that their planned boat trip might be cut short by seasickness.
+
+At the time of the crew's arrival, the marina supervisor was visiting the harbourmaster's office, but earlier that morning he had posted the latest local inshore weather forecast on the marina noticeboard. The crew of Last Call had a key to gain access through the security gate and onto the marina pontoon.
+
+At about 1155, an adjacent berth holder observed the crew preparing the craft for departure. Two of the crew were seen wearing lifejackets; the third, dressed in dark blue clothing, was not.
+
+At 1205, the crew let go the mooring lines and made their way toward the Whitby swing bridge. The cockpit canopy was erected, but its rear panel had been unzipped, rolled up, and secured at the stern. It is unknown whether the helmsman was wearing a properly attached kill-cord.
+
+At about 1210, Last Call passed under the swing bridge, and from the Whitby lifeboat station was seen on the east side of the river proceeding downstream. One of the lifeboat crew observed the boat through a telescope, and identified a male at the helm wearing a lifejacket, a much slighter built person sitting in the port hand seat, and a second male without a lifejacket stowing ropes at the stern. The lifeboat mechanic, aware of the heavy seas outside of the harbour, became concerned that Last Call might be intending to proceed to sea. In an attempt to avert a potential accident, he called Last Call three times on VHF channel 16 using the craft's name, which he had read on its stern. There was no response, and Last Call continued toward the harbour entrance. The lifeboat mechanic then contacted the lifeboat coxswain by telephone and asked him to report to the station in anticipation of an immediate launch.
+
+At 1211, the duty harbour watchkeeper, who was working in the vicinity of the Fish Quay, on the west side of the river, saw Last Call pass Tate Hill Pier, increase speed, and then head toward the harbour entrance (Figure 5). Concerned for the safety of the craft should it attempt to leave the harbour, he called the lifeboat station direct
+by mobile telephone. At 1212, immediately after the call to the lifeboat station, he informed the Whitby harbourmaster that a pleasure craft was attempting to leave the harbour. On completion of the call he collected his hand-held VHF and made his way toward the end of the west pier.
+
+Figure 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Whitby outer harbour
+At 12121/2, Whitby lifeboat station contacted Humber MRCC by VHF, advised them of the developing situation, and requested permission for an immediate launch. Humber MRCC approved the request.
+
+At 1213, several witnesses observed Last Call departing Whitby through the harbour entrance. The canvas cockpit canopy was still erected and protecting the crew from the worst of the elements.
+
+An off-duty police officer who witnessed Last Call's departure recalled seeing all three of the crew standing up at the front of the cockpit. He estimated the height of the waves at the entrance to be between 6m to 9m. The police officer, aware that conditions were unsuitable for a craft such as Last Call, shouted at the crew to turn back. There was no response from the crew, and Last Call continued outbound.
+
+As Last Call approached the harbour entrance, it was set toward the east breakwater and encountered a steep breaking wave. The craft rose up almost vertically and one person was observed falling into the aft part of the cockpit. Last Call landed on its keel in a deep trough. It continued outbound, and rose up again vertically onto the crest of a second breaking wave, described by witnesses as higher than the boat itself. As the craft passed over the crest, control was lost, and it landed on its stern and took a sharp 270º turn to port (Figure 6). During the turn, two of the crew fell overboard, one wearing a lifejacket and one in dark clothing without. Last Call's engine then either stalled or the gear change engaged neutral, and the boat was swept by the wind and tide along the seaward side of the east breakwater extension (Figure 7).
+
+Figure 6
+
+Last Call as control was lost, turning 270º to port (image captured from video)
+
+
+Image courtesy of Dave Carter Photography
+
+Figure 7
+
+
+
+Last Call drifting along the east breakwater extension
+
+At 1213, Humber coastguard received multiple calls from members of the public concerned about the actions of the boat and the welfare of the crew.
+
+Shortly before 1214, Humber coastguard received a mobile telephone call from Jill Russell. She reported that Andrew and John Carrick had been swept overboard from Last Call. Initially it had been possible to hear their voices but that they were now out of sight and hearing. In a state of shock, she reported that she was unsure how to stop the boat and was clearly concerned about the size of the incoming waves, their effect on the motion of Last Call, and the danger of making contact with the harbour wall. Jill Russell was able to confirm that she was wearing a lifejacket, but was not hooked onto the boat.
+
+By 1216, the Whitby lifeboat crew had mustered and the all-weather lifeboat was underway toward the harbour entrance.
+
+The off-duty police officer called Humber coastguard and was able to provide details of the accident and a running commentary on the situation west of the breakwater extension. Aware that two people were in the water, he jumped over a barrier and
+made his way to the end of the breakwater extension where, after a few seconds, spray from a large wave resulted in damage to his mobile telephone and he lost contact with the coastguard.
+
+The duty harbour watchkeeper had also made his way to the end of the west breakwater extension and, assisted by the off-duty police officer, he was able to gain sight of the two people in the water about 100m from the west breakwater. He saw that the person in dark blue clothing was not wearing a lifejacket, and was face down in the water with his arms outstretched. The second person was wearing a lifejacket; he was lying about 5m from the first, but appeared motionless.
+
+Just before 1219, while Jill Russell was speaking to the coastguard, a large wave capsized Last Call. She was thrown overboard and lost contact with the coastguard, but she was wearing a lifejacket and was subsequently seen in the water by several onlookers. After Last Call capsized, the craft floated upside down. Slowly, the wind and tide drove the craft into shallow water where wave action and contact with the rocky seabed caused it to break-up.
+
+At 1220, Whitby lifeboat reported to Humber coastguard that it had just cleared the harbour entrance, and at the same time received information that the local search and rescue (SAR) helicopter was inbound from Flamborough Head. The Whitby harbour duty watchkeeper was able to communicate with the lifeboat by VHF radio and direct the lifeboat toward the two men in the water.
+
+The coxswain manoeuvred the lifeboat to head into the wind and sea, and then drifted astern towards the men (Figure 8). During the manoeuvre, a large wave broke over the lifeboat and the two men in the water. When the seawater cleared, the person wearing the lifejacket was sighted face down in the water.
+
+Image courtesy of the Whitby Gazette
+
+Figure 8
+
+
+
+Rescue operation
+
+
+At 1224, in heavy breaking seas, the first casualty was recovered to the lifeboat, followed 1 or 2 minutes later by the second casualty.
+
+At 1228, Whitby lifeboat reported that two persons had been recovered, one of whom was still showing signs of life. Aware that the SAR helicopter was inbound, and also that there was insufficient water available for manoeuvring in the vicinity of Jill Russell, the lifeboat coxswain made the decision to return to harbour and land the casualty showing signs of life. Because of the prevailing sea conditions, he also advised Humber coastguard not to launch the inshore lifeboat.
+
+At 1238, the SAR helicopter arrived on scene and by 12401/2, it had recovered Jill Russell from the sea. The helicopter then departed directly to the James Cook hospital at Middlesbrough.
+
+Meanwhile, the Whitby lifeboat returned to harbour, berthed alongside at Scotch Head, and awaited the arrival of the ambulance. The lifeboat crew then arranged for the ambulance to be redirected to the lifeboat station on the other side of the harbour, where it was deemed a safer and more private berth for transferring the casualties to the ambulance.
+
+At about 1254, both casualties were transferred from the care of the lifeboat crew to the waiting ambulance. The ambulance rendezvoused with an air ambulance helicopter on the east pier, where it transferred Andrew Carrick, and by 1327 he also was en route
+to James Cook hospital Middlesbrough. John Carrick was taken by ambulance to Scarborough hospital.
+
+1.4 ENVIRONMENTAL CONDITIONS
+1.4.1 Forecast weather
+The inshore waters forecast issued by the meteorological office at 0600 on 23 November for the period 23 November 0600 until 24 November 0600 stated:
+'Berwick on Tweed to Whitby 24 hour forecast
+North 7 or gale 8, backing south west 5 or 6 Wintry showers, then fair
+Good
+Moderate or rough, occasionally very rough at first'
+
+The marina office noticeboard was displaying the inshore forecast (see Annex A).
+
+1.4.2 Actual weather
+The Whitby harbourmaster's logbook recorded the weather conditions on the morning of 23 November as:
+
+'Cloudy, wintry showers, clear, wind NE'ly 6/7, rough sea, heavy swell'
+
+The conditions near the east breakwater extension at the time of the accident can be seen in Figure 9.
+
+
+Image courtesy of the Whitby Gazette
+
+Figure 9
+
+
+
+Weather conditions at the time of the accident - East Breakwater
+
+1.4.3 State of tide
+High water at Whitby was predicted to occur at 1437 with a height of tide of 5.5m, 100 percent of the spring range. The accident occurred 21/2 hours before high water.
+
+1.5 POST-ACCIDENT INSPECTION OF WRECKAGE
+The local coastguard team recovered flotsam from Last Call up to 48 hours after the accident. Items found included:
+6	-	US style Near Shore Buoyant Vests
+1	-	US dry chemical fire extinguisher
+2	-	Engine gauges (rpm and temperature)
+1	-	Alcohol burning stove
+1	-	One metre deck section from the bow
+1	-	US style flotation grab cushion
+Cabin furniture
+Various pieces of awning and upholstery.
+
+1.6 LAST CALL
+1.6.1 Design and build
+Last Call was built in 2004 by Bayliner, part of the Brunswick Boat Group, Roseburg, Oregon USA. Marketed as a 245 Cruiser, the boat was capable of extended cruising by virtue of its road trailer compatibility. The planing hull was constructed from hand- laid fibreglass and heavy-duty marine grade vinyl. The bluff bow design provided generous space in the forward cabin, and the craft was capable of achieving speeds up to 35 knots.
+
+The US National Marine Manufacturers Association, in co-operation with the American Boat and Yacht Council, certified Bayliner boats. The certification process allowed manufacturers to certify for both American and European directives simultaneously.
+The vessel's specification met the applicable USCG standards.
+
+The cockpit layout and design is shown in Figures 10 and 11. The photographs were taken on board another Bayliner 245 Ciera, but show the same layout and instrumentation as that fitted to Last Call.
+
+The 5 litre inboard Mercruiser petrol engine had approximately 50 running hours registered on the instrumentation. It was connected through a stern drive to a single propeller. The boat was fitted with trim tabs, as well as a trim facility on the outdrive leg.
+
+The port side passenger seat was multi positional, its backrest being controlled by a lift and slide mechanism, which allow passengers to face forward, aft, or to lie horizontal.
+
+The helmsman's seat was positioned close to a 'tilt adjustable' steering wheel. The space available for the helmsman to stand behind the wheel was minimal. From the information available, there was no additional equipment fitted to Last Call over and above the manufacturer's initial specification.
+
+Figure 10
+
+245 SB - helmsman's position (similar craft)
+
+Figure 11
+
+Cockpit layout (similar craft)
+
+A USA manufactured VHF set was fitted into the forward console just to the right of the steering wheel. A digital depth indicator and a small steering compass were fitted at production.
+
+The two-piece canvas and vinyl cockpit canopy could be unzipped, allowing the occupants to remain protected, while the aft section was open to the elements. Access to the boat was via a transom door on the starboard side (see Figure 12).
+
+A kill-cord 'toggle' mechanism was fitted adjacent to the throttle lever (see Figure 13). Its purpose was to stop the engine if the helmsman moved away from the helm or fell overboard. By doing so, it prevented the boat from injuring third parties, and gave the helmsman an opportunity to re-board the boat if he had fallen overboard.
+
+The personal effects recovered from the crew provided no indication that the kill-cord was in use at the time of this accident.
+
+1.6.2 Navigational equipment
+There was no GPS or chart plotter fitted to Last Call. No paper chart, nautical almanac, sailing directions, binoculars, hand-held bearing compass, or plotting equipment were carried on board.
+
+1.6.3 Purchase of the boat
+The owner of Last Call had recognised the financial benefits to be gained by the weakness of the US dollar, and through the internet had identified a suitable second- hand vessel to purchase. His long-term aspiration was to start importing leisure boats from the USA and sell them in the United Kingdom after EU conformity had been achieved.
+
+The breakdown of purchase costs showed a significant saving could be achieved by importing such craft. Allowing for exchange rate variation, the total cost of boat, new trailer, administration fee and shipping was $41,595 or £20,569. With the additional costs of import duty and VAT included, a conservative estimate would indicate a saving of about £8000 on an equivalent second-hand model purchased in the UK.
+
+1.7 THE CREW
+On 23 November there were three crew members on board Last Call: the owner, Andrew Carrick; his partner, Jill Russell; and Andrew Carrick's brother, John Carrick.
+
+All three crew were considered competent swimmers.
+
+1.7.1 Previous boating experience
+Approximately 14 years earlier, Andrew Carrick had purchased a small powerboat capable of being transported by road trailer (Figure 14). The boat was based and operated near the River Tees and was used for occasional fishing trips. On two or three occasions, it had undertaken passages to Whitby, returning to the River Tees the same day.
+
+Andrew Carrick had owned this boat for approximately 2 years, during which time both his partner and brother accompanied him on occasional day trips.
+
+Figure 12
+
+Bayliner 245 SB (similar craft)
+
+Figure 13
+Last Call - helm position
+
+Figure 14
+
+
+
+1.7.2
+
+
+Qualifications and training
+
+The skipper's previous boat
+
+This investigation has been unable to discover any records of certification or evidence that any of the three crew had attended, or successfully completed, a recognised maritime training course.
+
+1.7.3 Knowledge
+The owner's personal computer contained a publication entitled 'Work Hard. Play Hard. Operate Your Boat Safely'. This had been downloaded free of charge from Bayliner's website. The eight-part publication discussed a number of elementary safety subjects, including: wearing of personal flotation devices, man overboard procedure, fire, heat- related illness, vessel safety checklist, and the benefits to be gained from completing a boating safety course.
+
+Also in the owner's home were four boating DVDs including 'Boat Handling' and 'Improve Your Boating Skills and Knowledge'.
+
+1.7.4 Craft familiarisation
+The three crew members visited Last Call on several occasions when the boat was on its trailer at Coates Marine.
+
+During these visits, they questioned the boatyard owner on many aspects of boat ownership. Although they appeared fairly inexperienced and lacked knowledge about certain fundamental aspects of boat ownership, appropriate advice was provided, and they purchased equipment suitable to carry out engine trials ashore. They gave the boatyard owner the impression that they were receptive to the advice given and were keen to learn.
+
+Recognising that the boat was fitted with an American 110 volt power system, and would require a transformer to achieve UK specification, the owner intended to consider the options available over the winter lay up period.
+
+Evidence also showed that Andrew Carrick was aware that the VHF radio fitted to Last Call was an American variant, and that he was investigating the purchase of a hand- held VHF from within the UK.
+
+The broker responsible for supplying the craft was able to confirm that the engine and the owner's manual were still in his office in New Jersey, USA. They were, therefore, unavailable to the owner before he operated the craft.
+
+Prior to the accident on 23 November, Andrew Carrick had accumulated 8 hours experience at the helm of Last Call.
+
+1.8 POSTMORTEM RESULTS
+Postmortem results confirmed that the cause of death for all three of Last Call's crew was 'death due to immersion in sea water'. The results of subsequent toxicology tests indicated no reason for any of the crew's judgment to have been impaired at the time of the accident.
+
+1.9 THE PORT OF WHITBY
+1.9.1 Harbour Bylaws
+As a municipal port, the Port of Whitby is a Statutory Harbour Authority whose powers are derived from the Whitby Port and Harbour Act 1879. The port is operated by Scarborough Borough Council, the duty holder, and is currently in the process of developing bylaws to assist the control of navigation within Whitby Harbour under powers conferred upon it by section 83 of the Harbours, Docks and Piers Clauses Act 1847.
+
+The proposed bylaws have been reviewed by the Department for Transport (DfT), returned to Scarborough Borough Council, and are currently awaiting re-submission to the Department.
+
+The accident occurred inside the port's statutory harbour limit.
+
+1.9.2 Overview
+Situated on the east coast of England, Whitby has a population of about 14,000 and stands on the mouth of the River Esk. The port is described as 'a small commercial and fishing port and also a centre for recreational craft'
+
+The harbour is divided into the upper and lower harbours, which are separated by a swing bridge. Whitby marina is situated at the south end of the upper harbour. An extract of BA chart 1612 showing the harbour and its approaches can be found at Figure 15.
+
+Reproduced from Admiralty Chart BA 1612 by permission of
+the Controller of HMSO and the UK Hydrographic Office
+
+
+Figure 15
+
+
+
+Whitby harbour
+
+Although Whitby lies on the east coast, the River Esk flows through the centre of the port in a south-to-north direction. The river rises 16 miles above Whitby and drains the high ground to the west. Consequently, the sailing directions record that:
+
+ 'in wet weather the river is subject to sudden and heavy freshets which scour the harbour'.
+
+Rainfall had been recorded in the harbourmaster's logbook earlier in the week, prior to the accident, but its effect on producing freshets in the river was considered not to be significant.
+
+The east and west breakwater extensions afford the harbour good protection from heavy seas, although the sailing directions comment that:
+'no attempt should be made to enter Whitby Harbour in gales from the North to North East, when the sea breaks a long way off shore and renders the approach dangerous. In N gales the Lower Harbour is unusable and the Upper Harbour acts as a place of refuge'.
+
+In the vicinity of the harbour entrance, the flood tidal stream was setting easterly. The sailing directions, chart, information pack and the Whitby harbour office tide tables inform mariners that on approaching the piers:
+'care should be exercised as a strong set to the east will be experienced across the entrance during the two hours preceding high water'
+
+1.9.3 Safety of navigation in Whitby harbour
+On 29 April 2002, a meeting of Whitby harbour users established a guide to normal and best practice, applicable to the safety of navigation within Whitby harbour. The
+guide entitled 'The Safety of Navigation Within Whitby Harbour' identified nine examples of good and proper practice, which, 'if applied by harbour users, would preserve the existing safe situation within the harbour'. The guide can be found at Annex B.
+
+In respect of this accident, there were two relevant 'good practice' examples:
+'All craft equipped with VHF should maintain a listening watch on Channel 11 when approaching and within Whitby harbour'
+'Harbour Watchkeepers will give information on tidal height, tidal flows, navigation marks, sea conditions and existing weather conditions but will not make judgements. They can be contacted on Channel 11 VHF'
+
+The guide also referred to the expectation that new bylaws would shortly be introduced to assist in the control of navigation within Whitby harbour.
+
+A Scarborough Borough Council (Whitby Harbour) standard operating procedure referring to the operation of the harbour watchkeeping service states that the purpose of the service is:
+'to provide information and assistance to all users on demand.....'
+
+The same procedure lists the duties of the watchkeeping staff, and instructs that:
+'When sea conditions are such that danger exists on the west extension the storm gate should be closed'
+
+and;
+'If, in the watchkeeper's opinion, sea conditions in the harbour entrance are such that they pose a danger to a vessel entering or leaving the port they should attempt to contact the vessel by VHF to alert the operator to the conditions'
+
+1.10 BUOYANCY AIDS
+1.10.1 Provision of life vests
+Last Call was delivered to Whitby complete with eight US, Type II PFD (personal flotation device), adult, near shore buoyant vests (Figure 16). In the USA, this type of aid is typically supplied by boat dealerships at the request of the purchaser, when a new boat is delivered.
+
+There had been no subsequent checks made on the equipment by the brokerage used by Andrew Carrick to purchase Last Call.
+
+Figure 16
+US Type II PFD
+
+1.10.2 Technical specification
+The adult, near shore buoyant vest complied with USCG regulation 160.060 - Specification for a buoyant vest, unicellular polyethylene foam, adult and child (Annex C). The vest had undergone type testing by the American - Underwriters Laboratories (UL), (Annex D) and had received the UL stamp of approval. The vest had not been assessed under the EU Personal Protective Equipment Directive, and therefore did not bear a CE mark.
+
+The lot number showed that the vests were manufactured in the fourth quarter of 2003. They were designed for a person weighing 90lbs (40.8kgs) or more and provided a minimum buoyancy of 15.5lbs (77N). It is a USCG requirement that all recreational boats must carry one wearable PFD (Type I, II, III or V) per person on board. In Europe, a Bayliner 245SB is certified to carry 8 passengers and luggage up to a maximum of 758kg.
+
+The USCG provides the following guidance on a Type II PFD:
+• Intended use:
+• General boating activities
+• Good for calm, inland waters or, where there is a good chance of fast rescue.
+
+• Advantages:
+• More comfortable to wear than a Type I PFD
+• Keeps most unconscious wearers face up in the water
+• The Type II is a compromise between Type I performance and wearer comfort.
+
+• Disadvantages:
+• May be uncomfortable after wearing for extended periods
+• Will not turn as many people face up as a Type I PFD
+• In rough water, a wearer's face may often be covered by waves
+• Not for extended survival in rough water.
+
+1.10.3 Other buoyancy aids
+The only other buoyancy aid known to be on board Last Call was a Throwable Device Type IV PFD, which was also USCG approved. Similar to a seat cushion, the device recovered from Last Call measured 38cm x 38cm x 4cm; it also did not have a CE mark. There was no lifebuoy or liferaft fitted to Last Call.
+
+1.10.4 Inspection
+Inspection of the buoyant vests recovered from and worn by Andrew Carrick and Jill Russell, showed that their structure had remained intact, but the web securing strap had become detached from the front of the buoyancy chamber cover (Figure 17).
+
+Figure 17
+Detachment of web securing strap
+Additionally, photographic evidence showed that the aid worn by Jill Russell had been forced over her head, although the waist strap held, keeping the PFD attached to her body.
+
+The device worn by Andrew Carrick remained in the fitted position, but was described by his rescuer as 'only loosely secured'.
+
+1.11 PASSAGE PLANNING
+1.11.1 MCA advice
+The current advice provided for leisure boat users by the MCA, entitled 'SOLAS V For Pleasure Craft' (MCA/098), advocates that skippers should take into account the following points when planning a boating trip:
+• Weather: before you go boating, check the weather forecast and get regular updates if you are planning to be out for any length of time.
+• Tides: check the tidal predictions for your trip and ensure that they fit with what you are planning to do.
+• Limitations of the vessel: consider whether your boat is up to the proposed trip and that you have sufficient safety equipment and stores with you.
+• Crew: take into account the experience and physical ability of your crew. Crews suffering from cold, tiredness and seasickness won't be able to do their job properly and could even result in an overburdened skipper.
+• Navigational dangers: make sure you are familiar with any navigational dangers you may encounter during your boating trip. This generally means checking an up to date chart and a current pilot book or almanac.
+
+• Contingency plan: always have a contingency plan should anything go wrong. Before you go, consider bolt-holes and places where you can take refuge should conditions deteriorate or if you suffer an incident or injury. Bear in mind that your GPS set is vulnerable and could fail at the most inconvenient time. It is sensible and good practice to make sure that you are not over-reliant on your GPS set and, that you can navigate yourself to safety without it should it fail you.
+
+1.12 COMMUNICATIONS EQUIPMENT
+1.12.1 VHF conformity
+Other than mobile telephone, the only known communications equipment on board Last Call was a marine VHF radio manufactured in the USA. It was not equipped with Digital Selective Calling. Within the EU, all electronic and electrical equipment must meet stringent technical and legislative standards. To show that marine equipment meets these standards, the equipment is assigned a European Conformity (CE) mark. In the USA, however, products do not have to comply with the same regulations, and are neither tested nor carry a CE marking. The Ofcom (Office of Communications) guidance for radio equipment conformity can be found at Annex E.
+
+With the exception of type-approved installations listed in the Ofcom guidance, VHF radio equipment that does not carry a CE mark cannot be licensed for use on EU vessels.
+
+1.12.2 VHF frequency allocation
+The frequencies allocated to marine VHF radios within Europe and the USA are common, and are published in the Admiralty List of Radio Signals, Volume 1(1). Each frequency has a corresponding channel number. Eighty-eight international channels are allocated to public correspondence, inter-ship, port operations and ship movement communications. Channel 16 is the recognised international distress, safety and calling channel, and channel 70 is the digital selective calling channel for distress, safety and calling.
+
+Some administrations, including the USA, allocate additional channels for their own national purposes.
+
+Evidence suggests that Andrew Carrick believed that VHF frequency allocation differed between the USA and UK; as a result, he had been trying to source appropriate UK approved equipment.
+
+1.12.3 Operator's licence
+None of Last Call's crew possessed a VHF radio operator's licence.
+
+1.13 RECREATIONAL CRAFT DIRECTIVE 2003/44/EC
+1.13.1 Requirements
+The Recreational Craft Directive (RCD) places the responsibility for ensuring that the craft complies with its requirements on the person 'placing the craft on the market'. A craft imported from outside the EEA is considered a new 'placing on the market' when it clears any European Customs.
+
+A boat must comply with the RCD and obtain a CE mark, either at the first point of sale, or when it is first put into service in the EEA, unless it is in transit through, or entering, EU waters for touristic reasons. Since 1 January 2006, the RCD required all second- hand imported craft to undergo a procedure called Post Construction Assessment (PCA), which requires a Notified Body to check such vessels are RCD compliant. The process has increased the cost of importing a boat. A craft should be fully compliant before it is used for the first time in EEA waters, and the RCD places that responsibility with the importer. In the UK, policing RCD compliance is the responsibility of local authority Trading Standards.
+
+The owner, or the person taking responsibility for placing the craft on the market, must lodge an application for a PCA report with a Notified Body and provide all available documentation. The Notified Body will examine the craft to ensure its equivalent conformity with the RCD.
+
+If successful, the craft is required to display a builder's plate endorsed with 'Post Construction Assessment', a CE mark, and the design category. The process and final report would inform the 'person putting the craft on the market' of their responsibilities for drawing up a written Declaration of Conformity, and their 6-year liability if the craft is defective and causes injury to anyone.
+
+Before Last Call entered the UK, the owner approached a commercial company to gain an understanding of the PCA and CE process, including: insurance liability, policing of the EU (UK) RCD regulations, and the cost of employing the company to undertake the process on his behalf. There was no further communication; a PCA was not carried out, and European Conformity was not achieved on Last Call before the accident.
+
+1.14 DESIGN CATEGORY
+1.14.1 RCD category
+The RCD defines boat design categories by the wind and sea state the craft must be designed and constructed to withstand (Table 1):
+
+
+Design categoryWind Force (Beaufort scale)Significant wave height (H1/3, metres)1A - OceanExceeding 8Exceeding 4B - OffshoreUp to, and including, 8Up to, and including, 4C - InshoreUp to, and including, 6Up to, and including, 2D - Sheltered watersUp to, and including, 4Up to, and including, 0.3Table 1: Boat design categories
+
+
+
+
+
+
+
+1 The mean height of the highest one-third of the waves in a given sample.
+
+There were two models of the Bayliner 245 manufactured, the 245SB and the 245RB. The 245SB was developed in 1999 and was defined as a cruiser style boat.
+
+In respect of RCD design categorisation, the SB model was rated for import into the EU by the Notified Body IMCI as a Category B boat capable of carrying 8 persons. The boat was certified using RCD module Aa2. The RB model, classified as a deck or runabout boat achieved Category C status, using RCD module B3.
+
+Manufacturers and notified bodies can use harmonised standards to demonstrate the conformity of their products, but are under no obligation to do so and may use alternative means to demonstrate conformity with the essential requirements.
+
+In 1999, a draft version of a proposed standard; ISO/CD2 12217-1: Small Craft- Stability and Buoyancy assessment and Categorisation- Non Sailing Boats of hull length greater than 6m, was circulated for comments and further development. The manufacturer chose to use this draft version - ISO/CD2 12217-1 to demonstrate the 245SB's conformity with the essential requirements of the RCD. The 245SB was assessed by the International Marine Certification Institute (IMCI) against this standard, and appropriately issued with a conformity certificate assigning the craft a Category B
+status. IMCI has reissued the certificate of conformity for the 245SB on an annual basis since 1999.
+
+During the consultation period for draft ISO/CD2 12217-1, the stability requirements in respect of categories A and B were significantly enhanced, and these were incorporated into the mandated version of ISO 12217-1, published in 2002. The enhancements included:
+* Introducing limits of area for recesses.
+* Increasing the assumed roll angle in the criterion for rolling in beam waves and wind.
+* Increasing the required area under the righting moment curve for smaller vessels.
+
+Once a standard has been mandated by publication in the Official Journal (OJ) of the EU, it represents the minimum level of safety acceptable for a product being placed on the market after the transition date. Until the transition date, either the previous standard or the newly mandated standard can be used. Once the transition date has passed, manufacturers and their notified bodies may only use the mandated standard for new products placed on the market in the EU.
+
+However, as the Bayliner 245SB had not changed since ISO 12217-1 became effective in 2002, it was deemed to be a 'series production' vessel, and so did not require to be reassessed to check its conformity with the newly adopted harmonised standard
+
+
+
+
+2 Aa - Internal conformity assessment and production control by the manufacturer who draws up a written declaration of conformity, plus tests on stability and buoyancy carried out on the responsibility of the notified body.
+3 B - EC type-examination. The notified body issues an EC type-examination certificate for a representative production sample which it has assessed in accordance with essential safety requirements. Applicable only to the design phase.
+
+(Annex F). As a consequence, Bayliner 245SBs on sale in the UK, at the time of this investigation have not been assessed against ISO 12217-1 2002, and continue to hold the CAT B rating that they were originally allocated in 1999.
+
+1.14.2 Man Overboard prevention
+ISO 15085:2003 - Small craft - Man overboard prevention and recovery examines the requirements for handholds, hooking points, and body support on high-speed boats.
+
+In respect of body support on high-speed boats, and addressing the risk of falling overboard, the ISO states that:
+'High-speed boats of any design category shall be fitted with means of support for each of its occupants, when the boat is underway, limiting the risk of being thrown overboard in case of sharp turns, strong acceleration, or movements in the sea'
+
+To provide support for each person either a single handhold, plus back support, or two handholds allowing simultaneous gripping of both hands is to be provided.
+'if the occupants are seated, the body support shall have a height of no less than 120mm above the rigid bottom of the seat...'
+
+If the occupants are standing or leaning,
+'the body support may only provide support for the back or torso'
+
+A handhold is defined as,
+'any part of the boat that may be gripped by hand to reduce the risk of falling overboard, even if it is not its main function. Example, handle, shroud, seat edge, cleat, top of windscreen, steering wheel, foot strap of sailing dinghy'
+
+SECTION 2 - ANALYSIS
+
+2.1 AIM
+The purpose of the analysis is to determine the contributory causes and circumstances of the accident as a basis for making recommendations to prevent similar accidents occurring in the future.
+
+2.2 FATIGUE
+There is no evidence to indicate that any of the crew of Last Call were suffering from fatigue. Fatigue, therefore, is not considered a contributory factor to this accident.
+
+2.3 PORT OF WHITBY
+2.3.1 Northerly gales
+Whitby harbour entrance faces north. The strong northerly winds that preceded this accident produced waves that, as they crossed the shallowing water outside the harbour, became large steep breaking waves affecting the harbour entrance. This is a well known local phenomenon, as evidenced by the absence of other traffic to and from the port on that day.
+
+2.3.2 UKHO publications
+BA chart 1612 and the Admiralty Sailing Directions, NP 54, contain sufficient information for the risks associated with entering Whitby harbour during north to north-easterly gales to be adequately assessed by anyone with a basic competence in navigation.
+With this understanding, the same person would be able to judge the risks involved in departing the harbour in similar conditions. However, there is no evidence that either Last Call's skipper or his crew had received any training in navigation, or that he owned or had consulted these publications.
+
+2.3.3 Local information
+The port information pack is produced by the harbour authority to provide boat users with basic information about port and harbour operations; evidence suggests that Andrew Carrick was provided with a copy of this pack. The pack explains how to contact the authority, and that users of the port can help the harbour staff by asking them 'to explain anything they are not sure about'. However, the port information pack does not mention, nor does it provide advice to mariners about the effects of strong northerly winds and the associated build up of heavy seas at the entrance to the harbour.
+
+The Port Marine Safety Code (Guide to Good Practice) 7.8.2 contains the following:
+Recreational users are not all well trained, safety conscious boat handlers..... neither do they all have detailed knowledge of their harbour...harbour masters have traditionally given passage planning advice to recreational users..'
+
+There is room to enhance the information available to recreational / leisure craft users of Whitby harbour. Such enhancements could include: expanding the port information pack to include relevant sections of NP 54; providing leisure craft users with the local guide entitled - 'The Safety of Navigation within Whitby Harbour'; and consolidating the various port information notices to simplify current instructions.
+
+2.3.4 Sources of advice
+The port information pack explains that the harbour maintains a 24 hours a day watchkeeper who can be consulted for advice. Had he been contacted by Last Call's crew, he would have been able to counsel them against their proposed trip.
+
+The marina manager, who works part time, could potentially have warned the crew of Last Call against attempts to leave the harbour. Unfortunately, he was not at the
+marina when the crew arrived on the day of the accident, and so an opportunity to seek his advice was lost.
+
+2.3.5 Risk assessment
+Examination of the port's risk assessments showed that risks associated with the recreational or leisure sector had not been formally considered, although the publication of the guidance note 'The Safety of Navigation within Whitby Harbour' demonstrated that many of the risks associated with generic vessel movements within the port had been considered.
+
+Given the considerable number of recreational craft berthed and operating through the Statutory Harbour Area, there is a need for the risks associated with these craft to be formally assessed and control measures identified. Such an exercise might examine the need for the control of vessel movements in the harbour and visual warning signals or notices during periods of inclement weather and rough sea conditions.
+
+If necessary, appropriate powers for the implementation of any control measures could be sought through the current bylaw consultation exercise.
+
+2.4 THE WEATHER
+The weather experienced at Whitby on the day of the accident was as forecast and widely promulgated. In addition, a copy of the latest local inshore forecast had been placed on the Whitby marina noticeboard, which the crew passed on their way to Last Call. There is no evidence that the crew had seen or heard any of these forecasts.
+However, John Carrick's telephone call with his mother, at 1150 that morning, indicated he was aware that the sea was rough, and that they might therefore have to shorten their trip to sea.
+
+2.5 POST CONSTRUCTION ASSESSMENT
+This accident has highlighted the importance of a craft undergoing a Post Construction Assessment (PCA). In this case, responsibility for completing the PCA rested with the owner. While he had made enquiries about the PCA process, one had not been carried out, and the vessel had not been CE marked. Had the process been completed, not only would the craft have been legal, with any shortfalls rectified, but also the owner would have been made aware of the boat's RCD Category (see 2.6.1).
+
+The original owner's manual had not accompanied Last Call when the vessel was imported, so the skipper was not able to read the guidance and warnings contained in it. One of these warnings, for example, would have alerted him to the manufacturer's guidance that Bayliner 245SBs should only be operated by trained operators. There is no requirement for second-hand leisure craft sold within the UK to be accompanied with their owner's manuals, so this cannot normally be considered a robust safety barrier.
+
+However, the PCA process requires that an owner's manual be presented, and it would therefore have been available for the skipper to read and to benefit from the advice it provided.
+
+The favourable dollar / pound exchange rate has triggered an increase in the number of boats imported from America into the UK. Currently, inspection of these vessels at the point of entry into the UK by Trading Standards is impractical, not financially viable, or required by statute. Guidance and advice to importers on the requirement to conduct PCAs is available on many websites4, but the number of owners who miss or fail to heed this advice and, consequently, do not obtain EU conformity is not known. There is currently no registration scheme for UK recreational craft and, as a result, Trading Standards find the task of policing non-compliant craft extremely difficult.
+
+To help ensure that imported recreational craft do undertake a PCA, it is recommended that importers receive statutory notice of their responsibility at the point of entry into the UK.
+
+2.6 RECREATIONAL CRAFT DIRECTIVE
+2.6.1 Categorisation process
+Bayliner 245SBs imported into the EU are allocated RCD Category B status by the notified body, IMCI, indicating that they are designed for offshore use, in wind forces of up to and including Beaufort force 8, and significant wave heights up to and including 4m.
+
+Although Last Call had been privately imported from the USA as a second-hand vessel, it is possible that the skipper was aware that a Bayliner 245SB purchased new from a UK dealership, was certified as an RCD Category B vessel. In the absence of experience, he might have considered the forecast conditions on the day were within Last Call's capabilities.
+
+Had Last Call undertaken a PCA on importation to the UK, in respect of stability and buoyancy, it would have been assessed against ISO 12217-1:2002, the current
+standard, and probably been assigned RCD Category C status. This category limits use of a vessel to inshore waters, up to force 6, and a significant wave height of 2m.
+
+In this event, the skipper would have been more likely to know that the conditions on the day of the accident were beyond the boat's operating capabilities, and therefore too severe for a trip outside the harbour.
+
+2.6.2 Requirement for re-assessment
+The EU guide to the implementation of Directives based on the New Approach and the Global Approach, makes it clear that after a designated transition period 'only the revised harmonised standard gives presumption of conformity'. However, the guide does not address the situation when:
+* A harmonised standard was not available at the time of the initial assessment, or
+* A manufacturer or notified body has used a draft standard, still under development, to demonstrate conformity.
+
+
+4 For example: www.rya.org.uk/knowledgebase/technical.
+
+This lack of guidance has meant that, since the 245SB has not changed substantially since its introduction it can be considered to be a 'series production' craft, and there is therefore no requirement for it to be reassessed against the improved standards contained in ISO 12217-1:2002. As a consequence, 245SBs continue to be marketed
+and sold in the EU as Category B craft, based on the 1999 assessment made using the less demanding draft ISO standard.
+
+The RCD was developed to make trade across the EU more equitable, and not as an instrument for safety. However, it seems inappropriate that a Bayliner 245SB, for
+example, sold as new can be assigned Category B status, based on an obsolete draft standard, while the same model imported as a second-hand vessel receives Category C status based on the current standards.
+
+Without underestimating the significant costs involved with modifying design and production techniques to meet the latest approved standards, a consumer, purchasing a new craft in the EU, should be confident that the craft conforms with the latest approved standards.
+
+The original assessment conducted on the 245SB for its certificate of compliance was in accordance with the guidance and procedures applicable in 1999. Further, the model has continued to comply with EU directives and the advice produced by the Recreational Craft Sectoral Group (RSG).
+
+Given the significant stability and buoyancy enhancements introduced by ISO 12217-1:2002, the MAIB believes that in the interests of safety for all owners and
+potential owners, the 245SB should be voluntarily re-assessed for RCD conformity by the manufacturer, using the currently mandated ISO 12217-1:2002.
+
+2.6.3 Categorisation summary
+The degree to which the potential RCD Category of Last Call influenced Andrew Carrick on 23 November can never be known. However, it is considered inappropriate that when safety standards are significantly improved, they are not applied to all vessels sold as new. It is very probable that Bayliner 245SBs are not the only craft that have not been re-assessed against updated standards.
+
+The MAIB has identified inconsistencies in the implementation of rules, directives, and RSG recommendations, by both commercial and trade enforcement organisations, particularly in respect of the requirement for 'new' craft to comply with the latest ISO Standards. There is, therefore, a requirement to clarify EU guidance on the application of improved safety standards, in order to ensure that they are correctly applied.
+
+2.6.4 Crew security
+Last Call ultimately was wrecked upon the beach. However, while the vessel survived its passage through the heavy waves, Andrew and John Carrick were thrown overboard by the boat's violent motion.
+
+As Last Call approached the harbour entrance, the crew were seated or standing at the front of the cockpit. They were not wearing safety harnesses and there was no provision for hard-points for such harnesses to secure to. However, under current standards, there was no requirement for the manufacturer to provide such a facility.
+
+ISO 15085:2003 requires that each member of the crew has access to either two handholds, if standing, or one handhold and a backrest if seated (see section 1.14.2). The ISO definition of a handhold is broad, and permits the coaming top and windscreen surround to be used as handholds.
+
+The crew of Last Call had elected to sail with the canopy erected, and this effectively denied them the use of either the coaming top or the windscreen surround as handholds. With few other handholds available, the crew were unable to hold on effectively in the violent motion they experienced. As the boat pitched up sharply, the skipper - who was presumably holding the steering wheel - and his brother literally fell out of the back of the cockpit and into the sea.
+
+A boat weighing a little less than 2.5t. is likely to experience violent motion in sea conditions of up to and including Beaufort force 8, with up to 4m waves. In such conditions, the danger to the crew from movement inside the cockpit, or of falling overboard, is significant unless proper handholds are available.
+
+It is considered that, in these conditions, the implementation of ISO 15085:2003, Small Craft - Man Overboard Prevention and Recovery, or an equivalent standard, failed to provide sufficient and adequate handholds for the crew, and this contributed to two
+of them falling overboard. Further, had Last Call, or a similar Bayliner 245SB craft conforming with the RCD Category B, been carrying its certified maximum load of eight persons, more passengers might have been in the cockpit area and, in such sea conditions, more people might have died.
+
+If Bayliner 245SBs are to continue to be marketed as RCD Category B vessels, there is a requirement to review the provision of handholds, such that all passengers and crew have access to sufficient, robust handholds, for them all to be safe.
+
+2.7 LIFESAVING EQUIPMENT
+2.7.1 Lifejackets
+The Type II PFD near shore buoyant vests supplied with the craft had been certified by UL and approved by the USCG. They were, according to the instructions displayed on the cover, suitable for a recreational craft such as Last Call, and were the correct size for the crew, providing 15.5lb or 70N of buoyancy.
+
+EN ISO 12402:2006 provides the following Personal Flotation device performance levels:
+Level 275 - Lifejackets
+This level is intended primarily for offshore use under extreme conditions. It is also of value to those who are wearing clothing which traps air and which may adversely
+affect the self-righting capacity of the lifejacket. It is designed to ensure that the user is floating in the correct position with his mouth and nose clear of the surface.
+
+Level 150 - Lifejackets
+This level is intended for general application or for use with foul weather clothing. It will turn an unconscious person into a safe position, and requires no subsequent action by the user to maintain this position.
+
+Level 100 - Lifejackets
+This level is intended for those who may have to wait for rescue, but are likely to do so in sheltered water. The device should not be used in rough conditions.
+
+Level 50 - Buoyancy Aids
+This level is intended for use by those who are competent swimmers and who are near to bank or shore, or who have help and a means of rescue close at hand. These garments have minimal bulk, but they are of limited use in disturbed water, and cannot
+be expected to keep the user safe for a long period of time. They do not have sufficient buoyancy to protect people who are unable to help themselves. They require active participation by the user.
+
+An EU equivalent of the Type II PFD, therefore, would be classified as somewhere between a Level 50 buoyancy aid and a Level 100 lifejacket.
+
+In the conditions and circumstances faced by Last Call's crew on the day of the accident, Level 150, or even Level 275 personal flotation devices would have been appropriate.
+
+2.7.2 Performance of Type II PFD Near Shore Buoyant Vest
+The Type II PFDs had other shortcomings that made them unsuitable for coastal use in rough conditions.
+
+Backstraps. A key feature of a buoyancy aid is its ability to provide freedom of movement for the wearer. However, although there are several major benefits of lifejackets over buoyancy aids, a key design feature of solid foam lifejackets is the inclusion of a backstrap, which prevents the collar of the jacket passing over the head of the wearer. Such a feature would have prevented the foam buoyancy section of Jill Russell's Type II PFD from riding over her head, so providing greater support and helping to keep her mouth and nose clear of the water.
+
+Strength. On Andrew Carrick's Type II PFD, the straps, which held the foam collar in place, became detached when the fabric surrounding the collar ripped in the area of the strap stitching. This allowed one side of the foam buoyancy section to float free, and significantly reduced the Type II PFD's ability to hold its wearer's head above water. A flotation device similar to a Type II PFD, manufactured by a reputable UK company, incorporates double thickness material at webbing securing points to guard against the webbing becoming detached from the material during use.
+
+Other features. A number of other features were absent from the Type II PFD, all of which would have been considered highly desirable or even essential on a lifejacket being used in offshore conditions. These include: an integral safety harness, crotch strap, spray hood, whistle and light.
+
+In this accident, although they provided their wearers with some support and increased their chances of survival, the Type II PFDs were being used in sea conditions far exceeding their design criteria.
+
+Had the crew been wearing adult lifejackets, properly fitted and designed to the appropriate EU ISO 12402 requirements, their chance of survival would probably have been significantly increased, especially given the extremely fast lifeboat response time.
+
+2.7.3 Regulation for lifejackets and buoyancy aids
+An international standard for lifejackets and buoyancy aids, EN ISO 12402, was published in 2007. While this clarifies the standards required for such equipment, there are no plans to introduce mandatory carriage requirements in the UK, and the responsibility therefore rests with vessel owners to seek advice on, and provide the most suitable flotation device for their intended activity.
+
+2.8 COMMUNICATIONS
+2.8.1 VHF
+Having imported Last Call from the USA, Andrew Carrick assumed that the VHF set supplied with the boat was incompatible with UK frequencies. However, marine VHF frequency allocation is common throughout the world. Although some nations do allocate additional frequencies and channels for specific purposes, the equipment fitted to Last Call was, by virtue of frequency allocation, compatible with its UK equivalent.
+
+However, it is unlikely that the VHF set carried a CE mark, the vessel did not have a licence for a VHF set, and no one on board was qualified to use it. As a result, it would have been illegal to operate the VHF equipment within the EU.
+
+The presence of an appropriate and operational VHF set, tuned to either VHF Channel 16 or the port's working frequency, Channel 11, would have been a significant safety barrier, which, on this occasion, had been removed. Had an operational set been available, and turned on, there was a good possibility that the crew would have heard the VHF calls made from the local lifeboat station and amended their plans accordingly. However, Andrew Carrick had not attended a VHF short range operator's course, and so was unaware of the capabilities and limitations of the equipment fitted to his vessel, or of the legal requirements for its operation.
+
+2.8.2 Mobile telephone
+Jill Russell was successful in alerting the coastguard to her predicament by using a mobile telephone. However, two mobile phones, both being used during the accident to provide the coastguard with key information, succumbed to the effect of water ingress before the rescue was complete, reinforcing the risk of reliance on this type of equipment in the marine environment.
+
+2.9 DECISION MAKING AND RISK PERCEPTION
+2.9.1 Intention to sail
+When the three friends set off for Whitby in the morning, it was their intention to take Last Call out for one last trip. Mooring dues for its berth at Whitby Marina had been paid up to, and including, the day of the accident, and the vessel was to be placed on its trailer later that day to then remain ashore for the winter. The best time to recover the vessel was around 1437, the time of high water. Apparently, no consideration had been given to extending the use of the berth and this, therefore, was the crew's last chance to use and enjoy the boat before it was re-launched for the 2008 season.
+
+2.9.2 Decision to sail
+On the morning of 23 November, onlookers and harbour staff considered the sea conditions at the entrance to Whitby harbour to be extremely rough. There had been no harbour movements that morning, and after the accident it was the harbourmaster's view that conditions had been unsuitable for a craft such as Last Call to attempt a departure.
+
+That John Carrick had recognised that seasickness could be a problem indicates he had realized that sea conditions outside the harbour might not be good, and that the crew were prepared to cut short the trip if this was the case. However, the upper harbour area was comparatively sheltered, and conditions there bore little resemblance to those at the harbour entrance. As Last Call left her berth, none of the crew was wearing protective waterproof clothing. This might have been due to ignorance of
+the real conditions outside the harbour; a belief that the conditions did not warrant waterproofs, that the boat's canopy would protect them, or that they did not have any. Also, having successfully sailed Last Call in benign conditions the previous weekend, it is probable that this experience had increased the skipper's confidence in his boat- handling ability.
+
+Having left the marina, there were many opportunities for Last Call to turn back, up to and including the outer harbour area. However, the vessel did not deviate or hesitate at any point, and the only change observed was during the line-up for the
+harbour entrance when the vessel was seen to accelerate slightly. During the passage downriver, the canopy would have shielded the crew from the direct force of the wind, but they would certainly have been aware of its increasing force as Last Call left the shelter of the upper harbour, and they could not have failed to see the towering waves in the harbour entrance as they approached them.
+
+In reality, the decision to sail on the day of the accident was probably influenced by a perceived pressure to use the boat for a second and final trip before the winter lay up. A trip within the upper harbour would not have been unrealistic. However, as Last Call approached the harbour entrance, there were plenty of cues which should have alerted the crew to the conditions they were about to face, and persuaded them to turn back. That they failed to react to these cues reflects a naïve ignorance of the effect the sea conditions would have, possibly bolstered by an unrealistic faith in the vessel and their own abilities.
+
+2.9.3 The accident
+When Last Call departed the harbour, the vessel faced consistently rough seas with wave heights of between 3m to 4m, and several sets of large breaking seas of between 4m to 8m. In the slightly deeper water at the harbour approach were large 'plunging' waves, capable of exerting a force of approximately 1 t/m². These waves disperse into 'spillers' at the harbour entrance, and finally 'surging' waves running into the harbour mouth.
+
+Waves were observed breaking onto the east pier extension, which had the effect of offering some protection to the harbour and reducing the wave height, but also of creating areas of reflected and confused seas on the seaward side. As the waves
+continued, they encountered the west pier extension, which also created confused and disturbed areas of water at the entrance of the harbour.
+
+The confused seas at the entrance had created an environment where boat-handling, even for the most experienced skippers of larger more seaworthy craft, would have been challenging. This view was confirmed by the coxswain of the local lifeboat,
+who faced the same sea conditions just minutes after the accident, albeit in a vessel designed to cope with the very worst weather and sea conditions.
+
+A passer-by was taking a video of the sea conditions in the harbour entrance when
+Last Call left port. This video was sufficient for an expert RNLI instructor to provide a technical explanation of the events leading up to the accident. His report is summarised as follows:
+As Last Call approached the harbour entrance, the boat took the first wave at the point between the 'high side' and the 'shoulder'. The speed of the boat is considered too fast for the conditions but, fortunately, as the boat is nearer the
+'shoulder' than the 'high side', it left the top of the wave at a relatively level aspect. The level departure and large wave would have resulted in the boat freefalling and landing hard into the subsequent wave trough.
+
+The second wave appeared to be part of a large swell, but once again too much power was applied as the boat left the top of the swell and descended heavily into the trough. It is possible that damage could have been sustained at this point.
+
+Last Call then attacked a spilling wave estimated to have a height of about 3.5m. The white water was physically moving over the surface of the water and would have contained a large amount of energy. To negotiate such a wave required a craft with sufficient power, not speed, to punch through the aerated section. As the boat appeared to be forced up and then backward, it is likely that insufficient power was applied, this could be due to the skipper's over cautiousness given the effect of the previous waves.
+
+The lack of power, relatively lightweight nature of the craft, and the fact that the skipper chose to attack this part of the wave with this style of craft resulted in the boat being forced up and then backwards. The action of being held vertical due to the wind and the power applied could have caused water to be forced back through the propeller hub into the engine, resulting in the engine stalling. As the boat is forced backwards the position of the engine and the boat's inherent buoyancy act on the hull which forced the boat to be rotated through nearly 270 degrees.
+
+The trim tab settings during this critical period are unknown, however, if these were set incorrectly then the effects described above could have been exacerbated.
+
+From this analysis of Last Call's progress through the seas, it is apparent that the skipper did not have sufficient knowledge of small craft rough weather handling techniques to transit the harbour entrance safely.
+
+2.9.4 Passage planning
+SOLAS Regulation 19 paragraph 2.1.4 requires all ships, irrespective of size, to be able to plan and display the ship's route for the intended voyage. Leisure craft are not excluded, as proper passage planning is considered equally important for all vessel types. MCA leaflet MCA/098 'SOLAS V for Pleasure Craft', is aimed specifically at this sector (see section 1.11.1).
+
+If Last Call was to make a safe exit from Whitby harbour on 23 November, some passage planning was essential. The process requires a skipper (or nominated crew) to carefully examine the relevant publications, charts, weather forecasts, boat type, crew experience, and relevant local information. The result of the planning process provides a full appreciation of the proposed passage, identifies any risks and, if necessary, the mitigation measures required to help offset those risks. Leaving aside any passage considerations once clear of the harbour, had the Admiralty Sailing Directions, BA chart 1612 and the inshore waters weather forecast been consulted
+it would have been immediately evident that leaving Whitby into a northerly Beaufort force 7-8 was not a sensible option.
+
+Without charts, instruments, nautical publications, and probably a local weather forecast, it was impossible for the crew to complete an appropriate passage plan. However, even had they possessed the right documents and equipment, it is unlikely that they had the expertise to properly interpret the information available and assess the risks involved. Had a passage plan been attempted, some of the risks the crew were about to face might have been recognised, and their plan amended or even aborted. However, in this case, it was not possible to mitigate against risks that had not been identified.
+
+The Royal Yachting Association publication 'Start Powerboating' provides guidance on weather and sea conditions and their suitability for powerboating (Table 2).
+
+ForceWind Speed
+(knots)DescriptionMaximum
+wave height (metres)Sea StateSuitability for
+powerboating0<1Calm0Mirror like
+
+Ideal power boating weather11 - 3Light air0.1Ripples24 - 6Light breeze0.3Small wavelets37 - 10Gentle breeze0.9Large wavelets
+4
+11 - 16Moderate breeze
+1.5Large waves begin to formGetting interesting
+5
+17 - 21
+Fresh breeze
+2.5Moderate waves and many white
+horsesOnly for the most experienced
+6
+>21
+Strong breeze
+>2.5
+Large waves +Do something elseTable 2 - RYA Start Powerboating - Interpreting weather forecasts
+
+Excluding any local effect, the weather and sea conditions at the time of departure were probably in excess of Beaufort force 6. The information contained in Table 2 provides clear advice that in such conditions someone considering powerboating should choose to do something else until the conditions have subsided.
+
+Summary
+If Last Call's departure from Whitby harbour on the morning of 23 November is considered in isolation, it could be described, at best, as foolhardy. However, the lack of appropriate safety equipment on board, the absence of any navigational publications
+
+or aids, the inadequate personal equipment, among other shortcomings, all indicate the crew had insufficient seamanship or navigation knowledge to operate safely in a coastal environment. Without this basic awareness, no one on the boat was able to judge the limitations of the vessel or recognise the dangers they faced on the day of the accident.
+
+2.10 SIMILAR ACCIDENTS
+2.10.1 2007 statistics
+In 2007, MAIB recorded 53 deaths in the non-commercial leisure craft sector on the accident database, the largest annual fatality total in this sector since the branch started collecting data in 1991 (see Table 3). This figure comprises 26 accidents in UK coastal waters; 3 accidents to UK vessels that have occurred on the high seas; 10 accidents in non-tidal waters (eg lochs and lakes); 1 accident in a port or harbour area; and, 13 accidents on rivers and canals. The significant increase in recorded fatalities since 2005 largely reflects MAIB's increased collection of leisure craft fatality data
+from multiple sources, and does not necessarily reflect an increase in the rate of fatal accidents involving leisure craft.
+
+19911992199319941995199619971998199920002001200220032004200520062007Accident to Vessel
+3
+12
+0
+1
+11
+3
+5
+9
+9
+8
+3
+6
+10
+3
+24
+24
+37Accident to Person
+3
+4
+2
+2
+0
+1
+0
+0
+0
+0
+0
+2
+1
+0
+0
+4
+16
+Total
+6
+16
+2
+3
+11
+4
+5
+9
+9
+8
+3
+8
+11
+3
+24
+28
+53Table 3: Fatalities in the non-commercial leisure sector 1991 to 2007.
+
+There being no obligation to report leisure craft accidents to the MAIB, the branch does not hold a figure of total accidents for 2007. However, RNLI provisional statistics for 2007 show one of the busiest years on record, with lifeboats launched 8,141 times and 7,834 people rescued during the year. Of the RNLI's callouts, 52% were to leisure craft.
+
+Fifteen of the fatalities recorded on the MAIB database in 2007 were the result of seven multiple fatality accidents. A further two single fatality accidents involved multiple crew members overboard, where only the prompt rescue operation prevented the death toll being higher. Analysis of the multiple fatality accidents identified similar key causal factors that directly contributed to each accident:
+* Competence
+* Inattention
+* Perception abilities
+
+As with the accident involving Last Call, had the respective skippers undertaken appropriate training, their ability to safely plan a passage, recognise potential dangers, and handle their craft responsibly would have been significantly increased, and some of these accidents might have been prevented.
+
+SECTION 3 CONCLUSIONS
+
+3.1 SAFETY ISSUES DIRECTLY CONTRIBUTING TO THE ACCIDENT WHICH HAVE RESULTED IN RECOMMENDATIONS
+1. There is no evidence that either Last Call's skipper or his crew had received any training in navigation, or that he owned or had consulted appropriate navigation publications. [2.3.2]
+2. The PCA process requires that an owner's manual be presented, and it would therefore have been available for the skipper to read and benefit from the advice it provided. [2.5]
+3. To help ensure that imported recreational craft do undertake a PCA, it is recommended that importers receive statutory notice of their responsibility at the point of entry into the UK. [2.5]
+4. Had Last Call undertaken a PCA on importation into the UK, it would have been assessed against the current 2002 ISO 12217-1, and probably been assigned RCD Category C status - Inshore waters, up to force 6, and significant wave height of 2m. [2.6.1]
+5. Had Last Call been assigned RCD Category C status on importation into the UK, the skipper might have considered that the conditions on the day were too severe for a trip outside the harbour. [2.6.1]
+6. The MAIB believes that in the interests of safety for all owners and potential owners, the 245SB should be voluntarily re-assessed for conformity by the manufacturer, using the currently mandated ISO 12217-1:2002. [2.6.2]
+7. It is considered inappropriate that where safety standards are significantly improved, they are not applied to vessels sold as new. There is a requirement to clarify the Guidance Notes from the Commission, to ensure that revised safety standards are appropriately applied. [2.6.3]
+8. The implementation of ISO 15085:2003, Small Craft - Man Overboard Prevention and Recovery, or an equivalent standard, failed to provide sufficient and adequate handholds for the crew, which contributed to two of the crew falling overboard. [2.6.4]
+
+9. From this analysis of Last Call's progress through the seas, it is apparent that the skipper did not have sufficient knowledge of small craft rough weather handling techniques to transit the harbour entrance safely. [2.9.3]
+
+10. Had a passage plan been attempted, some of the risks the crew were about to face might have been recognised, and their plan amended or even aborted. However, in this case, it was not possible to mitigate against risks that had not been identified. [2.9.4]
+11. Without a basic level of seamanship and navigational knowledge, no one on board the boat was able to judge the limitations of the vessel, or recognise the dangers they faced on the day of the accident. [2.9.5]
+
+12. MAIB statistics on leisure craft accidents involving multiple fatalities indicate that had the skippers involved undertaken appropriate training, their ability to safely plan a passage, recognise potential dangers and handle their craft responsibly would have been significantly increased. [2.10.1]
+
+3.2 OTHER SAFETY ISSUES IDENTIFIED DURING THE INVESTIGATION ALSO LEADING TO RECOMMENDATIONS
+1. In this accident, although they provided their wearers with some support and increased their chances of survival, the Type II PFDs were being used in sea conditions far exceeding their design criteria. [2.7.2]
+2. While EN ISO 12402 has harmonised the standards required for lifejackets, there are no plans to introduce mandatory carriage requirements in the UK, and the responsibility therefore rests with vessel owners to seek advice on and provide the most suitable flotation device for their intended activity. [2.7.3]
+
+3.3 SAFETY ISSUES IDENTIFIED DURING THE INVESTIGATION WHICH HAVE NOT RESULTED IN RECOMMENDATIONS BUT HAVE BEEN ADDRESSED
+1. The port information pack does not mention, nor does it provide advice to mariners about the effects of strong northerly winds and the associated build up of heavy seas at the entrance to the harbour. [2.3.3]
+2. There is room to enhance the information available to recreational / leisure craft users of the harbour. Such enhancements could consolidate the various port information notices to simplify current instructions. [2.3.3]
+3. Given the considerable number of recreational craft berthed and operating through the Whitby Statutory Harbour Area, there is a need for the risks associated with these craft to be formally assessed and control measures identified. [2.3.5]
+4. Had an operational VHF set been available, and turned on, there was a good possibility that the crew would have heard the VHF calls made from the local lifeboat station and amended their plans accordingly. [2.8.1]
+5. Two mobile phones, both being used during the accident to provide key information, succumbed to the effect of water ingress before the rescue was complete, reinforcing the limitations of this type of equipment in the marine environment. [2.8.2]
+6. As Last Call approached the harbour entrance, there were plenty of cues alerting the crew to the conditions they were about to face. That they failed to react to these cues reflects a naïve ignorance of the effect that the sea conditions would have on Last Call. [2.9.2]
+7. The confused seas at the entrance had created an environment where boat- handling, even for the most experienced skippers of larger more seaworthy craft, would have been challenging. [2.9.3]
+
+SECTION 4 - ACTION TAKEN
+
+4.1 THE PORT OF WHITBY
+The Whitby harbourmaster convened a meeting of harbour staff the week following this accident. The meeting developed a notice providing advice for anyone launching a craft at Whitby (Annex G).
+
+Specifically, the notice recommends that the skipper is to:
+'have on board and switched on a marine VHF radio capable of listening to the harbour working channel and channel 16'
+'check the weather forecast to ensure that your vessel is capable of handling the anticipated conditions'
+'check the prevailing sea conditions before proceeding to the harbour entrance'
+'ensure that your vessel is handled in a competent manner and avoid taking any unnecessary risks'
+
+A risk assessment of 'Leisure Craft Operatives in Whitby Harbour' has been carried out and tabled at a consultative meeting with harbour users, which was held in April 2008. Measures adopted are at Annex H.
+
+4.2 MAIB
+The MAIB has issued a Safety Flyer containing a summary of this report, including key safety lessons, for promulgation to stakeholders.
+
+4.3 THE BRITISH MARINE FEDERATION (BMF)
+The BMF has worked with the Insurance Financial and Legal Services Association to develop best practice guidance for marine insurers, which will ensure customers are advised of the need for new craft, and second-hand craft at the first point of sale or use in the EU, to comply with the requirements of the RCD.
+
+SECTION 5 - RECOMMENDATIONS
+
+The British Ports Association is recommended to:
+2008/138	Promulgate to its membership MAIB's advice on the need for Port Authorities to provide comprehensive local safety advice to the leisure craft users of their
+ports including, where appropriate, specific local information to enhance the safe navigation and operation of these craft.
+The Department for Business, Enterprise and Regulatory Reform is recommended to: 2008/139	In conjunction with HMRC, seek to develop procedures whereby HMRC
+can notify local authorities of the import of recreational leisure craft into the Community market. This is to enable local authorities to conduct such checks as they deem necessary to ensure that individuals and companies importing such craft comply with the Recreational Craft Directive and that non CE marked craft undergo a Post-Construction Assessment.
+
+2008/140	Seek a review, through the Recreational Craft Sectoral Group and the European Commission, of the guidance provided to manufacturers of recreational craft and notified bodies, to ensure that, when significant improvements to safety standards are mandated, such standards are applied to all new and "series production" craft sold in the UK.
+
+The British Marine Federation is recommended to:
+2008/141	Work with the Boat Retailers and Brokers Association to include best practice guidance to its members on the provision to customers of training, and advice on sources of training, appropriate for the safe operation of the craft being sold.
+
+The Maritime and Coastguard Agency, Royal National Lifeboat Institution, and the Royal Yachting Association are recommended to:
+2008/142	Jointly, and as widely as possible, issue safety advice, drawing on this report and the MAIB's safety flyer, to the skippers and potential skippers of leisure craft, highlighting the need for them to undertake seamanship and navigation training appropriate to their intended marine activity.
+
+The Brunswick Corporation is recommended to:
+2008/143	Undertake a voluntary re-assessment for RCD Compliance of Bayliner 245SB destined for the EU market, specifically against ISO 12217-1 2002 to clarify the craft's RCD Category.
+
+
+Marine Accident Investigation Branch June 2008
+
+
+
+
+
+
+
+

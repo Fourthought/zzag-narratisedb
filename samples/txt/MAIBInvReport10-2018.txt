@@ -1,0 +1,850 @@
+
+
+
+
+
+
+
+
+
+
+Report on the investigation of the flooding and foundering
+of the trawler
+Ocean Way (LK207)
+18 nautical miles north-east of Lerwick,
+
+Shetland Islands, Scotland on 3 March 2017
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+VERY SERIOUS MARINE CASUALTY	REPORT NO 10/2018	MAY 2018
+
+Extract from
+The United Kingdom Merchant Shipping (Accident Reporting and Investigation) Regulations 2012 - Regulation 5:
+
+"The sole objective of the investigation of an accident under the Merchant Shipping (Accident Reporting and Investigation) Regulations 2012 shall be the prevention of future accidents through the ascertainment of its causes and circumstances. It shall not be the purpose of an investigation to determine liability nor, except so far as is necessary to achieve its objective, to apportion blame."
+
+NOTE
+This report is not written with litigation in mind and, pursuant to Regulation 14(14) of the Merchant Shipping (Accident Reporting and Investigation) Regulations 2012, shall be inadmissible in any judicial proceedings whose purpose, or one of whose purposes is to attribute or apportion liability or blame.
+
+
+
+(c) Crown copyright, 2018
+
+You may re-use this document/publication (not including departmental or agency logos) free of charge in any format or medium. You must re-use it accurately and not in a misleading context. The material must be acknowledged as Crown copyright and you must give the title of the source publication. Where we have identified any third party copyright material you will need to obtain permission from the copyright holders concerned.
+
+All MAIB publications can be found on our website: www.gov.uk/maib
+
+
+
+
+For all enquiries:Marine Accident Investigation Branch First Floor, Spring Place
+105 Commercial Road
+Southampton
+
+
+Email:
+
+
+maib@dft.gov.ukUnited KingdomTelephone:+44 (0) 23 8039 5500SO15 1GHFax:+44 (0) 23 8023 2459Press enquiries during office hours: 01932 440015
+Press enquiries out of hours: 020 7944 4292
+CONTENTS
+GLOSSARY OF ABBREVIATIONS AND ACRONYMS
+SYNOPSIS	1
+SECTION 1 - FACTUAL INFORMATION	2
+1.1 Particulars of Ocean Way and accident	2
+1.2 Background	3
+1.3 Narrative	3
+1.4 Environmental conditions	9
+1.5 Ocean Way	12
+1.5.1Construction and survey121.5.2Watertight integrity141.5.3Bilge pumping construction standards141.5.4Bilge pumping and alarm arrangements151.5.5Trawling equipment151.5.6Stability151.5.7Risk assessment and crew drills151.6Crew171.7Guidance for flooding171.8Post-accident evaluation181.9Previous or similar accidents191.9.1	Flooding and foundering of Jasper III191.9.2	Flooding and foundering of Annandale191.9.3	Flooding and foundering of Aurelia19
+SECTION 2 - ANALYSIS	20
+2.1 Aim	20
+2.2 The cause of the flood	20
+2.3 Construction standards	21
+2.4 Emergency response	21
+2.4.1 Crew actions	21
+2.4.2 Alternative courses of action	22
+2.5 Emergency preparation	23
+2.5.1 Guidance and procedures	23
+2.5.2 Training and drills	23
+2.6 Damaged stability	24
+SECTION 3 - CONCLUSIONS	25
+3.1 Safety issues directly contributing to the accident that have been addressed
+or resulted in recommendations	25
+3.2 Other safety issues not directly contributing to the accident	25
+SECTION 4 - ACTION TAKEN	26
+4.1 Actions taken by MAIB	26
+4.2 Actions taken by other organisations	26
+
+FIGURES
+
+Figure 1	-	Ocean Way - general arrangement
+
+Figure 2	-	Chart showing fishing grounds and tracks of Ocean Way, Gerda Saele
+and the Lerwick lifeboat with overview inset
+
+Figure 3	-	Schematic diagram of Ocean Way's fishing gear prior to the impact of
+the port door on the hull (not to scale)
+
+Figure 4	-	Ocean Way - detail of the aft compartment
+
+Figure 5	-	Ocean Way - main deck showing the watertight door to the aft compartment escape hatch
+
+Figure 6	-	Ocean Way during the flooding with the submersible portable pump
+discharge visible on the starboard side
+
+Figure 7	-	Gerda Saele alongside Ocean Way to transfer its portable pump
+
+Figure 8	-	Illustration of the effect of the bow up trim on engine room bilge
+pumping
+
+Figure 9	-	The Lerwick lifeboat alongside Ocean Way to transfer its salvage pump and two lifeboat men
+
+Figure 10	-	Ocean Way listing to port and trimmed by the stern just prior to foundering
+
+Figure 11	-	Ocean Way - final sighting
+
+Figure 12	-	Ocean Way, then named Copious, prior to first launch showing
+protective bars at the stern area
+
+Figure 13	-	Head of steering system above the aft compartment deck (picture taken during vessel build)
+
+Figure 14	-	Ocean Way, then named Copious, with original oval trawl doors
+
+Figure 15	-	Thyborøn Type 12D trawl door
+
+
+ANNEXES
+
+Annex A	-	Ocean Way - extract of Stability Booklet
+
+Annex B	-	The European Guide for Risk Prevention in Small Fishing Vessels - Flooding Checklist
+
+Annex C	-	Extract of the report on aspects of the flooding that led to the loss of
+FV Ocean Way - April 2017
+
+GLOSSARY OF ABBREVIATIONS AND ACRONYMS
+cm	-	centimetre
+
+EPIRB	-	Emergency Position Indicating Radio Beacon kg	-	Kilogramme
+kts	-	knots
+
+kW	-	kilowatt
+
+l/min	-	Litres per minute
+
+m	-	metre
+
+mm	-	millimetre
+
+MCA	-	Maritime and Coastguard Agency
+
+MGN	-	Marine Guidance Notice
+
+MSN	-	Merchant Shipping Notice
+
+RNLI	-	Royal National Lifeboat Institution
+
+SAR	-	Search and Rescue
+
+STCW	-	International Convention on the Standards of Training, Certification
+and Watchkeeping for Seafarers 1978, as amended
+
+v	-	volt
+
+VHF	-	Very High Frequency Radio
+
+UK	-	United Kingdom
+
+UTC	-	Universal Co-ordinated Time
+
+
+TIMES: all times used in this report are UTC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ocean Way
+
+SYNOPSIS
+At 0834 on 3 March 2017, the 23.22m UK registered twin-rigged trawler Ocean Way foundered 18 nautical miles north-east of Lerwick, Scotland. Ocean Way's crew was rescued uninjured by the Lerwick lifeboat; a small amount of pollution was reported on the sea surface by the coastguard helicopter after the vessel was lost.
+
+Two hours before Ocean Way foundered, its starboard net had come fast on a seabed obstruction when trawling. During the subsequent recovery of fishing gear, the port trawl door struck the hull heavily, following which the aft compartment started to flood rapidly. The crew was unable to access the lower part of the aft compartment, which was below the accommodation area, to inspect for damage.
+
+Despite its size, the aft compartment was not fitted with a bilge suction line so the crew used portable pumps rigged through the accommodation space escape hatch to pump out floodwater. A drain valve between the aft compartment and the engine room also allowed the crew to use the engine room bilge pumps to extract water. However, the ingress of water exceeded the pumping effort and Ocean Way succumbed when the escape hatch submerged leading to overwhelming downflooding.
+
+A safety recommendation has been made to the Maritime and Coastguard Agency to clarify guidance on the requirement for bilge suctions in watertight compartments and the management of flooding emergencies.
+
+SECTION 1 - FACTUAL INFORMATION
+1.1 PARTICULARS OF OCEAN WAY AND ACCIDENT
+
+SHIP PARTICULARSVessel's nameOcean WayFlagUnited KingdomFishing numbersLK207TypeTwin-rigged stern trawlerRegistered ownerColin Hughson and Partners LtdConstructionSteelYear of build1996Length overall24.30mRegistered length23.22mGross tonnage268Authorised cargoNot applicableVOYAGE PARTICULARSPort of departureLerwick, ScotlandType of voyageCommercial fishingManning5MARINE CASUALTY INFORMATIONDate and time3 March 2017, 0834 UTCType of marine casualty or incidentVery Serious Marine CasualtyLocation of incident60º21.59'N - 000º38.53'WInjuries/fatalitiesNoneDamage/environmental impactVessel lost
+Minor pollution observed on sea surface after vessel founderedShip operationFishingVoyage segmentMid-waterExternal & internal environmentWind: north-westerly, Force 3 (Gentle Breeze, 7-10 knots) Sea State: Slight
+Visibility: Good Weather: ClearPersons on board5
+
+2
+
+1.2 BACKGROUND
+
+Ocean Way was a twin-rigged stern trawler that operated from its home port of Lerwick. Internally, the vessel was subdivided into four watertight compartments (Figure 1). Ocean Way's trawling configuration used three trawl warps to tow two nets and a central clump. The trawl winches had an automatic towing mode that payed out wire in the event of an excessive load. There were five crew on board: a skipper, an engineer and three deckhands. At the time of the accident, Ocean Way was engaged in trawling.
+
+Figure 1: Ocean Way - general arrangement
+
+
+1.3 NARRATIVE
+
+Ocean Way departed from Lerwick at 2100 on 28 February 2017 for fishing grounds east of the Shetland Islands (Figure 2). Fishing continued for the following 2 days with the crew conducting routine 6-hour duration trawls. At 0445 on 3 March 2017, the gear was shot away and the crew started sorting the catch from the previous haul.
+
+At about 0630, the starboard winch drum started paying out wire, indicating to the skipper that the starboard net had come fast on an obstruction. The skipper stopped the boat and started heaving in the fishing gear until the boat was directly over the obstruction. The skipper then repeatedly heaved in and released the starboard winch wire in an attempt to free the net. After several attempts, the starboard net came loose and the skipper decided to recover and inspect all the gear. Ocean Way was on a north-westerly heading making good between 1 and 2 knots (kts) through the water, both trawl doors and the clump weight were suspended about 25 metres
+(m) beneath the vessel in approximately 100m of water (Figure 3).
+
+Reproduced from Admiralty Chart BA 1233 by permission of the Controller of HMSO and the UK Hydrographic Office
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fishing grounds
+
+
+
+
+
+
+
+
+Figure 2: Chart showing fishing grounds and tracks of	Ocean Way, Gerda Sael
+and the Lerwick lifeboat with overview inset
+
+ Shetland Islands 
+
+
+
+
+
+
+
+ Lerwick 
+
+
+Figure 3: Schematic diagram of Ocean Way's fishing gear prior to the impact of the port door on
+the hull (not to scale)
+
+Once the starboard trawl door and clump weight (which came back on board twisted) were recovered, the skipper and crew turned their attention to recovery of the port trawl door. Prior to heaving it in, the skipper had noticed that the port trawl wire, from which the port trawl door was suspended, was running vertically alongside the hull. This was unusual as the boat was moving through the water.
+
+As the port winch was heaving in the port trawl wire, a heavy impact was heard and felt throughout the vessel by all the crew. When the port trawl door emerged from the water, it was the wrong way around, with the normally outward facing side against the hull. In this position, the crew on deck were unable to reach the pennant used to disconnect the nets from the trawl door. The crew on deck shouted up to
+the skipper and asked him to lower the port door back into the water in an attempt to turn it back around. The skipper then lowered the port trawl wire, dropping the door back into the sea before heaving it in again; this time, the port door emerged the right way round and was recovered.
+
+About 1 minute after the impact, the engine room bilge alarm sounded in the wheelhouse and the skipper asked the engineer, who was on deck, to go to the engine room and investigate. Meanwhile, the crewmen on deck disconnected the nets from both trawl doors and reconnected them to the sweep winches in order to recover the nets on board.
+
+In the engine room, the engineer saw water flowing into the bilges through the drain valve1 from the aft compartment2 (Figure 4). He then went back to the wheelhouse to tell the skipper what had been found and to ask for help. The engineer returned to
+
+1  This was a 5.08 centimetre (cm) (2 inch) diameter pipe designed to drain water from the aft compartment to
+the engine room bilge. The pipe was fitted with a valve that was normally left open.
+2  The term 'aft compartment' is used throughout this report and refers to the steering and accommodation space between the aft engine room watertight bulkhead and the stern of the vessel.
+
+
+Figure 4: Ocean Way - detail of the aft compartment
+
+
+the engine room where he started the main bilge pump that was already configured to pump water from the aft engine room bilge suction. He then configured the deck wash pump to draw water from the forward engine room bilge suction before starting it. The engineer monitored the evacuation of the floodwater from the engine room and partially shut the aft compartment drain valve to restrict the flow of water into the engine room bilges. The engineer also visited the accommodation space; no inrush of water was seen but the carpets were wet indicating significant flooding below the cabin floor.
+
+To assist the engineer, two deckhands arrived in the engine room with the vessel's 240 volt (v) portable submersible pump in case it was required to aid the pumping effort there. The engineer assessed that the portable submersible pump was not required in the engine room so it was taken to the aft compartment escape hatch, which was accessed by opening the watertight door on the main deck (Figure 5). Once this door was open, the portable submersible pump was lowered into the flooding space through the escape hatch and the pump's discharge line was placed over the stern on the starboard side (Figure 6).
+
+Once the portable submersible pump was running, the engineer repeatedly moved between the main deck and the engine room to monitor water levels and ensure all three pumps were working effectively. The main bilge pumps in the engine room and the portable submersible pump were subject to suction strainer blockages and had to be repeatedly cleared of debris.
+
+At 0646, the skipper called Shetland Coastguard using very high frequency (VHF) radio and requested the provision of additional pumps as the vessel was taking on water. In response to this call, the coastguard requested the launch of the Lerwick all weather lifeboat and the search and rescue (SAR) helicopter based at Sumburgh
+
+
+Figure 5: Ocean Way - main deck showing the watertight door to the aft compartment escape hatch
+
+Image courtesy of the RNLI
+
+Portable submersible pump dischargeFigure 6: Ocean Way during the flooding with the submersible portable pump discharge visible on
+the starboard side
+
+in the Shetland Islands. The coastguard also alerted other vessels in the area. The Norwegian registered live fish carrier, Gerda Saele, which was 17.5nm away to the south-west, responded by VHF radio and started heading towards Ocean Way's position (Figure 2).
+
+By 0703 Ocean Way's crew had finished recovering the nets back on board so
+the skipper increased speed to the boat's maximum of 10kts and started heading south-west directly towards Lerwick. At 0745 Gerda Saele arrived on scene (Figure 7) and came alongside Ocean Way to transfer its portable pump3. Gerda Saele's portable submersible pump was then rigged at the aft compartment escape hatch to evacuate floodwater from the aft compartment. After this, Ocean Way's portable submersible pump stopped working4.
+
+Image courtesy of the Maritime and Coastguard Agency
+Figure 7: Gerda Saele alongside Ocean Way to transfer its portable pump
+
+The SAR helicopter also arrived on scene at 0745 and requested that Ocean Way reverse course in order to generate a suitable relative wind5 for a high-line transfer of the salvage pump on board the helicopter. Ocean Way's skipper was experiencing difficulty maintaining a steady heading as hand-steering had been adopted due to failure of the autohelm. Unable to maintain a steady heading and aware that the lifeboat, also with a salvage pump on board, was on its way, the skipper decided not to alter course as requested by the helicopter.
+
+In the engine room, the engineer had continued to monitor the water level and the main bilge and deck wash pumps. The flooding of the aft compartment had caused a bow up trim which meant that the floodwater was at the aft end of the space and the forward bilge suction was no longer effective so the engineer shut it off (Figure 8). Floodwater had also been seen entering the engine room through a smaller and higher tell-tale pipe between the aft compartment and the engine room (Figure 4). This drain pipe did not have a shut-off valve, so the engineer blocked it using rags and a plastic bag held in place with cable ties.
+
+3  Gerda Saele's portable pump was similar to Ocean Way's, requiring a 240v power supply and with a capacity of approximately 250 l/min
+4  The cause of the failure of Ocean Way's own portable submersible pump is unknown.
+5  The SAR helicopter aircrew had assessed that they would not be able to hover over Ocean Way on its south- westerly heading so had asked for a course alteration to the north-east to generate a suitable relative wind for hovering over the fishing vessel in order to lower its salvage pump down by high-line transfer.
+
+As the bow up trim continued to increase, the aft bilge well in the engine room was also intermittently dry rendering bilge pumping from the engine room ineffective so the engineer shut the drain valve from the aft compartment and switched off the engine room pumps. The bow up trim had also caused the remaining floodwater to congregate at the aft end of the engine room and the propeller shaft earthing
+disc was partially submerged. This resulted in floodwater being sprayed around the
+engine room risking water damage to running machinery (Figure 8).
+
+The lifeboat arrived at 0804 and came alongside Ocean Way to transfer two crew members6 and a diesel-driven salvage pump7 (Figure 9). Once the RNLI crew members were on board Ocean Way, they set up their salvage pump at the aft compartment escape hatch. The lifeboat was then turned north-east, opening away from Ocean Way, in preparation for a high-line transfer of the helicopter's salvage pump.
+
+During the high-line transfer with the helicopter, but before the pump had been passed down, the lifeboat received a VHF radio call from Ocean Way saying that the situation was deteriorating rapidly and the vessel would soon have to be abandoned.
+The high-line transfer was aborted and the lifeboat driven back to Ocean Way at full speed. When the lifeboat arrived back on scene, Ocean Way was stopped in the water and heavily trimmed by the stern (Figure 10). All efforts to pump out the floodwater had ceased as it had become unsafe for the crew and RNLI crewmen to stay inside the main deck. Before leaving the main deck, the engineer and one of
+the RNLI crewmen had seen the aft compartment escape hatch submerge and also observed sea water entering via the open engine room ventilation inlets.
+
+With no prospect of bringing the situation under control, everyone on board Ocean Way gathered on the starboard side by the wheelhouse in preparation for abandonment (Figure 10). All three deckhands had donned lifejackets and the skipper and engineer were wearing Fladen8 buoyancy jackets.
+
+As the lifeboat approached Ocean Way, the coxswain assessed that it would be unsafe to go alongside due to the unpredictable movement of the rapidly foundering fishing vessel. Ocean Way's crew and both lifeboat men entered the water as the vessel foundered; all were subsequently rescued on to the lifeboat.
+
+Ocean Way foundered at 0834 (Figure 11); both its hydrostatically operated liferafts were released to the surface and automatically inflated; the electronic position indicating radio beacon (EPIRB) also activated. Before leaving the scene, the lifeboat crew punctured the liferafts in order that they would sink, and the helicopter reported sighting some oily pollution at the surface where Ocean Way had sunk.
+The lifeboat arrived back in Lerwick at 1000, where Ocean Way's crew were assessed by paramedics; there were no injuries.
+
+1.4 ENVIRONMENTAL CONDITIONS
+
+The wind was north-westerly at Beaufort Force 39, sea state was slight with about 1m swell; visibility was good in between occasional showers. The tidal stream was north-westerly at less than 0.5kt and the sea temperature was 7º Celsius.
+
+
+
+6  One of the lifeboat men who transferred across was an 'off-watch' member of Ocean Way's crew.
+7  The RNLI pump had a capacity of 800 l/min.
+8  Foul weather jackets, manufactured by Fladen Ltd, which were fitted with integral buoyancy.
+9  Beaufort Force 3 defined as 'gentle breeze', wind speeds 7 - 11kts.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+Figure 8: Illustration of the effect of a bow up trim on engine room bilge pumping (not to scale)
+
+Image courtesy of the Maritime and Coastguard Agency
+Figure 9: The Lerwick lifeboat alongside Ocean Way to transfer its salvage pump and two lifeboat men
+
+Image courtesy of the RNLI
+Figure 10: Ocean Way listing to port and trimmed by the stern just prior to foundering
+
+Image courtesy of the RNLI
+Figure 11: Ocean Way - final sighting
+
+1.5 OCEAN WAY
+
+1.5.1 Construction and survey
+
+Originally named Copious, Ocean Way was a steel-hulled, twin-rigged whitefish stern trawler built in Buckie in 1996. Ocean Way's registered length was 23.22m and it was powered by a 738 kilowatt (kW) main engine.
+
+The shell plating was 8 millimetre (mm) Grade A steel, increasing to 10mm thickness in the transom and gallows areas. Protective bars were welded around the hull at the main deck levels and, below the waterline, to half way around the rounded hull section adjacent to the gallows (Figure 12). A hull thickness survey in 2014 showed that there had been no significant loss of hull thickness.
+
+The aft compartment (Figure 4) was subdivided horizontally by a non-watertight deck. Above this deck was the crew accommodation and below was a void space.
+The steering system ran vertically through the compartment with the head of the rudder stock above the level of this deck (Figure 13). The compartment also
+contained the emergency fire pump system consisting of a sea suction inlet, fixed
+pipework and hand-operated pump.
+
+Ocean Way was subject to 5-yearly inspections by the Maritime and Coastguard Agency (MCA). The vessel was last surveyed on 11 June 2014 and found to comply with all relevant sections of the Code of Safe Working Practice for the Construction and Use of 15m length overall to less than 24m Registered Length Fishing Vessels (MSN 1770(F))10.
+
+10 In the course of this investigation Merchant Shipping Notice (MSN) 1770(F) was replaced by MSN 1872(F), The Code of Safe Working Practice for 15m - 24m Fishing Vessels. Nevertheless, MSN1770(F) will be referred to in this report as it applied to Ocean Way at the time of the accident.
+
+Image courtesy of MacDuff Ship Designs Ltd
+Figure 12: Ocean Way, then named Copious, prior to
+first launch showing protective bars at the stern area
+Image courtesy of MacDuff Ship Designs Ltd
+  Figure 13: Head of steering system above the aft compartment deck (picture taken during vessel build)
+
+1.5.2 Watertight integrity
+
+Ocean Way was constructed to meet the requirements of the Fishing Vessels (Safety Provisions) Rules, 1975. These regulations required watertight bulkheads forward and aft of the engine room. Ocean Way was subdivided into four watertight compartments: the forepeak/freshwater tank, fish room, engine room and aft compartment.
+
+The aft compartment escape hatch led from the cabin space to the main deck; watertight integrity of this hatch was provided by the door into the main deck (Figure 5). Also on the main deck were four ventilation intakes leading to the engine room, each fitted with hinged or sliding plate watertight flaps. At the time of the accident, all four engine room ventilation flaps were open. The watertight door leading to the aft compartment escape hatch was also open as it had been used as the route for the three portable pumps used during the emergency.
+
+1.5.3 Bilge pumping construction standards
+
+The Fishing Vessels (Safety Provisions) Rules, 1975 required fishing vessels greater than 12m in length but less than 24.4m in length to have an efficient means of draining any compartment; this included a requirement for at least one bilge suction in each main watertight compartment11.
+
+Documentation for Ocean Way's original design requirement12 stated:
+
+Piping Bilge/Fire and Drainage
+The bilge system, engine room, two in and hold and steering compartment is to be served by both the bilge pump and the fire/ballast/deck wash pump. [sic]
+
+The 1975 regulations were superseded in 2002 by MSN 1770(F); existing bilge pumping arrangements13 were acceptable under the new Code of Practice.
+
+The MCA's Instructions to Surveyors14 for fishing vessel bilge pumping arrangements, para 5.1.1 stated that it is required that provision should be made for effective pumping from any watertight compartment.
+
+The Seafish 2002 Construction Standards for under 24m fishing vessels, para 7.5.3
+stated:
+
+Where peak compartments are incorporated in a vessel's design and are not fitted for ballasting purposes, an accessible drain cock may be fitted in lieu of a bilge suction, provided that any drainage will flow naturally to the adjacent bilge suction. The drain cock is to be of an approved type with a securing handle permanently attached and so loaded that on being released will automatically close the cock.
+
+
+
+
+
+11 Fishing Vessels (Safety Provisions) Rules, 1975, Rule 37(a)(i).
+12 Specification for the Completion of a 24m Trawler (Issue 2), Job Number 198-995, dated December 1995.
+13 The practice of permitting existing arrangements to continue where regulations are updated can be referred to as 'grandfather' rights.
+14 MCA's MSIS 27 Chapter 5, Revision 4 dated October 2013.
+
+1.5.4 Bilge pumping and alarm arrangements
+
+Ocean Way was fitted with two fixed Desmi pumps in the engine room: a bilge pump and deck wash pump. The bilge pump had a maximum capacity of 1166 litres per minute (l/min) and was normally configured to draw from the aft engine room suction. The deck wash pump had a maximum capacity of 583 l/min and was normally connected to the sea suction for deck washing15.
+
+The bilge system had two suctions in the engine room, one forward and one aft, and
+one each in the fish hold and main ballast tank. There was no bilge suction in the aft compartment; instead, drainage from this compartment was via a 5.08cm pipe fitted with a hand-operated screw-down valve that was routinely left open. In this condition, it would also allow water to pass into the aft compartment in the event of engine room flooding.
+
+Ocean Way carried a 240v powered portable submersible pump capable of pumping 250 l/min. Bilge alarms were fitted in the fish hold and engine room; there was no bilge alarm in the aft compartment.
+
+1.5.5 Trawling equipment
+
+Ocean Way was fitted with three main trawl winches: two on the upper deck behind the wheelhouse and the third on the centreline forward. All three winches were hydraulically powered and controlled from the wheelhouse. The port and starboard winches were used for towing the nets and the centreline winch towed the clump; the trawl winches were rated at 29 metres per minute (m/min) at the first layer of wire.
+
+In the automatic trawling mode, the winches would pay out when an excessive load was applied on the towing wire. This was a protective mechanism to prevent loss or damage to the gear in the event of snagging.
+
+Ocean Way's original trawl doors (Figure 14) were oval in shape, and these had been replaced with Thyborøn Type 12D doors (Figure 15). The Thyborøn trawl doors were constructed of a high tensile steel, and three of the four corners were sharp edged.
+
+1.5.6 Stability
+
+Ocean Way's stability arrangements were set out in a Stability Booklet dated 25 June 2002 that was held on board; an extract is at Annex A. The Stability Booklet contained guidance for the skipper on how to calculate the vessel's righting lever as well as a series of worked examples for typical loaded conditions. Post-accident analysis (Section 1.8) showed that Ocean Way was in a satisfactory stability condition prior to the flooding.
+
+1.5.7 Risk assessment and crew drills
+
+MSN1770(F) Section 6.1 required fishing vessel owners to ensure that vessels were
+operated without endangering the safety and health of the crew. There was also a requirement to give crew training and instructions on health and safety matters,
+
+15 These pumps were rated at 70 and 35 tonnes per hour respectively; for consistency, litres per minute (l/min) is used throughout this report.
+
+
+Figure 14: Ocean Way, then named Copious, with original oval trawl doors
+
+Image courtesy of Thyborøn Ltd
+Figure 15: Thyborøn Type 12D trawl door
+
+in particular, on accident prevention. A health and safety risk assessment was required to satisfy an owner's obligation to provide information to crew on measures necessary for their protection. Section 8.1 required the skipper to ensure that the crew were trained in the form of monthly drills to include lifesaving, fire-fighting and survival equipment, and stated that flooding drills should also be incorporated.
+
+Ocean Way's skippers maintained a risk assessment folder on board the vessel; this document was only held in hard copy and was lost with the vessel. There was no checklist on board for flooding and the portable submersible pump was not routinely tested.
+
+It was reported that the crew of Ocean Way carried out a training drill every 2 weeks and when a new crew member joined. These exercises were normally in the form
+of a crew muster followed by a 'walk through' of a fire, man overboard, flooding or abandon ship. When flooding drills were undertaken, these focused on evacuation of floodwater from the engine room or fish hold and use of the portable pump.
+There was no documentary evidence of crew training as the log, where a record of onboard drills had been made, was also lost with the vessel.
+
+1.6 CREW
+
+The skipper was 29 years old and held an MCA Class II fishing skipper's certificate of competency. He had been the skipper of Ocean Way for 4 years and worked a 2 weeks on/2 weeks off cycle with his father, who was the other regular skipper.
+
+The engineer had a background in the merchant navy and held an STCW16 III/2 chief engineer (unlimited) certificate of competency. He had offshore seagoing experience in a variety of merchant vessel types. He had been working as the engineer on board Ocean Way for just under a year.
+
+One of the deckhands was a UK national and the other two were Latvians; all held
+the necessary qualifications to work on board a fishing vessel.
+
+1.7 GUIDANCE FOR FLOODING
+
+Marine Guidance Notice (MGN) 165(F), Fishing Vessels: The Risk of Flooding provided advice to owners and skippers intended to reduce the risk of flooding. MGN 165(F) included actions to take in an emergency, stating:
+
+? Immediately try to find the cause of the flooding
+
+? Start pumping bilges as soon as possible
+
+? Do not concentrate on other matters, such as recovering the fishing gear. Deal with the flooding first.
+
+The MCA Fishermen's Safety Guide17 Section 4, titled 'Emergencies', contained detailed guidance on actions to be taken in the event of a man overboard or abandon ship situation. Section 3, titled 'At Sea', contained guidance for fire and flood situations. The fire section included fire prevention advice and actions to take
+
+16 The International Convention for the Standards of Training, Certification and Watchkeeping of Seafarers,
+1978, as amended
+17 A Guide to Safe Working Practices and Emergency Procedures for Fishermen
+
+if finding a fire. The section on flooding included advice on flood prevention but not the actions to take during a flooding emergency. The European Guide for Risk Prevention in Small Fishing Vessels18 contained a detailed checklist for use should flooding occur (Annex B).
+
+1.8 POST-ACCIDENT EVALUATION
+
+The MAIB commissioned an independent analysis of the effects of the flooding on
+board Ocean Way, specifically to:
+
+? Model Ocean Way's draughts, trim and stability in stages.
+
+? Estimate the breach hole size and volume of floodwater necessary for inevitable
+loss.
+
+? Assess the effects of pumping and whether the loss could have been prevented.
+
+? Model the potential outcome had the aft compartment drain valve been left open
+allowing floodwater into the engine room bilge.
+
+An extract of the full report is at Annex C; the key conclusions were:
+
+? Ocean Way was in a satisfactory stability condition prior to the flooding.
+
+? Once the aft compartment contained about 61 tonnes of seawater, the exterior sea level would have reached the escape hatch sill, resulting in inevitable loss through rapid downflooding.
+
+? The average flooding rate was assessed to be about 790 l/min, but this would have varied considerably as the compartment filled and the vessel sank deeper in the water.
+
+? The breach size was estimated to be between 37 - 111 cm², depending on how far below the waterline the breach was.
+
+? Soon after the flood started, the flow rate from the aft compartment through the
+drain pipe to the engine room bilge would have been about 348 l/min.
+
+? Had the aft compartment drain valve into the engine room been left open and
+the bilge pump used to evacuate floodwater, an additional 26 tonnes of seawater could have been removed, resulting in Ocean Way being upright and stable when the lifeboat arrived.
+
+? The righting lever diminished as the flooding increased. By the time 20 tonnes of floodwater was on board the vessel no longer met the minimum stability criteria, introducing a risk of capsize.
+
+
+
+
+
+
+
+18 The European Guide for Risk Prevention in Small Fishing Vessels was a guide intended for use on board
+fishing vessels of under 15m in length
+
+1.9 PREVIOUS OR SIMILAR ACCIDENTS
+
+1.9.1 Flooding and foundering of Jasper III
+
+On 10 September 1999, the crew of the 24m steel-hulled trawler Jasper III abandoned into a liferaft after being unable to contain a flood that had started in the engine room but spread throughout the vessel. The MAIB report stated that Jasper III did not meet the requirement of the Fishing Vessels (Safety Provisions) Rules, 1975 as the aft engine room watertight bulkhead was breached by two open drain valves, which allowed the flooding to spread into the aft compartment.
+
+1.9.2 Flooding and foundering of Annandale
+
+On 23 March 2000, the 22.83m steel-hulled trawler Annandale foundered as a result of flooding. Two hours after the initial report, the crew transferred to the safety of another fishing boat and Annandale foundered soon thereafter. The MAIB report identified the lack of engine room watertight integrity as a contributing factor as floodwater had been observed spreading uncontrollably from the engine room into the cabin space.
+
+1.9.3 Flooding and foundering of Aurelia
+
+On 13 August 2001, the 23.79m steel-hulled trawler Aurelia foundered as a result of flooding that started in the engine room. The MAIB report identified that a lack of engine room watertight integrity was a contributory factor in the inability of the crew to contain the flooding.
+
+SECTION 2 - ANALYSIS
+2.1 AIM
+
+The purpose of the analysis is to determine the contributory causes and circumstances of the accident as a basis for making recommendations to prevent similar accidents occurring in the future.
+
+2.2 THE CAUSE OF THE FLOOD
+
+The flooding occurred in the aft compartment, which was one of Ocean Way's four main internal spaces (Figure 1); it was separated from the engine room by a watertight bulkhead. Potential sources of seawater ingress directly into the aft
+compartment were: a breach of the steering system, a breach of the emergency fire
+pump sea water inlet or hull damage caused by the impact of the port trawl door.
+
+The autohelm failure probably resulted from water damage to electrical components aft as Ocean Way's steering continued to respond normally to manual helm orders. The head of the rudder stock was situated above the level of cabin floor (Figure 13) and no water ingress was sighted in this area. A failure of the emergency fire pump sea suction inlet would have been evident to the crew when they entered the aft compartment, because a breach of this pipework would have been visible. Damage or failure of the steering or emergency fire pump systems in the aft compartment were not, therefore, sources of water ingress. Thus, it is almost certain that the flood was a result of damage caused when the port trawl door struck Ocean Way's hull.
+
+Trawl doors are designed to stream away from a fishing vessel's side, minimising risk of contact with the hull. Nevertheless, additional hull thickness and strengthening bar protection was provided in the gallows and transom area on Ocean Way where contact during shooting and recovery was most likely. However, the lower aft hull was not usually prone to contact with trawl doors and did not have this additional protection (Figure 12).
+
+Prior to the recovery of the port trawl door, the skipper had noticed that the port trawl wire was running vertically alongside the hull, indicating that the door was not streaming away from the vessel as it normally would, despite Ocean Way moving slowly ahead. When the door first emerged from the water following the impact heard by all on board, the door was the wrong way around, indicating that it had become fouled and twisted, probably during the earlier snagging. When suspended beneath the vessel and the wrong way around, the hydrodynamic effect of heaving in the port door would have been to drive it further under the vessel until the hard, sharp edged trawl door (see Section 1.5.5) came into heavy contact with the unprotected lower hull, below the level of the internal cabin floor.
+
+The extent of the damage caused by the impact can only be estimated as the hull damage was never sighted by the crew during the emergency and the wreck was not examined. However, the conclusion that the hull was breached below the cabin floor level is underpinned by the fact that, had the breach been higher up, it is highly likely that the crew would have seen or heard water entering the compartment.
+
+2.3 CONSTRUCTION STANDARDS
+
+Ocean Way's aft compartment formed a significant proportion of the internal volume of the vessel and had numerous potential sources of water ingress, including the risk of downflooding through the escape hatch or breaches of fitted systems. There was also a risk of flooding into the aft compartment through the open drain valve in the event of an engine room flood.
+
+Ocean Way was constructed to meet the 1975 Fishing Vessels (Safety Provisions) Rules, 1975, that required a bilge suction to be fitted in each watertight compartment. The vessel's original build specification stated that the bilge system was required to serve the engine room, two in and hold and steering compartment [sic] suggesting that the aft compartment should have been fitted with a bilge line suction, rather than a drain valve. There was no bilge alarm in the aft compartment.
+
+Ocean Way's aft compartment drain valve was routinely left open in order that any water accumulating in the aft compartment would drain into the engine room bilge. However, leaving this valve open breached the construction requirement for the engine room to be contained by watertight bulkheads. In this condition, water could potentially have flowed into the aft compartment in the event of an engine
+room flood, rendering the watertight bulkhead ineffective. Such a risk of floodwater
+spreading had been highlighted in previous MAIB investigations (Section 1.9).
+
+Although not applicable to Ocean Way19, the 2002 Seafish construction standards permitted a drain cock to be fitted in lieu of a bilge suction; however, this only applied to peak compartments not used for ballasting. Although Ocean Way's aft compartment was at the aft extremity of the vessel, it was not a peak compartment as it formed a large proportion of the internal volume and could not be used
+for ballasting. Additionally, Ocean Way's aft compartment drain valve was a hand-operated screw-down valve that would not have met the Seafish standard, which required an automatically closing cock that could not have been left open (Section 1.5.4).
+
+The MCA's guidance to its surveyors, applicable to all fishing vessels, required an efficient method of pumping (not just draining) from any watertight compartment. However, the absence of a bilge suction in the aft compartment was not identified as a non-conformity during surveys or inspections.
+
+Given the risk of flooding into Ocean Way's aft compartment and the regulatory requirement to pump from any watertight compartment, the fitting of a bilge suction would have been appropriate. The absence of a bilge suction in the aft compartment severely hampered the crew's ability to control the flood.
+
+2.4 EMERGENCY RESPONSE
+
+2.4.1 Crew actions
+
+Ocean Way's crew tackled the flood by maximising the pumping effort using their fixed and portable pumps. When the bow up trim made pumping from the engine room ineffective, the crew focused on the use of submersible pumps via the aft compartment escape hatch. The portable pumps were particularly susceptible to
+
+19 Ocean Way's existing bilge pumping arrangements remained acceptable under 'grandfather' rights despite
+the updated MCA regulations and Seafish guidance.
+
+blockages and even with both running at their potential full capacity totalling 500 l/ min this would still not have been effective against the estimated average ingress of 790 l/min (Section 1.8 and Annex C).
+
+The skipper's decision not to alter course to receive the helicopter's salvage pump by high-line transfer was based on the difficulty being experienced in maintaining a steady heading and he could see the lifeboat was fast approaching. Reversing course and conducting the transfer with the helicopter would also have been contrary to the skipper's focus of heading back to Lerwick. Nevertheless, had the transfer of the helicopter's powerful salvage pump been attempted, this would potentially have been the quickest way to increase the portable pumping effort.
+Although the transfer of the lifeboat's salvage pump took place, by the time it was set up and running, it was too late to have any significant effect on the flood. By this time, the deteriorating situation also meant it was no longer safe for anyone to stay on the main deck.
+
+Ocean Way's crew attempted to contain the flood and reacted to the situation as it developed. The fixed bilge pumps slowed the rate of water ingress but without a
+more powerful salvage pump on board, the vessel's loss became inevitable due to the catastrophic downflooding through the open aft compartment escape hatch and engine room vents.
+
+2.4.2 Alternative courses of action
+
+Two alternative courses of action have been considered: deliberate flooding of the engine room to enable sustained use of the main bilge pump, or isolation of the aft compartment.
+
+The post-accident evaluation (Section 1.8) identified a scenario where the aft compartment drain valve could have been deliberately left open to facilitate sustained use of the main bilge pump. This scenario would have required a deliberate flooding of the engine room to ensure a level trim and maximum effectiveness of the main bilge pump. To achieve this, as estimated 5 tonnes of water, taking about 20 minutes, would have had to be flooded into the engine room bilge. The estimated flow rate of 348 l/min through the drain valve into the engine room bilge was well within the capacity of the main bilge pump although this would not have fully controlled the estimated 790 l/min flood rate into the aft compartment. Nevertheless, the post-accident analysis suggests that this effort would have sufficiently reduced the accumulation of water such that Ocean Way could have been upright and stable when the lifeboat arrived with its powerful salvage pump.
+However, this scenario is not realistic as:
+
+? it would have been completely counter-intuitive for the crew to have deliberately
+flooded the engine room;
+
+? such action runs contrary to the principle of containing flooding by sealing
+watertight bulkheads, and;
+
+? it would have introduced a very significant risk of water damage to running machinery in the engine room resulting in loss of electrical power for the main bilge pump.
+
+Another alternative course of action would have been for the crew to have attempted to isolate the aft compartment by shutting the drain valve in the engine room and not opening the escape hatch. In this scenario, the crew would not have had any options available to pump out floodwater due to the absence of a bilge suction in the aft compartment. This scenario would also probably have resulted in loss of the vessel due to eventual large bow up trim leading to downflooding through openings such as the engine room vents.
+
+2.5 EMERGENCY PREPARATION
+
+2.5.1 Guidance and procedures
+
+Flooding will always present a very significant risk of vessel loss if the ingress of water cannot be brought under control. Flooding could be considered similar to fire: an immediate threat to the vessel and crew that should be attacked as the top priority.
+
+The MCA Fishermen's Safety Guide, MGN 165(F) and the European Guide for Risk Prevention in Small Fishing Vessels all offered guidance to crews on actions to be taken to deal with flooding emergencies. As the primary guide for a UK fishing vessel, the MCA Fishermen's Safety Guide contained procedures for fire, man overboard or abandonment situations. However, while there was guidance for flooding prevention, there was no checklist for actions to take during a flooding emergency. Equally, the crew of Ocean Way did not have an onboard procedure of their own to follow in the event of flooding. This indicates that the owner's
+risk assessment process had not fully considered the potential severity of the
+consequences of flooding.
+
+The European Guide (Annex B) suggests isolating the flooding compartment. However, this is only viable if it is known that the vessel can survive with that compartment flooded. In the absence of information about damaged stability, the crew's only options are to attempt to stem the inrush of water and to maximise the pumping effort.
+
+A key feature of delivering an effective response is prior risk assessment, drawing on industry guidance, to develop vessel-specific plans for crews to follow in
+an emergency. Although guidance was available, it was contained in different references and the primary reference did not have a checklist for flooding alongside its procedures for fire, man overboard and abandonment.
+
+2.5.2 Training and drills
+
+Crew training and drills form a key element of readiness for emergency, and previous investigations into fishing vessel losses (Section 1.9) have highlighted the risks associated with not completing adequate flooding drills.
+
+Although the documentary evidence of Ocean Way's crew training was lost, regular drills, normally in the form of a 'walk through', were undertaken. However, these had not prepared the crew for the scale of the flooding they faced on the day of the accident. There were no onboard checklists or procedures to follow and the risk of losing the vessel was not recognised until it was too late.
+
+2.6 DAMAGED STABILITY
+
+Ocean Way's stability criteria were set out in the Stability Booklet (Annex A). The stability criteria and worked examples were only applicable to the vessel in an undamaged state. Post-accident analysis showed that Ocean Way was stable prior to the flooding; however, as the water ingress progressed, the righting lever steadily reduced and, once about 20 tonnes of seawater had entered the aft compartment, the minimum stability criteria were no longer satisfied.
+
+A diminishing righting lever means an increasing risk of capsize, which can be exacerbated by sea conditions or a free surface effect if water can move in a partially flooded compartment. Ocean Way did list to port in the latter stages of the foundering but did not capsize, probably due to the relatively calm sea conditions. Nevertheless, had a capsize occurred, it would have been rapid in nature and placed the lives of the crew and the lifeboat men in immediate danger.
+
+The Stability Booklet was not required by the regulations to contain guidance on damaged stability, such as the risks associated with a compartment fully flooding. However, in the absence of such information, the skipper and crew of Ocean Way were not equipped to assess the risks posed by flooding and develop appropriate procedures. Therefore, they did not consider the risk of capsize, or the fact that loss of the aft compartment through flooding could lead to the vessel foundering.
+
+Although there is no regulatory requirement for managing damaged stability in fishing vessels, it would be possible in stability documentation to indicate that complete loss of a compartment could lead to loss of the vessel. With such knowledge in mind, the skipper and engineer might have decided to leave the aft compartment drain valve open and prioritise the maximum capacity of pumping out floodwater ahead of preserving machinery or maintaining propulsion. Equally, had the diminishing righting lever and inherent risk of capsize been understood, it
+might have prompted the crew to consider abandoning the vessel earlier so that the potential risk to life incurred during any capsize was avoided.
+
+SECTION 3 - CONCLUSIONS
+3.1 SAFETY ISSUES DIRECTLY CONTRIBUTING TO THE ACCIDENT THAT HAVE BEEN ADDRESSED OR RESULTED IN RECOMMENDATIONS
+
+1. Ocean Way foundered as a result of uncontrolled flooding in the aft compartment. The flood was almost certainly a consequence of hull damage caused during the recovery of the port trawl door. [2.2]
+
+2. The crew's actions to attack the flood were hampered by the absence of a bilge
+suction in the aft watertight compartment. [2.4.1, 2.4.2]
+
+3. Ocean Way did not meet the Fishing Vessels (Safety Provisions) 1975 as there was not a bilge suction in each watertight compartment. [2.3]
+
+3.2 OTHER SAFETY ISSUES NOT DIRECTLY CONTRIBUTING TO THE ACCIDENT
+
+1. MCA guidance for fishing vessel crews lacked detail on the actions to take when dealing with a flooding emergency. [2.5.1]
+
+2. The practice on board of leaving the aft compartment drain valve open breached the watertight integrity of the aft engine room bulkhead. [2.3]
+
+3. The absence of a bilge suction in the aft watertight compartment was not identified
+as a non-conformity during MCA surveys or inspections. [2.3]
+
+4. On board training and drills had not prepared the crew for the scale of flooding they
+faced on the day of the accident. [2.5]
+
+5. In the absence of any information on damaged stability, the skipper and crew of Ocean Way were not equipped to assess the risks posed by flooding and develop appropriate procedures. [2.6]
+
+SECTION 4 - ACTION TAKEN
+4.1 ACTIONS TAKEN BY MAIB
+
+The Marine Accident Investigation Branch has issued a safety flyer to the fishing industry designed to raise awareness of the safety lessons identified during this investigation.
+
+4.2 ACTIONS TAKEN BY OTHER ORGANISATIONS
+
+The Maritime and Coastguard Agency has issued Marine Guidance Notice 570(F)
+which offers guidance for fishing vessel crews on the conduct of emergency drills.
+
+SECTION 5 - RECOMMENDATIONS
+2018/115	The Maritime and Coastguard Agency is recommended to:
+
+? Update the Fishermen's Safety Guide to include guidance on the emergency preparation and emergency response for flooding emergencies, including stability considerations.
+
+? Review and, where appropriate, update its guidance to the fishing industry
+and its marine surveyors on:
+
+- the maintenance of watertight integrity in fishing vessels where drain valves are fitted through watertight bulkheads.
+
+- the construction standards of 15 - 24m fishing vessels to ensure that all watertight compartments are fitted with a dedicated bilge suction. A clearer definition of peak compartments should also be considered.
+
+	Safety recommendations shall in no case create a presumption of blame or liability	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
