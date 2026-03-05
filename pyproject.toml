@@ -11,7 +11,11 @@ dependencies = [
     "httpx (>=0.28.1,<0.29.0)",
     "pytest-cov (>=6.2.1,<7.0.0)",
     "supabase (>=2.18.1,<3.0.0)",
-    "python-dotenv (>=1.1.1,<2.0.0)"
+    "python-dotenv (>=1.1.1,<2.0.0)",
+    "pdfplumber (>=0.11.9,<0.12.0)",
+    "nltk (>=3.9.3,<4.0.0)",
+    "python-multipart (>=0.0.22,<0.0.23)",
+    "poethepoet (>=0.42.1,<0.43.0)"
 ]
 
 
@@ -23,6 +27,14 @@ build-backend = "poetry.core.masonry.api"
 flake8 = "^7.3.0"
 autopep8 = "^2.3.2"
 pytest = "^8.4.1"
+
+[tool.poe.tasks]
+dev = "uvicorn main:app --reload"
+test = "pytest"
+test-cov = "pytest --cov"
+lint = "flake8 ."
+fmt = "autopep8 --in-place --recursive ."
+schema = "node scripts/schema/generate.mjs"
 
 [tool.flake8]
 max-line-length = 160
