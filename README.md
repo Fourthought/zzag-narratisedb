@@ -4,6 +4,28 @@ A production-ready backend API for CHIRP's maritime incident reporting system. B
 
 ---
 
+## Progress
+
+**What actually works:**
+
+- PDFs are uploaded, parsed, and stored in the database
+- Sentences are split and classified by text type (heading, list item, paragraph)
+- For MAIB investigation reports (identified by filename prefix `MAIBInvReport`), front matter and TOC sentences are marked as irrelevant using a known end-of-front-matter marker
+
+**What is partially working or unvalidated:**
+
+- Relevance scoring for non-MAIB PDFs relies on a normalised duplicate heading heuristic that has not been validated beyond one sample document
+- Metadata extraction (vessel name, accident date, etc.) is implemented but extraction quality has not been systematically validated across the sample set
+
+**What is not yet built:**
+
+- All GET endpoints (documents, sections, sentences, authors, organisations, safety issues, recommendations)
+- Embeddings routes (POST + similarity search)
+- Auth middleware
+- DELETE and PATCH routes
+
+---
+
 ## The Problem
 
 CHIRP maintains a large corpus of Marine Accident Investigation Branch (MAIB) incident reports — detailed PDF documents covering maritime accidents, safety findings, and corrective recommendations. This data is currently unstructured and difficult to query, analyse, or surface systematically.
