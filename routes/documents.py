@@ -1,7 +1,9 @@
 import httpx
 from fastapi import APIRouter, File, UploadFile, HTTPException
+from fastapi.responses import PlainTextResponse
 from pydantic import BaseModel
 
+from controllers import documents as documents_controller
 from controllers import pdf as pdf_controller
 from controllers import url as url_controller
 from services.ingest_to_db import DuplicateDocumentError
@@ -54,3 +56,12 @@ def ingest_from_url(body: FromUrlRequest):
         raise HTTPException(status_code=502, detail=f"Upstream error: {e.response.status_code}")
     except httpx.RequestError as e:
         raise HTTPException(status_code=502, detail=f"Network error: {e}")
+
+
+@router.get("/{id}/full", response_class=PlainTextResponse)
+def get_document_full(id: str):
+    """Reconstructed document — all sentences ordered by position."""
+    text = documents_controller.get_full_text(_get_db(), id)
+    if text is None:
+        raise HTTPException(status_code=404, detail="Document not found")
+    return text
