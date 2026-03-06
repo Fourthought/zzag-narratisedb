@@ -30,7 +30,7 @@ CREATE TRIGGER set_updated_at BEFORE UPDATE ON public.chirp_shield_codes
 CREATE TRIGGER set_updated_at BEFORE UPDATE ON public.chirp_organisations
   FOR EACH ROW EXECUTE FUNCTION public.set_updated_at();
 
-CREATE TRIGGER set_updated_at BEFORE UPDATE ON public.chirp_report_metadata
+CREATE TRIGGER set_updated_at BEFORE UPDATE ON public.chirp_accident_metadata
   FOR EACH ROW EXECUTE FUNCTION public.set_updated_at();
 
 CREATE TRIGGER set_updated_at BEFORE UPDATE ON public.chirp_safety_issues

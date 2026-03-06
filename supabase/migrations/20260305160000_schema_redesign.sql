@@ -146,7 +146,7 @@ CREATE TABLE public.chirp_shield_codes (
 );
 ALTER TABLE public.chirp_shield_codes ENABLE ROW LEVEL SECURITY;
 
-CREATE TABLE public.chirp_report_metadata (
+CREATE TABLE public.chirp_accident_metadata (
   id uuid NOT NULL DEFAULT gen_random_uuid(),
   document_id uuid,
   vessel_name text,
@@ -163,10 +163,10 @@ CREATE TABLE public.chirp_report_metadata (
   pdf_author text,
   created_at timestamp with time zone DEFAULT now(),
   updated_at timestamp with time zone DEFAULT now(),
-  CONSTRAINT chirp_report_metadata_pkey PRIMARY KEY (id),
-  CONSTRAINT chirp_report_metadata_document_id_fkey FOREIGN KEY (document_id) REFERENCES public.documents(id) ON DELETE CASCADE
+  CONSTRAINT chirp_accident_metadata_pkey PRIMARY KEY (id),
+  CONSTRAINT chirp_accident_metadata_document_id_fkey FOREIGN KEY (document_id) REFERENCES public.documents(id) ON DELETE CASCADE
 );
-ALTER TABLE public.chirp_report_metadata ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.chirp_accident_metadata ENABLE ROW LEVEL SECURITY;
 
 
 -- ============================================================
@@ -316,11 +316,11 @@ CREATE POLICY "Chirp Shield Codes: Authenticated insert" ON public.chirp_shield_
 CREATE POLICY "Chirp Shield Codes: Authenticated update" ON public.chirp_shield_codes FOR UPDATE USING ((auth.uid() IS NOT NULL));
 CREATE POLICY "Chirp Shield Codes: Authenticated delete" ON public.chirp_shield_codes FOR DELETE USING ((auth.uid() IS NOT NULL));
 
--- chirp_report_metadata (recreated)
-CREATE POLICY "Chirp Report Metadata: Public read access" ON public.chirp_report_metadata FOR SELECT USING (true);
-CREATE POLICY "Chirp Report Metadata: Authenticated insert" ON public.chirp_report_metadata FOR INSERT WITH CHECK ((auth.uid() IS NOT NULL));
-CREATE POLICY "Chirp Report Metadata: Authenticated update" ON public.chirp_report_metadata FOR UPDATE USING ((auth.uid() IS NOT NULL));
-CREATE POLICY "Chirp Report Metadata: Authenticated delete" ON public.chirp_report_metadata FOR DELETE USING ((auth.uid() IS NOT NULL));
+-- chirp_accident_metadata (recreated)
+CREATE POLICY "Chirp Report Metadata: Public read access" ON public.chirp_accident_metadata FOR SELECT USING (true);
+CREATE POLICY "Chirp Report Metadata: Authenticated insert" ON public.chirp_accident_metadata FOR INSERT WITH CHECK ((auth.uid() IS NOT NULL));
+CREATE POLICY "Chirp Report Metadata: Authenticated update" ON public.chirp_accident_metadata FOR UPDATE USING ((auth.uid() IS NOT NULL));
+CREATE POLICY "Chirp Report Metadata: Authenticated delete" ON public.chirp_accident_metadata FOR DELETE USING ((auth.uid() IS NOT NULL));
 
 -- chunks (new)
 CREATE POLICY "Chunks: Public read access" ON public.chunks FOR SELECT USING (true);
@@ -393,9 +393,9 @@ GRANT ALL ON TABLE public.chirp_shield_codes TO anon;
 GRANT ALL ON TABLE public.chirp_shield_codes TO authenticated;
 GRANT ALL ON TABLE public.chirp_shield_codes TO service_role;
 
-GRANT ALL ON TABLE public.chirp_report_metadata TO anon;
-GRANT ALL ON TABLE public.chirp_report_metadata TO authenticated;
-GRANT ALL ON TABLE public.chirp_report_metadata TO service_role;
+GRANT ALL ON TABLE public.chirp_accident_metadata TO anon;
+GRANT ALL ON TABLE public.chirp_accident_metadata TO authenticated;
+GRANT ALL ON TABLE public.chirp_accident_metadata TO service_role;
 
 GRANT ALL ON TABLE public.chunks TO anon;
 GRANT ALL ON TABLE public.chunks TO authenticated;
