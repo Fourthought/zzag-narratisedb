@@ -58,6 +58,12 @@ def ingest_from_url(body: FromUrlRequest):
         raise HTTPException(status_code=502, detail=f"Network error: {e}")
 
 
+@router.get("")
+def list_documents():
+    """List all documents — id and author_id only."""
+    return documents_controller.list_documents(_get_db())
+
+
 @router.get("/{id}/full", response_class=PlainTextResponse)
 def get_document_full(id: str):
     """Reconstructed document — all sentences ordered by position."""

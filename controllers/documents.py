@@ -1,6 +1,16 @@
 from services.supabase.service import SupabaseService
 
 
+def list_documents(db: SupabaseService) -> list[dict]:
+    result = (
+        db.client.table("documents")
+        .select("id, author_id")
+        .order("created_at", desc=True)
+        .execute()
+    )
+    return result.data or []
+
+
 def get_full_text(db: SupabaseService, doc_id: str) -> str | None:
     """Reconstruct document as plain text — all sentences ordered by position.
 
