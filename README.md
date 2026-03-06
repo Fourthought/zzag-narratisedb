@@ -6,14 +6,14 @@ A production-ready backend API for CHIRP's maritime incident reporting system. B
 
 ## Progress
 
-**What works:**
+What works:
 
-- `POST /documents/from-url` — scrapes a GOV.UK MAIB report page, downloads the PDF, and runs the full ingestion pipeline. Web-scraped metadata (title, publication date, vessel type, accident date, location) takes precedence over PDF-extracted values
-- `POST /documents` — file upload path; all data sourced from the PDF
+- `POST /documents/url` — scrapes a GOV.UK MAIB report page, downloads the PDF, and runs the full ingestion pipeline
+- `POST /documents/pdf` — file upload path; all data sourced from the PDF
 - Both paths: duplicate detection (SHA-256), sentence splitting and classification by text type, report metadata extraction from structured tables in the PDF
 - See [INGESTION.md](INGESTION.md) for a full breakdown of what comes from where
 
-**What is not yet built:**
+What is not yet built:
 
 - All GET endpoints (documents, sentences, authors, organisations, safety issues, recommendations)
 - Embeddings routes (POST + similarity search)
@@ -64,7 +64,7 @@ A FastAPI application responsible for:
 - Storing and querying vector embeddings via pgvector
 - Serving structured data back to the client pipeline and any future consumers
 
-The API does **not** perform semantic analysis or generate embeddings. It is a structured data store and retrieval layer.
+The API does not perform semantic analysis or generate embeddings. It is a structured data store and retrieval layer.
 
 ### 2. Client NLP Pipeline (external)
 
@@ -77,52 +77,17 @@ A locally-operated pipeline maintained by the client, responsible for:
 
 Safety issues and recommendations are extracted at ingestion time and are not processed by the NLP pipeline.
 
-**Neither layer is useful without the other.** The API provides structure; the NLP pipeline provides intelligence.
+Neither layer is useful without the other. The API provides structure; the NLP pipeline provides intelligence.
 
 ### Ingestion pipelines
 
 There are two ingestion routes, each with a distinct pipeline:
 
-**`POST /documents/url`** — the primary path. Accepts a GOV.UK MAIB report URL. The scraper fetches the page and extracts structured metadata (title, publication date, vessel type, accident date, location) directly from the HTML, then downloads the PDF. The PDF parser extracts the remaining fields (vessel name, severity, loss of life, port/destination, sentences) that aren't available on the page. Both sets of data are written to the database.
+`POST /documents/url` — the primary path. Accepts a GOV.UK MAIB report URL. The scraper fetches the page and extracts structured metadata (title, publication date, vessel type, accident date, location) directly from the HTML, then downloads the PDF. The PDF parser extracts the remaining fields (vessel name, severity, loss of life, port/destination, sentences) that aren't available on the page. Both sets of data are written to the database.
 
-**`POST /documents/pdf`** — for direct PDF uploads. Skips the scraping step entirely; all metadata and content comes from the PDF alone.
+`POST /documents/pdf` — for direct PDF uploads. Skips the scraping step entirely; all metadata and content comes from the PDF alone.
 
-In both cases, a SHA-256 hash of the document text is used to detect and reject duplicates. See [INGESTION.md](INGESTION.md) for the full field-by-field breakdown.
-
-### Code responsibilities
-
-The ingestion code is split into four layers, each with a single concern:
-
-**Routes** (`routes/documents.py`) — HTTP only. Parse the incoming request, call the appropriate controller, and map any errors to HTTP responses. No business logic.
-
-**Controllers** (`controllers/`) — Orchestration. Each controller owns one pipeline end-to-end: calling the right services in the right order, merging data from multiple sources, and returning the final result. They know what needs to happen but not how each step works internally.
-
-**Services** (`services/`) — Single-concern operations:
-- `scraper.py` — fetches a GOV.UK MAIB report page and returns structured metadata plus the raw PDF bytes. No PDF parsing, no database.
-- `pdf_parsing.py` — opens a PDF and extracts text, file metadata, and structured report metadata from tables. No database.
-- `ingest_to_db.py` — all database writes: duplicate checking, author resolution, document creation, accident metadata, and sentence storage. No PDF or HTTP knowledge.
-
-**Utils** (`utils/pdf/`) — Pure functions for extracting specific fields from PDF text: title, publication date, accident date, loss of life, and sentence splitting. No I/O, no side effects.
-
-#### URL pipeline call order
-
-```
-POST /documents/url
-  → controllers/url.py
-      → services/scraper.py        # fetch page + download PDF
-      → services/pdf_parsing.py    # extract text + metadata from PDF
-      → services/ingest_to_db.py   # write document, metadata, sentences to DB
-```
-
-#### PDF pipeline call order
-
-```
-POST /documents/pdf
-  → controllers/pdf.py
-      → services/pdf_parsing.py    # extract text + metadata from PDF
-      → utils/pdf/                 # extract title, publication date
-      → services/ingest_to_db.py   # write document, metadata, sentences to DB
-```
+In both cases, a SHA-256 hash of the document text is used to detect and reject duplicates. See [INGESTION.md](INGESTION.md) for a detailed breakdown of what comes from where, including code responsibilities and call order.
 
 ### Interaction flow
 
@@ -142,10 +107,10 @@ SHIELD codes are a domain-specific classification taxonomy used by CHIRP to cate
 
 ## Infrastructure
 
-- **Database:** Supabase (managed PostgreSQL + pgvector), London region
-- **API hosting:** Docker Compose on Tandem server (Germany)
-- **TLS / ingress:** Cloudflare reverse proxy
-- **Embeddings:** Client-generated, dimension fixed at 384
+- Database: Supabase (managed PostgreSQL + pgvector), London region
+- API hosting: Docker Compose on Tandem server (Germany)
+- TLS / ingress: Cloudflare reverse proxy
+- Embeddings: Client-generated, dimension fixed at 384
 
 See `ai-docs/ZigZag_ADR_20260223.md` for the full architectural decision record.
 
@@ -185,7 +150,7 @@ poetry run uvicorn main:app --reload
 ### Ingest from a GOV.UK URL
 
 ```bash
-curl -X POST http://localhost:8000/documents/from-url \
+curl -X POST http://localhost:8000/documents/url \
   -H "Content-Type: application/json" \
   -d '{"url": "https://www.gov.uk/maib-reports/..."}'
 ```
@@ -193,7 +158,7 @@ curl -X POST http://localhost:8000/documents/from-url \
 ### Ingest from a PDF file
 
 ```bash
-curl -X POST http://localhost:8000/documents \
+curl -X POST http://localhost:8000/documents/pdf \
   -F "file=@path/to/report.pdf"
 ```
 
