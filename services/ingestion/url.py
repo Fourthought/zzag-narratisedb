@@ -53,7 +53,7 @@ def ingest_from_url(db: SupabaseService, url: str) -> dict:
     logger.info("  Created document %s", doc_id)
 
     logger.info("Step 3: Storing report metadata...")
-    db.create_record("chirp_report_metadata", {
+    db.create_record("chirp_accident_metadata", {
         "document_id": doc_id,
         # From webpage
         "vessel_type": scraped.vessel_type,

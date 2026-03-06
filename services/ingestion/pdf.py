@@ -41,7 +41,7 @@ def ingest(db: SupabaseService, pdf_bytes: bytes, filename: str) -> dict:
     logger.info("  Created document %s", doc_id)
 
     logger.info("Step 3: Storing report metadata...")
-    db.create_record("chirp_report_metadata", {
+    db.create_record("chirp_accident_metadata", {
         "document_id": doc_id,
         "page_count": pdf_meta.page_count,
         "pdf_subject": pdf_meta.pdf_subject,
