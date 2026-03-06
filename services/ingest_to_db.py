@@ -1,20 +1,16 @@
+"""Write ingested data to the database."""
 import hashlib
 import logging
 from typing import Optional
 
-from services.pdf_parser import split_into_sentences
 from services.supabase.service import SupabaseService
+from utils.pdf import split_into_sentences
 
 logger = logging.getLogger(__name__)
 
 
 class DuplicateDocumentError(Exception):
     """Raised when a document with the same content already exists."""
-    pass
-
-
-class UnsupportedDocumentError(Exception):
-    """Raised when the document type is not supported."""
     pass
 
 
@@ -41,11 +37,18 @@ def get_or_create_author(db: SupabaseService, name: str) -> dict:
     return db.create_record("authors", {"name": name})
 
 
-def store_sentences(db: SupabaseService, full_text: str, doc_id: int) -> None:
-    logger.info("Step 4: Splitting text into sentences...")
+def create_document(db: SupabaseService, fields: dict) -> dict:
+    return db.create_record("documents", fields)
+
+
+def create_accident_metadata(db: SupabaseService, fields: dict) -> None:
+    db.create_record("chirp_accident_metadata", fields)
+
+
+def store_sentences(db: SupabaseService, full_text: str, doc_id) -> None:
+    logger.info("Splitting text into sentences...")
     all_sentences = split_into_sentences(full_text)
     logger.info("  Found %s sentences", len(all_sentences))
-    logger.info("Step 5: Storing sentences...")
     db.create_records_batch("sentences", [
         {"text": s["text"], "text_type": s["text_type"], "position": i, "document_id": doc_id}
         for i, s in enumerate(all_sentences)
