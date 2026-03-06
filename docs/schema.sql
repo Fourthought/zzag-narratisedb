@@ -55,6 +55,34 @@ CREATE POLICY "Authors: Authenticated insert" ON public.authors FOR INSERT WITH 
 CREATE POLICY "Authors: Authenticated update" ON public.authors FOR UPDATE USING ((auth.uid() IS NOT NULL));
 CREATE POLICY "Authors: Public read access" ON public.authors FOR SELECT USING (true);
 
+CREATE TABLE public.chirp_accident_metadata (
+  id uuid DEFAULT gen_random_uuid() NOT NULL,
+  document_id uuid,
+  vessel_name text,
+  vessel_type text,
+  accident_type text,
+  accident_date date,
+  accident_location text,
+  severity text,
+  loss_of_life integer,
+  port_of_origin text,
+  destination text,
+  page_count integer,
+  pdf_subject text,
+  pdf_author text,
+  created_at timestamp with time zone DEFAULT now(),
+  updated_at timestamp with time zone DEFAULT now(),
+  CONSTRAINT chirp_accident_metadata_pkey PRIMARY KEY (id),
+  CONSTRAINT chirp_accident_metadata_document_id_fkey FOREIGN KEY (document_id) REFERENCES public.documents(id) ON DELETE CASCADE
+);
+
+ALTER TABLE public.chirp_accident_metadata ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Chirp Report Metadata: Authenticated delete" ON public.chirp_accident_metadata FOR DELETE USING ((auth.uid() IS NOT NULL));
+CREATE POLICY "Chirp Report Metadata: Authenticated insert" ON public.chirp_accident_metadata FOR INSERT WITH CHECK ((auth.uid() IS NOT NULL));
+CREATE POLICY "Chirp Report Metadata: Authenticated update" ON public.chirp_accident_metadata FOR UPDATE USING ((auth.uid() IS NOT NULL));
+CREATE POLICY "Chirp Report Metadata: Public read access" ON public.chirp_accident_metadata FOR SELECT USING (true);
+
 CREATE TABLE public.chirp_analysis_shield_codes (
   analysis_id uuid NOT NULL,
   shield_code_id uuid NOT NULL,
@@ -112,34 +140,6 @@ CREATE POLICY "Chirp Recommendations: Authenticated delete" ON public.chirp_reco
 CREATE POLICY "Chirp Recommendations: Authenticated insert" ON public.chirp_recommendations FOR INSERT WITH CHECK ((auth.uid() IS NOT NULL));
 CREATE POLICY "Chirp Recommendations: Authenticated update" ON public.chirp_recommendations FOR UPDATE USING ((auth.uid() IS NOT NULL));
 CREATE POLICY "Chirp Recommendations: Public read access" ON public.chirp_recommendations FOR SELECT USING (true);
-
-CREATE TABLE public.chirp_report_metadata (
-  id uuid DEFAULT gen_random_uuid() NOT NULL,
-  document_id uuid,
-  vessel_name text,
-  vessel_type text,
-  accident_type text,
-  accident_date date,
-  accident_location text,
-  severity text,
-  loss_of_life integer,
-  port_of_origin text,
-  destination text,
-  page_count integer,
-  pdf_subject text,
-  pdf_author text,
-  created_at timestamp with time zone DEFAULT now(),
-  updated_at timestamp with time zone DEFAULT now(),
-  CONSTRAINT chirp_report_metadata_pkey PRIMARY KEY (id),
-  CONSTRAINT chirp_report_metadata_document_id_fkey FOREIGN KEY (document_id) REFERENCES public.documents(id) ON DELETE CASCADE
-);
-
-ALTER TABLE public.chirp_report_metadata ENABLE ROW LEVEL SECURITY;
-
-CREATE POLICY "Chirp Report Metadata: Authenticated delete" ON public.chirp_report_metadata FOR DELETE USING ((auth.uid() IS NOT NULL));
-CREATE POLICY "Chirp Report Metadata: Authenticated insert" ON public.chirp_report_metadata FOR INSERT WITH CHECK ((auth.uid() IS NOT NULL));
-CREATE POLICY "Chirp Report Metadata: Authenticated update" ON public.chirp_report_metadata FOR UPDATE USING ((auth.uid() IS NOT NULL));
-CREATE POLICY "Chirp Report Metadata: Public read access" ON public.chirp_report_metadata FOR SELECT USING (true);
 
 CREATE TABLE public.chirp_safety_issue_legislation (
   safety_issue_id uuid NOT NULL,
