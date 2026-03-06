@@ -15,38 +15,33 @@ What works:
 
 What is not yet built:
 
-- All GET endpoints (documents, sentences, authors, organisations, safety issues, recommendations)
+- GET endpoints for sentences, authors, organisations, safety issues, recommendations
 - Embeddings routes (POST + similarity search)
 - Auth middleware
 - DELETE and PATCH routes
 
----
+### Ingestion
 
-## The Problem
+See [INGESTION.md](INGESTION.md) for a full breakdown of what is extracted and from where.
 
-CHIRP maintains a large corpus of Marine Accident Investigation Branch (MAIB) incident reports — detailed PDF documents covering maritime accidents, safety findings, and corrective recommendations. This data is currently unstructured and difficult to query, analyse, or surface systematically.
+### Development scripts
 
-The goal of CHIRPdb is to ingest those reports into a structured, queryable database — breaking each document down into its constituent parts (sections, sentences, safety issues, recommendations) and making them available via a clean REST API for downstream analysis and search.
+All scripts are in `scripts/development/`. They default to `http://localhost:8000` but respect `API_URL`.
 
----
+```bash
+# Ingest reports from docs/maib_links.json (default: first 10)
+./scripts/development/ingest-from-links.sh
+./scripts/development/ingest-from-links.sh 50
 
-## The Data
+# Fetch full text for a single document, saved to output/{id}.txt
+./scripts/development/get-full-text.sh <document-id>
 
-Source documents are MAIB investigation reports in PDF format. Each report contains:
+# Fetch full text for all documents, saved to output/{id}.txt
+./scripts/development/extract-all-documents.sh
 
-- Incident metadata (vessel name, accident date, location, severity, etc.)
-- Structured narrative sections
-- Safety issues identified during the investigation
-- Recommendations directed at organisations
-
-Reports vary in length and internal structure. Extraction quality for certain fields (particularly incident metadata) depends on consistency of PDF formatting across reports and is subject to ongoing validation.
-
-### What we extract and from where
-
-See [INGESTION.md](INGESTION.md) for the full breakdown. In summary:
-
-- For `POST /documents/from-url`: title, publication date, vessel type, accident date, and location come from the GOV.UK webpage. Vessel name, severity, loss of life, port of origin, destination, accident type, and all sentences come from the PDF.
-- For `POST /documents`: everything comes from the PDF.
+# Truncate all non-reference tables (local Supabase only)
+./scripts/development/truncate-db.sh
+```
 
 ---
 
@@ -160,13 +155,6 @@ curl -X POST http://localhost:8000/documents/url \
 ```bash
 curl -X POST http://localhost:8000/documents/pdf \
   -F "file=@path/to/report.pdf"
-```
-
-### Bulk ingest from the MAIB links list
-
-```bash
-./scripts/ingest-from-links.sh        # first 10
-./scripts/ingest-from-links.sh 50     # custom limit
 ```
 
 ---
