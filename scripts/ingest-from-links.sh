@@ -23,7 +23,7 @@ count=0
 while IFS= read -r url; do
     count=$((count + 1))
     echo "[$count/$total] $url"
-    response=$(curl -s -w "\n%{http_code}" -X POST "$API_URL/documents/from-url" \
+    response=$(curl -s -w "\n%{http_code}" -X POST "$API_URL/documents/url" \
         -H "Content-Type: application/json" \
         -d "{\"url\": \"$url\"}")
     http_code=$(echo "$response" | tail -1)
