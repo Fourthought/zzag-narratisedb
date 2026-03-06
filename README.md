@@ -6,20 +6,16 @@ A production-ready backend API for CHIRP's maritime incident reporting system. B
 
 ## Progress
 
-**What actually works:**
+**What works:**
 
-- PDFs are uploaded, parsed, and stored in the database
-- Sentences are split and classified by text type (heading, list item, paragraph)
-- For MAIB investigation reports (identified by filename prefix `MAIBInvReport`), front matter and TOC sentences are marked as irrelevant using a known end-of-front-matter marker
-
-**What is partially working or unvalidated:**
-
-- Relevance scoring for non-MAIB PDFs relies on a normalised duplicate heading heuristic that has not been validated beyond one sample document
-- Metadata extraction (vessel name, accident date, etc.) is implemented but extraction quality has not been systematically validated across the sample set
+- `POST /documents/from-url` — scrapes a GOV.UK MAIB report page, downloads the PDF, and runs the full ingestion pipeline. Web-scraped metadata (title, publication date, vessel type, accident date, location) takes precedence over PDF-extracted values
+- `POST /documents` — file upload path; all data sourced from the PDF
+- Both paths: duplicate detection (SHA-256), sentence splitting and classification by text type, report metadata extraction from structured tables in the PDF
+- See [INGESTION.md](INGESTION.md) for a full breakdown of what comes from where
 
 **What is not yet built:**
 
-- All GET endpoints (documents, sections, sentences, authors, organisations, safety issues, recommendations)
+- All GET endpoints (documents, sentences, authors, organisations, safety issues, recommendations)
 - Embeddings routes (POST + similarity search)
 - Auth middleware
 - DELETE and PATCH routes
@@ -47,32 +43,10 @@ Reports vary in length and internal structure. Extraction quality for certain fi
 
 ### What we extract and from where
 
-**From the PDF file metadata** (embedded in the file itself):
+See [INGESTION.md](INGESTION.md) for the full breakdown. In summary:
 
-| Field | Notes |
-|-------|-------|
-| Title | Used as the document title |
-| Page count | Stored against the report metadata record |
-| Subject | Stored against the report metadata record |
-
-**From the PDF contents** (the text of the document):
-
-| Field | Notes |
-|-------|-------|
-| Publication date | Extracted from the cover page |
-| Vessel name | Extracted from the document's incident summary |
-| Accident date | Extracted from the document's incident summary |
-| Accident location | Extracted from the document's incident summary |
-| Severity | Extracted from the document's incident summary |
-| Vessel type | Extracted from the document's incident summary |
-| Loss of life | Extracted from the document's incident summary |
-| Port of origin | Extracted from the document's incident summary |
-| Destination | Extracted from the document's incident summary |
-| Accident type | Extracted from the document's incident summary |
-| Sections | The document split into named narrative sections |
-| Sentences | Each section split into individual sentences, typed as paragraph, list item, or heading |
-| Safety issues | Extracted from the safety/conclusions section |
-| Recommendations | Extracted from the recommendations section, with associated organisations |
+- For `POST /documents/from-url`: title, publication date, vessel type, accident date, and location come from the GOV.UK webpage. Vessel name, severity, loss of life, port of origin, destination, accident type, and all sentences come from the PDF.
+- For `POST /documents`: everything comes from the PDF.
 
 ---
 
@@ -84,8 +58,8 @@ The system is split into two distinct layers:
 
 A FastAPI application responsible for:
 
-- Accepting PDF uploads and running the ingestion pipeline
-- Parsing PDFs into structured data: documents, sections, sentences, safety issues, recommendations
+- Ingesting MAIB reports via GOV.UK URL scraping or direct PDF upload
+- Parsing PDFs into structured data: documents, sentences, and report metadata
 - Storing all structured data in a PostgreSQL database (Supabase)
 - Storing and querying vector embeddings via pgvector
 - Serving structured data back to the client pipeline and any future consumers
@@ -107,11 +81,11 @@ Safety issues and recommendations are extracted at ingestion time and are not pr
 
 ### Interaction flow
 
-1. A PDF is uploaded to `POST /documents` — the API computes a SHA256 hash of the document content and rejects it with a `409 Conflict` if it has been ingested before. Otherwise it ingests the PDF, extracts structure, and stores documents, sections, sentences, safety issues, and recommendations
+1. A report is ingested via `POST /documents/from-url` (GOV.UK URL) or `POST /documents` (PDF upload) — the API deduplicates by SHA-256 hash and stores documents, sentences, and report metadata
 2. The client pipeline fetches sentences from the API
-3. The client pipeline runs semantic NLP analysis on the sentences — assigning SHIELD codes, generating embeddings, and applying any other classifications that require semantic understanding
-4. The client pipeline writes results back to the API (embeddings, shield codes, relevance scores for sentences)
-5. The API now serves fully enriched data — sentences with SHIELD codes and embeddings — enabling similarity search and structured querying. Safety issues and recommendations are stored as extracted at ingestion time and linked to their constituent sentences
+3. The client pipeline runs semantic NLP analysis — assigning SHIELD codes, generating embeddings, and scoring relevance
+4. The client pipeline writes results back to the API
+5. The API serves fully enriched data, enabling similarity search and structured querying
 
 ---
 
@@ -163,11 +137,26 @@ poetry install
 poetry run uvicorn main:app --reload
 ```
 
-### Ingest a PDF
+### Ingest from a GOV.UK URL
+
+```bash
+curl -X POST http://localhost:8000/documents/from-url \
+  -H "Content-Type: application/json" \
+  -d '{"url": "https://www.gov.uk/maib-reports/..."}'
+```
+
+### Ingest from a PDF file
 
 ```bash
 curl -X POST http://localhost:8000/documents \
   -F "file=@path/to/report.pdf"
+```
+
+### Bulk ingest from the MAIB links list
+
+```bash
+./scripts/ingest-from-links.sh        # first 10
+./scripts/ingest-from-links.sh 50     # custom limit
 ```
 
 ---
