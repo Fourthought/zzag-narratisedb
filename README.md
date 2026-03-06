@@ -79,9 +79,54 @@ Safety issues and recommendations are extracted at ingestion time and are not pr
 
 **Neither layer is useful without the other.** The API provides structure; the NLP pipeline provides intelligence.
 
+### Ingestion pipelines
+
+There are two ingestion routes, each with a distinct pipeline:
+
+**`POST /documents/url`** — the primary path. Accepts a GOV.UK MAIB report URL. The scraper fetches the page and extracts structured metadata (title, publication date, vessel type, accident date, location) directly from the HTML, then downloads the PDF. The PDF parser extracts the remaining fields (vessel name, severity, loss of life, port/destination, sentences) that aren't available on the page. Both sets of data are written to the database.
+
+**`POST /documents/pdf`** — for direct PDF uploads. Skips the scraping step entirely; all metadata and content comes from the PDF alone.
+
+In both cases, a SHA-256 hash of the document text is used to detect and reject duplicates. See [INGESTION.md](INGESTION.md) for the full field-by-field breakdown.
+
+### Code responsibilities
+
+The ingestion code is split into four layers, each with a single concern:
+
+**Routes** (`routes/documents.py`) — HTTP only. Parse the incoming request, call the appropriate controller, and map any errors to HTTP responses. No business logic.
+
+**Controllers** (`controllers/`) — Orchestration. Each controller owns one pipeline end-to-end: calling the right services in the right order, merging data from multiple sources, and returning the final result. They know what needs to happen but not how each step works internally.
+
+**Services** (`services/`) — Single-concern operations:
+- `scraper.py` — fetches a GOV.UK MAIB report page and returns structured metadata plus the raw PDF bytes. No PDF parsing, no database.
+- `pdf_parsing.py` — opens a PDF and extracts text, file metadata, and structured report metadata from tables. No database.
+- `ingest_to_db.py` — all database writes: duplicate checking, author resolution, document creation, accident metadata, and sentence storage. No PDF or HTTP knowledge.
+
+**Utils** (`utils/pdf/`) — Pure functions for extracting specific fields from PDF text: title, publication date, accident date, loss of life, and sentence splitting. No I/O, no side effects.
+
+#### URL pipeline call order
+
+```
+POST /documents/url
+  → controllers/url.py
+      → services/scraper.py        # fetch page + download PDF
+      → services/pdf_parsing.py    # extract text + metadata from PDF
+      → services/ingest_to_db.py   # write document, metadata, sentences to DB
+```
+
+#### PDF pipeline call order
+
+```
+POST /documents/pdf
+  → controllers/pdf.py
+      → services/pdf_parsing.py    # extract text + metadata from PDF
+      → utils/pdf/                 # extract title, publication date
+      → services/ingest_to_db.py   # write document, metadata, sentences to DB
+```
+
 ### Interaction flow
 
-1. A report is ingested via `POST /documents/from-url` (GOV.UK URL) or `POST /documents` (PDF upload) — the API deduplicates by SHA-256 hash and stores documents, sentences, and report metadata
+1. Reports are ingested via `POST /documents/url` or `POST /documents/pdf`
 2. The client pipeline fetches sentences from the API
 3. The client pipeline runs semantic NLP analysis — assigning SHIELD codes, generating embeddings, and scoring relevance
 4. The client pipeline writes results back to the API
