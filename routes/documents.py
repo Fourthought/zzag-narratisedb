@@ -1,121 +1,73 @@
-from fastapi import APIRouter, File, UploadFile, Response
+import httpx
+from fastapi import APIRouter, File, UploadFile, HTTPException
 from fastapi.responses import PlainTextResponse
+from pydantic import BaseModel
 
-from services.ingestion import IngestionService
+from controllers import documents as documents_controller
+from controllers import pdf as pdf_controller
+from controllers import url as url_controller
+from services.ingest_to_db import DuplicateDocumentError
 from services.supabase.client import get_supabase
 from services.supabase.service import SupabaseService
 
 router = APIRouter(prefix="/documents")
 
 
-@router.post("")
-async def create_document(file: UploadFile = File(...)):
-    """Upload and ingest a PDF document into the database.
+def _get_db() -> SupabaseService:
+    return SupabaseService(get_supabase())
 
-    Accepts a PDF file (MAIB report), parses it into structured data,
-    and stores it across multiple database tables.
+
+@router.post("/pdf")
+def ingest_pdf(file: UploadFile = File(...)):
+    """Upload and ingest a PDF document.
 
     Returns the created document record.
-
-    Raises 409 if a document with the same content already exists.
+    Raises 409 if the document already exists.
     """
-    pdf_bytes = await file.read()
-    client = get_supabase()
-    service = IngestionService(SupabaseService(client))
-    document = service.ingest(pdf_bytes, file.filename)
-    return document
+    try:
+        return pdf_controller.ingest_pdf(_get_db(), file.file.read(), file.filename)
+    except DuplicateDocumentError as e:
+        raise HTTPException(status_code=409, detail=str(e))
+
+
+class FromUrlRequest(BaseModel):
+    url: str
+
+
+@router.post("/url")
+def ingest_from_url(body: FromUrlRequest):
+    """Scrape a GOV.UK MAIB report page and ingest the PDF.
+
+    Returns the created document record.
+    Raises 404 if the GOV.UK page is not found.
+    Raises 409 if the document already exists.
+    Raises 422 if no PDF attachment is found on the page.
+    Raises 502 on other network or upstream errors.
+    """
+    try:
+        return url_controller.ingest_from_url(_get_db(), body.url)
+    except DuplicateDocumentError as e:
+        raise HTTPException(status_code=409, detail=str(e))
+    except ValueError as e:
+        raise HTTPException(status_code=422, detail=str(e))
+    except httpx.HTTPStatusError as e:
+        if e.response.status_code == 404:
+            raise HTTPException(status_code=404, detail="MAIB report page not found")
+        raise HTTPException(status_code=502, detail=f"Upstream error: {e.response.status_code}")
+    except httpx.RequestError as e:
+        raise HTTPException(status_code=502, detail=f"Network error: {e}")
+
+
+@router.get("")
+def list_documents():
+    """List all documents — id and author_id only."""
+    return documents_controller.list_documents(_get_db())
 
 
 @router.get("/{id}/full", response_class=PlainTextResponse)
-async def get_document_full(id: int, min_relevance: int | None = None):
-    """Reconstructed document — all sentences ordered by position.
-
-    Query params:
-    - min_relevance: Filter out sentences with relevance_score below this value (0-10)
-                     0 = TOC/metadata, None = include all
-    """
-    client = get_supabase()
-
-    # Build query with optional relevance filter
-    query = (
-        client.table("sentences")
-        .select("text, text_type")
-        .eq("document_id", id)
-        .order("position")
-    )
-
-    if min_relevance is not None:
-        # Filter: relevance_score >= min_relevance OR relevance_score IS NULL (not yet scored)
-        query = query.or_(f"relevance_score.gte.{min_relevance},relevance_score.is.null")
-
-    sentences_result = query.execute()
-
-    # Reconstruct as plain text with proper formatting
-    lines = []
-    for sent in sentences_result.data:
-        text = sent["text"]
-        text_type = sent["text_type"]
-
-        # Add blank line before headings
-        if text_type == "heading":
-            lines.append("")
-            lines.append(text)
-        else:
-            lines.append(text)
-
-    return "\n".join(lines).strip()
-
-
-@router.get("/{id}/full.json")
-async def get_document_full_json(id: int, min_relevance: int | None = None):
-    """Reconstructed document as JSON — sentences with metadata."""
-    client = get_supabase()
-
-    # Get document with author
-    doc_result = (
-        client.table("documents")
-        .select("*, authors(*)")
-        .eq("id", id)
-        .single()
-        .execute()
-    )
-    document = doc_result.data
-
-    # Build query with optional relevance filter
-    query = (
-        client.table("sentences")
-        .select("*")
-        .eq("document_id", id)
-        .order("position")
-    )
-
-    if min_relevance is not None:
-        query = query.or_(f"relevance_score.gte.{min_relevance},relevance_score.is.null")
-
-    sentences_result = query.execute()
-
-    return {
-        **document,
-        "sentences": sentences_result.data,
-    }
-
-
-@router.get("/{id}/headings")
-async def get_document_headings(id: int):
-    """Get all headings for a document (document structure).
-
-    Filters out TOC entries (relevance_score = 0).
-    """
-    client = get_supabase()
-
-    result = (
-        client.table("sentences")
-        .select("id, text, position")
-        .eq("document_id", id)
-        .eq("text_type", "heading")
-        .or_("relevance_score.is.null,relevance_score.gt.0")
-        .order("position")
-        .execute()
-    )
-
-    return result.data
+def get_document_full(id: str):
+    """Reconstructed document — all sentences ordered by position."""
+    text = documents_controller.get_full_text(_get_db(), id)
+    if text is None:
+        raise HTTPException(status_code=404, detail="Document not found")
+    return text
