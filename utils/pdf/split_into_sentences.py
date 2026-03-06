@@ -1,5 +1,7 @@
 import re
 
+from utils.pdf.remove_cover_watermarks import remove_cover_watermarks
+
 
 def split_into_sentences(text: str) -> list[dict]:
     """Split text into sentences.
@@ -11,6 +13,7 @@ def split_into_sentences(text: str) -> list[dict]:
     - list_item: starts with bullet (-, *, ●) or numbered pattern (a., 1., i.)
     - paragraph: everything else, split into sentences by NLTK
     """
+    text = remove_cover_watermarks(text)
     blocks = _classify_lines(text)
     return _tokenize_blocks(blocks)
 
