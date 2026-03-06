@@ -10,15 +10,15 @@
 | `documents.filename`         | PDF filename from download URL               | —                                      |
 | `documents.author_id`        | PDF `Author` metadata                        | `"Unknown"`                            |
 | `documents.hash`             | SHA-256 of full text                         | —                                      |
-| `metadata.vessel_type`       | `gem-c-metadata` `"Vessel type"` term        | Section 1.1 table                      |
-| `metadata.accident_date`     | `gem-c-metadata` `"Date of occurrence"` term | Section 1.1 table                      |
-| `metadata.accident_location` | `og:description` `"Location: ..."`           | Section 1.1 table                      |
-| `metadata.vessel_name`       | Section 1.1 table                            | —                                      |
-| `metadata.severity`          | Section 1.1 table                            | —                                      |
-| `metadata.loss_of_life`      | Section 1.1 table                            | —                                      |
-| `metadata.port_of_origin`    | Section 1.1 table                            | —                                      |
-| `metadata.destination`       | Section 1.1 table                            | —                                      |
-| `metadata.accident_type`     | Section 1.1 table                            | —                                      |
+| `metadata.vessel_type`       | `gem-c-metadata` `"Vessel type"` term        | Any table in the PDF (key matches `^type$`) |
+| `metadata.accident_date`     | `gem-c-metadata` `"Date of occurrence"` term | Any table in the PDF (key matches `date.*time`) |
+| `metadata.accident_location` | `og:description` `"Location: ..."`           | Any table in the PDF (key matches `location.*incident` etc.) |
+| `metadata.vessel_name`       | Any table in the PDF (key matches `vessel.*name`) | —                             |
+| `metadata.severity`          | Any table in the PDF (key matches `type.*casualty` etc.) | —                    |
+| `metadata.loss_of_life`      | Any table in the PDF (key matches `injur\|fatal\|casualt`) | —                  |
+| `metadata.port_of_origin`    | Any table in the PDF (key matches `port.*departure` etc.) | —                   |
+| `metadata.destination`       | Any table in the PDF (key matches `port.*arrival`) | —                        |
+| `metadata.accident_type`     | Any table in the PDF (key matches `type.*voyage` etc.) | —                     |
 | `metadata.page_count`        | PDF page count                               | —                                      |
 | `metadata.pdf_subject`       | PDF `Subject` metadata                       | —                                      |
 | `metadata.pdf_author`        | PDF `Author` metadata                        | —                                      |
