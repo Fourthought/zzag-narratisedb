@@ -69,7 +69,7 @@ def _classify_lines(text: str) -> list[dict]:
                 text_type = "list_item"
             elif re.match(r"^\([a-zA-Z0-9]\)\s+", stripped):
                 text_type = "list_item"
-            elif re.match(r"^[A-Za-z°][A-Za-z°/.\d]{0,6}\s+[-–]\s+", stripped):
+            elif re.match(r"^[A-Za-z°][A-Za-z°/.\d]{0,8}\s+[-–]\s+", stripped):
                 text_type = "list_item"
             elif re.match(r"^\d{1,2}\s+(?!January|February|March|April|May|June|July|August|September|October|November|December)(?:https?://|[A-Z])", stripped):
                 text_type = "footnote"
@@ -101,7 +101,8 @@ def _classify_lines(text: str) -> list[dict]:
                 line_starts_lowercase = stripped[0].islower()
                 hanging_conjunction = bool(_HANGING_CONJUNCTION.search(current_list_item.rstrip()))
                 unmatched_paren = current_list_item.count('(') > current_list_item.count(')')
-                if list_ends_without_punct and (line_starts_lowercase or hanging_conjunction or unmatched_paren):
+                ends_with_possessive = bool(re.search(r"['\u2019]\w*\s*$", current_list_item.rstrip()))
+                if list_ends_without_punct and (line_starts_lowercase or hanging_conjunction or unmatched_paren or ends_with_possessive):
                     current_list_item += " " + stripped
                 else:
                     blocks.append({"type": "list_item", "text": current_list_item})
