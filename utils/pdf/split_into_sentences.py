@@ -70,7 +70,7 @@ def _classify_lines(text: str) -> list[dict]:
         if len(stripped) < 80:
             if re.match(r"^SECTION\s+\d+", stripped, re.IGNORECASE):
                 text_type = "heading"
-            elif re.match(r"^\d+\.\d+(\.\d+)?\s+", stripped):
+            elif re.match(r"^\d+\.\d+(\.\d+)?\s+[A-Za-z]", stripped):
                 text_type = "heading"
             elif re.match(r"^[A-Z]{3,}(\s+[A-Z]{2,})*(\s+\d+)?$", stripped):
                 text_type = "heading"
