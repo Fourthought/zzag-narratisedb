@@ -24,7 +24,17 @@ def _extract_full_text(pdf: pdfplumber.PDF) -> str:
         page_text = page.extract_text()
         if page_text:
             text_parts.append(page_text)
-    return "\n\n".join(text_parts)
+
+    if not text_parts:
+        return ""
+
+    result = text_parts[0]
+    for part in text_parts[1:]:
+        last_char = result.rstrip()[-1] if result.rstrip() else ""
+        separator = "\n\n" if last_char in ".!?" else "\n"
+        result += separator + part
+
+    return result
 
 
 def _extract_metadata(pdf: pdfplumber.PDF) -> PdfMetadata:
