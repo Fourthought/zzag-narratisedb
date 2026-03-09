@@ -123,7 +123,10 @@ def _classify_lines(text: str) -> list[dict]:
             current_list_item = stripped
 
         else:
-            if current_list_item:
+            # URL path continuation: no spaces, follows a footnote ending with a hyphen
+            if not current_paragraph and not current_list_item and blocks and blocks[-1]["type"] == "footnote" and blocks[-1]["text"].endswith("-") and " " not in stripped:
+                blocks[-1]["text"] += stripped
+            elif current_list_item:
                 list_ends_without_punct = not current_list_item.rstrip().endswith(('.', '!', '?'))
                 line_starts_lowercase = stripped[0].islower()
                 hanging_conjunction = bool(_HANGING_CONJUNCTION.search(current_list_item.rstrip()))
