@@ -7,7 +7,7 @@ from utils.pdf.remove_cover_watermarks import remove_cover_watermarks
 _nlp = spacy.load("en_core_web_sm", exclude=["tagger", "attribute_ruler", "lemmatizer", "ner"])
 
 # List-item line-wrap continuation signals
-_HANGING_CONJUNCTION = re.compile(r"\b(and|or|nor|that|which|the|a|an|of|to|in|on|at|by|for|with|from)\s*$", re.IGNORECASE)
+_HANGING_CONJUNCTION = re.compile(r"\b(and|or|nor|that|which|the|a|an|of|to|in|into|on|at|by|for|with|from|between|among|through|across)\s*$", re.IGNORECASE)
 
 # Sentence-initial patterns that indicate a false split by the parser
 _FALSE_SPLIT_PATTERNS = (
@@ -15,6 +15,12 @@ _FALSE_SPLIT_PATTERNS = (
     re.compile(r"^NO\s+\d+/\d{4}"),  # report number with prefix: "NO 17/2024 NOVEMBER 2024"
     re.compile(r"^\d{4}$"),            # standalone years: "2024"
 )
+
+# Section/citation references embedded in text lines, e.g. "[2.7.1]"
+_CITATION_PREFIX = re.compile(r"^\[\d+(?:\.\d+)*\]\s*")
+
+# Stub list-item markers with no body content, e.g. "10." or "14)"
+_STUB_MARKER = re.compile(r"^\d+[.\)]\s*$")
 
 
 def split_into_sentences(text: str) -> list[dict]:
@@ -30,6 +36,8 @@ def split_into_sentences(text: str) -> list[dict]:
     """
     text = remove_cover_watermarks(text)
     blocks = _classify_lines(text)
+    blocks = _merge_wrapped_headings(blocks)
+    blocks = _merge_wrapped_list_items(blocks)
     return _tokenize_blocks(blocks)
 
 
@@ -49,6 +57,11 @@ def _classify_lines(text: str) -> list[dict]:
                 current_list_item = None
             continue
 
+        # Strip leading citation references that PDF extraction attaches to the next line
+        stripped = _CITATION_PREFIX.sub("", stripped).strip()
+        if not stripped:
+            continue
+
         if re.match(r"^\d{1,3}$", stripped):
             continue  # skip standalone page numbers
 
@@ -63,16 +76,30 @@ def _classify_lines(text: str) -> list[dict]:
                 text_type = "heading"
 
         if text_type == "paragraph":
+            # Bullets are unambiguous list markers regardless of context
             if re.match(r"^[\-\*●]\s+", stripped):
                 text_type = "list_item"
-            elif re.match(r"^[a-zA-Z0-9][.\)]\s+", stripped):
+            # Standalone digit markers (e.g. "8." alone after citation stripping) are unambiguous
+            elif re.match(r"^\d+[.\)]\s*$", stripped):
                 text_type = "list_item"
-            elif re.match(r"^\([a-zA-Z0-9]\)\s+", stripped):
-                text_type = "list_item"
-            elif re.match(r"^[A-Za-z°][A-Za-z°/.\d]{0,8}\s+[-–]\s+", stripped):
-                text_type = "list_item"
-            elif re.match(r"^\d{1,2}\s+(?!January|February|March|April|May|June|July|August|September|October|November|December)(?:https?://|[A-Z])", stripped):
-                text_type = "footnote"
+            else:
+                # For all other list patterns, don't classify mid-paragraph lines as list items.
+                # If the current paragraph ends without sentence-final punctuation, the line is
+                # more likely a continuation (e.g. PDF line-wrap of "Amendment\n1. The suite...").
+                last_para_line = re.sub(r"\s*\[[\d.]+\]\s*$", "", current_paragraph[-1]) if current_paragraph else ""
+                mid_paragraph = bool(current_paragraph) and not last_para_line.rstrip().endswith(('.', '!', '?', ':'))
+                if not mid_paragraph:
+                    if re.match(r"^[a-zA-Z0-9][.\)]\s+", stripped):
+                        text_type = "list_item"
+                    elif re.match(r"^\d{2,3}[.\)](\s+|$)", stripped):
+                        text_type = "list_item"
+                    elif re.match(r"^\([a-zA-Z0-9]\)\s+", stripped):
+                        text_type = "list_item"
+                    elif re.match(r"^[A-Za-z°][A-Za-z°/.\d]{0,8}\s+[-–]\s+", stripped):
+                        text_type = "list_item"
+                if text_type == "paragraph":
+                    if re.match(r"^\d{1,2}\s+(?!January|February|March|April|May|June|July|August|September|October|November|December)(?:https?://|[A-Z])", stripped):
+                        text_type = "footnote"
 
         if text_type in ("heading", "footnote"):
             if current_list_item:
@@ -118,6 +145,63 @@ def _classify_lines(text: str) -> list[dict]:
         blocks.append({"type": "paragraph", "text": " ".join(current_paragraph)})
 
     return blocks
+
+
+def _merge_wrapped_headings(blocks: list[dict]) -> list[dict]:
+    """Merge consecutive heading blocks that are PDF line-wrap continuations of a single heading.
+
+    Uses the spaCy dependency tag of the last token to detect open-ended headings
+    (e.g. ending with a preposition or determiner) that wrap onto the next line.
+    """
+    _OPEN_DEP = {"prep", "cc", "mark", "det", "amod", "compound", "quantmod", "pobj"}
+
+    if not blocks:
+        return blocks
+
+    merged = [blocks[0]]
+    for block in blocks[1:]:
+        prev = merged[-1]
+        if prev["type"] == "heading" and block["type"] == "heading":
+            # A block starting with a section number is always a new heading, not a continuation
+            next_is_new_section = bool(re.match(r"^\d+\.\d+|^SECTION\s+\d+", block["text"], re.IGNORECASE))
+            if not next_is_new_section:
+                last_token = _nlp(prev["text"])[-1]
+                if last_token.dep_ in _OPEN_DEP:
+                    prev["text"] += " " + block["text"]
+                    continue
+        merged.append(block)
+    return merged
+
+
+def _merge_wrapped_list_items(blocks: list[dict]) -> list[dict]:
+    """Merge paragraph blocks that are PDF line-wrap continuations of a preceding list item.
+
+    Uses the spaCy dependency tag of the last token of the list item to detect
+    open-ended phrases that string heuristics cannot catch (e.g. prepositions,
+    conjunctions, determiners at the end of a wrapped line). Also merges stub
+    list-item markers (e.g. "10.") that appear alone on a line with their content.
+    """
+    _OPEN_DEP = {"prep", "cc", "mark", "det", "amod", "compound", "quantmod", "pobj"}
+
+    if not blocks:
+        return blocks
+
+    merged = [blocks[0]]
+    for block in blocks[1:]:
+        prev = merged[-1]
+        if prev["type"] == "list_item" and block["type"] == "paragraph":
+            # Stub marker (e.g. "10." with no body) — always merge with following paragraph
+            if _STUB_MARKER.match(prev["text"].strip()):
+                prev["text"] = prev["text"].strip() + " " + block["text"]
+                continue
+            # NLP dep_ check for open-ended phrases
+            doc = _nlp(prev["text"])
+            last_token = doc[-1]
+            if last_token.dep_ in _OPEN_DEP:
+                prev["text"] += " " + block["text"]
+                continue
+        merged.append(block)
+    return merged
 
 
 def _fix_false_splits(sentences: list[dict]) -> list[dict]:
