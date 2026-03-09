@@ -6,10 +6,8 @@ from utils.pdf.remove_cover_watermarks import remove_cover_watermarks
 
 _nlp = spacy.load("en_core_web_sm", exclude=["tagger", "attribute_ruler", "lemmatizer", "ner"])
 
-# Matches the start of an abbreviation/glossary entry: short token + space + dash
-_ABBREV_ENTRY_RE = re.compile(r"^[A-Za-z°][A-Za-z°/.\d]{0,6}\s+[-–]\s+")
-# Splits on whitespace immediately before a new abbreviation entry (for merged glossary lines)
-_ABBREV_SPLIT_RE = re.compile(r"\s+(?=[A-Za-z°][A-Za-z°/.\d]{0,6}\s+[-–]\s+)")
+# List-item line-wrap continuation signals
+_HANGING_CONJUNCTION = re.compile(r"\b(and|or|nor|that|which)\s*$", re.IGNORECASE)
 
 # Sentence-initial patterns that indicate a false split by the parser
 _FALSE_SPLIT_PATTERNS = (
@@ -31,26 +29,8 @@ def split_into_sentences(text: str) -> list[dict]:
     - paragraph: everything else, split into sentences by spaCy dependency parser
     """
     text = remove_cover_watermarks(text)
-    text = _split_glossary_lines(text)
     blocks = _classify_lines(text)
     return _tokenize_blocks(blocks)
-
-
-def _split_glossary_lines(text: str) -> str:
-    """Split lines containing multiple concatenated abbreviation entries into separate lines.
-
-    pdfplumber flattens multi-column glossary tables into one long line per row group.
-    Only applied to lines that start with an abbreviation pattern to avoid splitting
-    abbreviation usage within narrative prose.
-    """
-    result = []
-    for line in text.split("\n"):
-        if _ABBREV_ENTRY_RE.match(line.strip()):
-            parts = _ABBREV_SPLIT_RE.split(line.strip())
-            result.extend(p.strip() for p in parts if p.strip())
-        else:
-            result.append(line)
-    return "\n".join(result)
 
 
 def _classify_lines(text: str) -> list[dict]:
@@ -119,7 +99,9 @@ def _classify_lines(text: str) -> list[dict]:
             if current_list_item:
                 list_ends_without_punct = not current_list_item.rstrip().endswith(('.', '!', '?'))
                 line_starts_lowercase = stripped[0].islower()
-                if list_ends_without_punct and line_starts_lowercase:
+                hanging_conjunction = bool(_HANGING_CONJUNCTION.search(current_list_item.rstrip()))
+                unmatched_paren = current_list_item.count('(') > current_list_item.count(')')
+                if list_ends_without_punct and (line_starts_lowercase or hanging_conjunction or unmatched_paren):
                     current_list_item += " " + stripped
                 else:
                     blocks.append({"type": "list_item", "text": current_list_item})
@@ -144,7 +126,8 @@ def _fix_false_splits(sentences: list[dict]) -> list[dict]:
     for sent in sentences[1:]:
         is_pattern_split = any(p.match(sent["text"]) for p in _FALSE_SPLIT_PATTERNS)
         is_lowercase_fragment = sent["text"] and sent["text"][0].islower()
-        if is_pattern_split or is_lowercase_fragment:
+        both_paragraphs = merged[-1]["text_type"] == "paragraph" and sent["text_type"] == "paragraph"
+        if (is_pattern_split or is_lowercase_fragment) and both_paragraphs:
             merged[-1]["text"] += " " + sent["text"]
         else:
             merged.append(sent)
