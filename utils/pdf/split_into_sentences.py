@@ -7,7 +7,7 @@ from utils.pdf.remove_cover_watermarks import remove_cover_watermarks
 _nlp = spacy.load("en_core_web_sm", exclude=["tagger", "attribute_ruler", "lemmatizer", "ner"])
 
 # List-item line-wrap continuation signals
-_HANGING_CONJUNCTION = re.compile(r"\b(and|or|nor|that|which)\s*$", re.IGNORECASE)
+_HANGING_CONJUNCTION = re.compile(r"\b(and|or|nor|that|which|the|a|an|of|to|in|on|at|by|for|with|from)\s*$", re.IGNORECASE)
 
 # Sentence-initial patterns that indicate a false split by the parser
 _FALSE_SPLIT_PATTERNS = (
@@ -102,7 +102,8 @@ def _classify_lines(text: str) -> list[dict]:
                 hanging_conjunction = bool(_HANGING_CONJUNCTION.search(current_list_item.rstrip()))
                 unmatched_paren = current_list_item.count('(') > current_list_item.count(')')
                 ends_with_possessive = bool(re.search(r"['\u2019]\w*\s*$", current_list_item.rstrip()))
-                if list_ends_without_punct and (line_starts_lowercase or hanging_conjunction or unmatched_paren or ends_with_possessive):
+                ends_with_allcaps = bool(re.search(r"\b[A-Z]{2,}\s*$", current_list_item.rstrip()))
+                if list_ends_without_punct and (line_starts_lowercase or hanging_conjunction or unmatched_paren or ends_with_possessive or ends_with_allcaps):
                     current_list_item += " " + stripped
                 else:
                     blocks.append({"type": "list_item", "text": current_list_item})
