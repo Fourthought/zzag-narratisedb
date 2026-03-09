@@ -53,7 +53,7 @@ def _classify_lines(text: str) -> list[dict]:
                 text_type = "heading"
             elif re.match(r"^\d+\.\d+(\.\d+)?\s+", stripped):
                 text_type = "heading"
-            elif stripped == "SYNOPSIS":
+            elif re.match(r"^[A-Z]{3,}(\s+[A-Z]{2,})*(\s+\d+)?$", stripped):
                 text_type = "heading"
 
         if text_type == "paragraph":
