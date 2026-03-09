@@ -6,6 +6,11 @@ from utils.pdf.remove_cover_watermarks import remove_cover_watermarks
 
 _nlp = spacy.load("en_core_web_sm", exclude=["tagger", "attribute_ruler", "lemmatizer", "ner"])
 
+# Matches the start of an abbreviation/glossary entry: short token + space + dash
+_ABBREV_ENTRY_RE = re.compile(r"^[A-Za-z°][A-Za-z°/.\d]{0,6}\s+[-–]\s+")
+# Splits on whitespace immediately before a new abbreviation entry (for merged glossary lines)
+_ABBREV_SPLIT_RE = re.compile(r"\s+(?=[A-Za-z°][A-Za-z°/.\d]{0,6}\s+[-–]\s+)")
+
 # Sentence-initial patterns that indicate a false split by the parser
 _FALSE_SPLIT_PATTERNS = (
     re.compile(r"^\d+/\d{4}"),        # report numbers: "17/2024"
@@ -26,8 +31,26 @@ def split_into_sentences(text: str) -> list[dict]:
     - paragraph: everything else, split into sentences by spaCy dependency parser
     """
     text = remove_cover_watermarks(text)
+    text = _split_glossary_lines(text)
     blocks = _classify_lines(text)
     return _tokenize_blocks(blocks)
+
+
+def _split_glossary_lines(text: str) -> str:
+    """Split lines containing multiple concatenated abbreviation entries into separate lines.
+
+    pdfplumber flattens multi-column glossary tables into one long line per row group.
+    Only applied to lines that start with an abbreviation pattern to avoid splitting
+    abbreviation usage within narrative prose.
+    """
+    result = []
+    for line in text.split("\n"):
+        if _ABBREV_ENTRY_RE.match(line.strip()):
+            parts = _ABBREV_SPLIT_RE.split(line.strip())
+            result.extend(p.strip() for p in parts if p.strip())
+        else:
+            result.append(line)
+    return "\n".join(result)
 
 
 def _classify_lines(text: str) -> list[dict]:
@@ -66,7 +89,7 @@ def _classify_lines(text: str) -> list[dict]:
                 text_type = "list_item"
             elif re.match(r"^\([a-zA-Z0-9]\)\s+", stripped):
                 text_type = "list_item"
-            elif re.match(r"^[A-Z°][A-Za-z°/\d]{0,6}\s+[-–]\s+", stripped):
+            elif re.match(r"^[A-Za-z°][A-Za-z°/.\d]{0,6}\s+[-–]\s+", stripped):
                 text_type = "list_item"
             elif re.match(r"^\d{1,2}\s+(?!January|February|March|April|May|June|July|August|September|October|November|December)(?:https?://|[A-Z])", stripped):
                 text_type = "footnote"
