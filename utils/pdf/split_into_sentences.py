@@ -46,6 +46,9 @@ def _classify_lines(text: str) -> list[dict]:
                 current_list_item = None
             continue
 
+        if re.match(r"^\d{1,3}$", stripped):
+            continue  # skip standalone page numbers
+
         text_type = "paragraph"
 
         if len(stripped) < 80:
@@ -114,7 +117,9 @@ def _fix_false_splits(sentences: list[dict]) -> list[dict]:
         return sentences
     merged = [sentences[0]]
     for sent in sentences[1:]:
-        if any(p.match(sent["text"]) for p in _FALSE_SPLIT_PATTERNS):
+        is_pattern_split = any(p.match(sent["text"]) for p in _FALSE_SPLIT_PATTERNS)
+        is_lowercase_fragment = sent["text"] and sent["text"][0].islower()
+        if is_pattern_split or is_lowercase_fragment:
             merged[-1]["text"] += " " + sent["text"]
         else:
             merged.append(sent)
