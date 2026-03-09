@@ -66,6 +66,8 @@ def _classify_lines(text: str) -> list[dict]:
                 text_type = "list_item"
             elif re.match(r"^\([a-zA-Z0-9]\)\s+", stripped):
                 text_type = "list_item"
+            elif re.match(r"^[A-Z°][A-Za-z°/\d]{0,6}\s+[-–]\s+", stripped):
+                text_type = "list_item"
             elif re.match(r"^\d{1,2}\s+(?!January|February|March|April|May|June|July|August|September|October|November|December)(?:https?://|[A-Z])", stripped):
                 text_type = "footnote"
 
@@ -128,21 +130,19 @@ def _fix_false_splits(sentences: list[dict]) -> list[dict]:
 
 def _tokenize_blocks(blocks: list[dict]) -> list[dict]:
     sentences = []
-    position = 0
 
     for block in blocks:
         if block["type"] == "paragraph":
-            block_sents = []
             for sent in _nlp(block["text"]).sents:
                 sent_text = sent.text.strip()
                 if sent_text:
-                    block_sents.append({"text": sent_text, "text_type": "paragraph"})
-            for sent in _fix_false_splits(block_sents):
-                sent["position"] = position
-                sentences.append(sent)
-                position += 1
+                    sentences.append({"text": sent_text, "text_type": "paragraph"})
         else:
-            sentences.append({"text": block["text"], "text_type": block["type"], "position": position})
-            position += 1
+            sentences.append({"text": block["text"], "text_type": block["type"]})
+
+    sentences = _fix_false_splits(sentences)
+
+    for i, sent in enumerate(sentences):
+        sent["position"] = i
 
     return sentences
