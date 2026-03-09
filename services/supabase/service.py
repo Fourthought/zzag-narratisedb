@@ -10,6 +10,13 @@ class SupabaseService:
         result = self.client.table(table).insert(data).execute()
         return result.data[0] if result.data else {}
 
+    def create_records_batch(self, table: str, records: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """Create multiple records in a single batch operation."""
+        if not records:
+            return []
+        result = self.client.table(table).insert(records).execute()
+        return result.data if result.data else []
+
     def get_records(self, table: str, filters: Optional[Dict[str, Any]] = None, limit: Optional[int] = None) -> List[Dict[str, Any]]:
         query = self.client.table(table).select("*")
 
