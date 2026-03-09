@@ -24,7 +24,7 @@ def _classify_lines(text: str) -> list[dict]:
     current_list_item = None
 
     for line in text.split("\n"):
-        stripped = line.strip()
+        stripped = remove_cover_watermarks(line.strip()).strip()
         if not stripped:
             if current_paragraph:
                 blocks.append({"type": "paragraph", "text": " ".join(current_paragraph)})
