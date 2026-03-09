@@ -28,7 +28,7 @@ def ingest_from_url(db: SupabaseService, url: str) -> dict:
     logger.info("  %s characters, %s pages", len(parsed.full_text), pdf_meta.page_count)
 
     author = db_service.get_or_create_author(db, db_service.resolve_author_name(pdf_meta.pdf_author))
-    document = db_service.create_document(db, {
+    document = db.create_record("documents", {
         "title": scraped.title,
         "filename": scraped.pdf_url.split("/")[-1],
         "hash": db_service.check_duplicate(db, parsed.full_text),
@@ -38,7 +38,7 @@ def ingest_from_url(db: SupabaseService, url: str) -> dict:
     })
     logger.info("  Created document %s", document["id"])
 
-    db_service.create_accident_metadata(db, {
+    db.create_record("chirp_accident_metadata", {
         "document_id": document["id"],
         # From webpage
         "vessel_type": scraped.vessel_type,

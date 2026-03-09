@@ -17,7 +17,7 @@ def ingest_pdf(db: SupabaseService, pdf_bytes: bytes, filename: str) -> dict:
     logger.info("  %s characters, %s pages", len(parsed.full_text), pdf_meta.page_count)
 
     author = db_service.get_or_create_author(db, db_service.resolve_author_name(pdf_meta.pdf_author))
-    document = db_service.create_document(db, {
+    document = db.create_record("documents", {
         "title": pdf_meta.pdf_title or extract_title(parsed.full_text),
         "filename": filename,
         "hash": db_service.check_duplicate(db, parsed.full_text),
@@ -26,7 +26,7 @@ def ingest_pdf(db: SupabaseService, pdf_bytes: bytes, filename: str) -> dict:
     })
     logger.info("  Created document %s", document["id"])
 
-    db_service.create_accident_metadata(db, {
+    db.create_record("chirp_accident_metadata", {
         "document_id": document["id"],
         "vessel_name": report_meta.vessel_name,
         "vessel_type": report_meta.vessel_type,
