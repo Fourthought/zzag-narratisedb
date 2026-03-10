@@ -6,7 +6,7 @@ from utils.pdf.remove_cover_watermarks import remove_cover_watermarks
 
 _nlp = spacy.load("en_core_web_sm", exclude=["tagger", "attribute_ruler", "lemmatizer", "ner"])
 
-# List-item line-wrap continuation signals
+# When a paragraph line follows a list item, these trailing words signal the list item may wrap onto it
 _HANGING_CONJUNCTION = re.compile(r"\b(and|or|nor|that|which|the|a|an|of|to|in|into|on|at|by|for|with|from|between|among|through|across)\s*$", re.IGNORECASE)
 
 # Sentence-initial patterns that indicate a false split by the parser
@@ -98,7 +98,8 @@ def _classify_lines(text: str) -> list[dict]:
                     elif re.match(r"^[A-Za-z°][A-Za-z°/.\d]{0,8}\s+[-–]\s+", stripped):
                         text_type = "list_item"
                 if text_type == "paragraph":
-                    if re.match(r"^\d{1,2}\s+(?!January|February|March|April|May|June|July|August|September|October|November|December)(?:https?://|[A-Z])", stripped):
+                    _MONTHS = r"(?!January|February|March|April|May|June|July|August|September|October|November|December)"
+                    if re.match(rf"^\d{{1,2}}\s+{_MONTHS}(?:https?://|[A-Z])", stripped):
                         text_type = "footnote"
 
         if text_type in ("heading", "footnote"):
@@ -124,7 +125,8 @@ def _classify_lines(text: str) -> list[dict]:
 
         else:
             # URL path continuation: no spaces, follows a footnote ending with a hyphen
-            if not current_paragraph and not current_list_item and blocks and blocks[-1]["type"] == "footnote" and blocks[-1]["text"].endswith("-") and " " not in stripped:
+            prev_is_hyphen_footnote = (blocks and blocks[-1]["type"] == "footnote" and blocks[-1]["text"].endswith("-"))
+            if not current_paragraph and not current_list_item and prev_is_hyphen_footnote and " " not in stripped:
                 blocks[-1]["text"] += stripped
             elif current_list_item:
                 list_ends_without_punct = not current_list_item.rstrip().endswith(('.', '!', '?'))
